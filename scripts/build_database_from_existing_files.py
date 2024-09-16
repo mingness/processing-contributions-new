@@ -2,7 +2,7 @@
 Reads in the json files in the sources folder of processing/processing-contributions,
 as well as the contribs.txt to output a yaml formatted database file. This is purely to make sure
 the content is exactly the same as the contribs.txt file, and json files. This important, because
-scripts will be written to go from this database file back to to contribs.txt, and source json files.
+scripts will be written to go from this database file back to contribs.txt, and source json files.
 If the content is the same, then the output of the scripts can be compared with the originals.
 """
 

@@ -1426,8 +1426,9 @@ contributions:
   url: http://interfaze.info/libraries/tablet/
   categories: I/O
   sentence: Tablet is a library for using pen tablets from Processing.
-  paragraph=It provides simplified access to the pen's pressure, tilt, etc. It is based on <a href: '"https://sourceforge.net/projects/jpen/">JPen</a>,
-    the Java Pen Tablet Access Library.'
+  paragraph: It provides simplified access to the pen's pressure, tilt, etc. It is
+    based on <a href="https://sourceforge.net/projects/jpen/">JPen</a>, the Java Pen
+    Tablet Access Library.
   version: '7'
   prettyVersion: 2.0-alpha3
   minRevision: '239'
@@ -1704,8 +1705,8 @@ contributions:
   url: http://interfaze.info/libraries/eliza/
   categories: Language
   sentence: The classic Eliza psychologist program.
-  paragraph=Based on the <a href: '"http://chayden.net/eliza/Eliza.html">Java implementation
-    by Charles Hayden</a>, faithful to the original 1966 version.'
+  paragraph: Based on the <a href="http://chayden.net/eliza/Eliza.html">Java implementation
+    by Charles Hayden</a>, faithful to the original 1966 version.
   version: '1'
   prettyVersion: '1.0'
   id: '119'
@@ -2641,7 +2642,7 @@ contributions:
     https://github.com/cansik/opencv-processing/releases/download/contribution-manager/opencv_processing.txt
 - name: BoofCV for Processing
   authors: Peter Abeles
-  url=http://boofcv.org/index.php?title: Tutorial_Processing
+  url: http://boofcv.org/index.php?title=Tutorial_Processing
   categories: Video & Vision
   sentence: Processing interface for BoofCV.
   paragraph: Processing interface for [BoofCV](http://boofcv.org). BoofCV is a general
@@ -2719,10 +2720,9 @@ contributions:
   url: https://tramontana.xyz/tramontanacv
   categories: Video & Vision
   sentence: a toolkit for sensing people in spaces with phones.
-  paragraph: With tramontanaCV you will be able to harness the computing power of
+  paragraph: 'With tramontanaCV you will be able to harness the computing power of
     your phone to sense people (among other things) in space and broadcast the result
-    to a Processing sketch..
-  'You can download the app here: https://itunes.apple.com/us/app/libreTSPSWP/id1276040950?mt': '8'
+    to a Processing sketch. You can download the app here: https://itunes.apple.com/us/app/libreTSPSWP/id1276040950?mt=8'
   version: '4'
   prettyVersion: '2.0'
   minRevision: '0250'

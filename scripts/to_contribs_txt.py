@@ -53,8 +53,13 @@ if __name__ == "__main__":
   with open(database_file, 'r') as db:
     data = yaml.load(db)
 
+  contributions_list = data['contributions']
+  def sort_key(d):
+    return type_list.index(d['type'])
+  contributions_list = sorted(contributions_list, key=sort_key)
+
   with open(contribs_text_file, 'w+') as f:
-    for contribution in data['contributions']:
+    for contribution in contributions_list:
       f.write(contribution['type']+'\n')
       for field in contribs_fields_list:
         if field in contribution:

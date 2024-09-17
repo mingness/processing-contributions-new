@@ -60,9 +60,7 @@ if __name__ == "__main__":
 
   # read in from source files
   sources_dict = read_sources_folder(sources_dir)
-  # print(sources_dict)
   contribs_list = read_contribs_text(contribs_text_file)
-  # print(contribs_list)
 
   # since desired output is a list of objects, use contribs_list as base, and add missing
   # information, which is props
@@ -70,7 +68,10 @@ if __name__ == "__main__":
     source_contrib = sources_dict[contrib["id"]]
     contrib["props"] = source_contrib["packages"][0]["props"]
 
-  # print(contribs_list)
+  def sort_key(the_dict):
+    return the_dict['id']
+
+  contribs_list = sorted(contribs_list, key=sort_key)
 
   yaml = YAML()
   with open(database_file, 'w') as outfile:

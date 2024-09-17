@@ -1,0 +1,21 @@
+{
+  "name": "R for Processing",
+  "authors": [
+    "[Processing.R Authors](https://github.com/processing-r/Processing.R/blob/master/AUTHORS.md)"
+  ],
+  "url": "https://github.com/processing-r/Processing.R",
+  "sentence": "Processing in R Language",
+  "paragraph": "",
+  "id": "220",
+  "type": "mode",
+  "categories": null,
+  "packages": [
+    {
+      "mode": "java",
+      "minRevision": "0",
+      "maxRevision": "0",
+      "props": "https://github.com/processing-r/Processing.R/releases/latest/download/RLangMode.txt",
+      "download": "https://github.com/processing-r/Processing.R/releases/latest/download/RLangMode.zip"
+    }
+  ]
+}

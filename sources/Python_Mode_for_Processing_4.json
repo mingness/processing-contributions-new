@@ -1,0 +1,21 @@
+{
+  "name": "Python Mode for Processing 4",
+  "authors": [
+    "[Jonathan Feinberg](http://MrFeinberg.com/)"
+  ],
+  "url": "https://github.com/jdf/processing.py",
+  "sentence": "Write Processing 4 sketches in Python.",
+  "paragraph": "",
+  "id": "274",
+  "type": "mode",
+  "categories": null,
+  "packages": [
+    {
+      "mode": "java",
+      "minRevision": "1279",
+      "maxRevision": "0",
+      "props": "https://contribs.processing.org/pythonmode/4/PythonMode.txt",
+      "download": "https://contribs.processing.org/pythonmode/4/PythonMode.zip"
+    }
+  ]
+}

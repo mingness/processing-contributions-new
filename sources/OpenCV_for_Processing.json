@@ -1,15 +1,14 @@
 {
   "name": "OpenCV for Processing",
-  "categories": [
-    "Video & Vision"
-  ],
   "authors": [
     "[Greg Borenstein](http://gregborenstein.com) and [Florian Bruggisser](https://broox.ch/)"
   ],
   "url": "https://github.com/cansik/opencv-processing",
+  "categories": [
+    "Video & Vision"
+  ],
   "sentence": "Computer vision with OpenCV.",
   "paragraph": "Based on the official OpenCV Java API. A nice Processing-style API for common tasks and access to the full power of the OpenCV API for the advanced stuff.",
-  "lastUpdated": "0",
   "id": "132",
   "type": "library",
   "packages": [

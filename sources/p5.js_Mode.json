@@ -1,6 +1,5 @@
 {
   "name": "p5.js Mode",
-  "categories": null,
   "authors": [
     "[Fathom Information Design](http://fathom.info/)"
   ],
@@ -10,6 +9,7 @@
   "imports": "processing.mode.java.JavaMode",
   "id": "199",
   "type": "mode",
+  "categories": null,
   "packages": [
     {
       "mode": "java",

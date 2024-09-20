@@ -2,7 +2,7 @@
 Reads in the json files in the sources folder of processing/processing-contributions,
 as well as the contribs.txt to output a yaml formatted database file. This is purely to make sure
 the content is exactly the same as the contribs.txt file, and json files. This important, because
-scripts will be written to go from this database file back to to contribs.txt, and source json files.
+scripts will be written to go from this database file back to contribs.txt, and source json files.
 If the content is the same, then the output of the scripts can be compared with the originals.
 """
 
@@ -10,26 +10,33 @@ import re
 import json
 import pathlib
 from ruamel.yaml import YAML
+from collections import defaultdict
 
 
 def read_contribs_text(filepath):
   contribs_list = []
   this_contrib = {}
   contrib_empty = True
-
-  url_pattern = re.compile(r"(.*)=(.*)")
+  contrib_field_counts = defaultdict(int)
 
   with open(filepath, 'r') as f:
     for line in f.readlines():
-      if line.strip() == "" and not contrib_empty:
-        contribs_list.append(this_contrib)
-        this_contrib = {}
-        contrib_empty = True
-      result = url_pattern.findall(line)
-      if result:
-        field, value = result[0]
-        this_contrib[field] = value
+      if line.strip() == "":
+        if not contrib_empty:
+          for key in list(this_contrib.keys()):
+            contrib_field_counts[key] += 1
+          contribs_list.append(this_contrib)
+          this_contrib = {}
+          contrib_empty = True
+
+      str_index = line.find("=")  # capture first equals,
+      if str_index >= 0:
+        field, value = line.split("=", 1)
+        this_contrib[field.strip()] = value.strip()
         contrib_empty = False
+
+  with open("contribs_txt_field_counts.json", 'w') as f:
+    json.dump(contrib_field_counts, f)
 
   return contribs_list
 
@@ -47,15 +54,13 @@ def read_sources_folder(folderpath):
 
 
 if __name__ == "__main__":
-  sources_dir = '../sources'
-  contribs_text_file = '../pde/contribs.txt'
+  sources_dir = '../sources_original'
+  contribs_text_file = '../pde_original/contribs.txt'
   database_file = '../contributions.yaml'
 
   # read in from source files
   sources_dict = read_sources_folder(sources_dir)
-  # print(sources_dict)
   contribs_list = read_contribs_text(contribs_text_file)
-  # print(contribs_list)
 
   # since desired output is a list of objects, use contribs_list as base, and add missing
   # information, which is props
@@ -63,7 +68,10 @@ if __name__ == "__main__":
     source_contrib = sources_dict[contrib["id"]]
     contrib["props"] = source_contrib["packages"][0]["props"]
 
-  # print(contribs_list)
+  def sort_key(the_dict):
+    return the_dict['id']
+
+  contribs_list = sorted(contribs_list, key=sort_key)
 
   yaml = YAML()
   with open(database_file, 'w') as outfile:

@@ -1,12 +1,12 @@
 {
   "name": "Deep Vision",
-  "categories": [
-    "Data"
-  ],
   "authors": [
     "[Florian Bruggisser](https://broox.ch)"
   ],
   "url": "https://github.com/cansik/deep-vision-processing",
+  "categories": [
+    "Data"
+  ],
   "sentence": "Deep computer-vision algorithms for Processing",
   "paragraph": "Run deep neural networks on images in Processing.",
   "id": "267",

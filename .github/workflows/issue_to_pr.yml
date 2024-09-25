@@ -36,5 +36,5 @@ jobs:
 
       - name: Show output
         run: |
-          echo "Output from parseIssue: ${{ steps.parseIssue.outputs.payload }}"
+          echo "url: ${{ fromJson(steps.parseIssue.outputs.payload).url }}"
           echo "Output from parseProps: ${{ steps.parseProps.outputs.props }}"

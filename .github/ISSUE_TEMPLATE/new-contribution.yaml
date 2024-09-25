@@ -7,8 +7,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        Great to have you here.
-        
         To add a new contribution to Processing, please provide the URL
         to the library properties text file. For example, in your
         library release artifacts, if your library is called my_library,

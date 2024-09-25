@@ -21,7 +21,7 @@ body:
         If the text file is not valid, you will need to edit your text file 
         before the contribution can be added.
   - type: input
-    id: properties-url
+    id: url
     attributes:
       label: URL of your properties text file, in your published release artifacts.
       description: a url of a txt file

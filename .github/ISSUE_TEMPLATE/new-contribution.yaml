@@ -1,0 +1,29 @@
+name: New Contribution
+description: Register a new contribution.
+title: "[NEW]: "
+labels: ["new-contribution"]
+projects: ["mingness/processing-contributions-new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Great to have you here.
+        
+        To add a new contribution to Processing, please provide the URL
+        to the library properties text file. For example, in your
+        library release artifacts, if your library is called my_library,
+        the file might be called my_library.txt.
+        
+        Once you submit this form, this text file will be parsed and validated. 
+        The result of this validation will be added to this issue. 
+        If the text file is valid, a pull request will be automatically
+        created, adding your contribution to the repository.
+        If the text file is not valid, you will need to edit your text file 
+        before the contribution can be added.
+  - type: input
+    id: properties-url
+    attributes:
+      label: URL of your properties text file, in your published release artifacts.
+      description: a url of a txt file
+    validations:
+      required: true

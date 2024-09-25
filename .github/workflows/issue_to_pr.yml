@@ -1,0 +1,43 @@
+name: Issue to Pull Request
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    outputs:
+      props_url: ${{ fromJson(steps.parseIssue.outputs.payload)["url"] }}
+      props: ${{ steps.parseProps.outputs.props }}
+    steps:
+      - name: Parse issue
+        id: parseIssue
+        uses: onmax/issue-form-parser@v1.5
+        with:
+          issue_number: ${{ github.event.issue.number }}
+
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Read and validate properties txt file
+        id: parseProps
+        run: python scripts/parse_and_validate_properties_txt.py ${{ fromJson(steps.parseIssue.outputs.payload)["url"] }}
+
+      - name: Show output
+        run: |
+          echo "props_url: ${{ fromJson(steps.parseIssue.outputs.payload)["url"] }}"
+          echo "Output from parseProps: ${{ steps.parseProps.outputs.props }}"

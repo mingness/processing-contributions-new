@@ -13,7 +13,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     outputs:
-      props_url: ${{ fromJson(steps.parseIssue.outputs.payload)["url"] }}
+      props_url: '${{ fromJson(steps.parseIssue.outputs.payload).url }}'
       props: ${{ steps.parseProps.outputs.props }}
     steps:
       - name: Parse issue
@@ -35,9 +35,9 @@ jobs:
 
       - name: Read and validate properties txt file
         id: parseProps
-        run: python scripts/parse_and_validate_properties_txt.py ${{ fromJson(steps.parseIssue.outputs.payload)["url"] }}
+        run: python scripts/parse_and_validate_properties_txt.py ${{ fromJson(steps.parseIssue.outputs.payload).url }}
 
       - name: Show output
         run: |
-          echo "props_url: ${{ fromJson(steps.parseIssue.outputs.payload)["url"] }}"
+          echo "props_url: ${{ fromJson(steps.parseIssue.outputs.payload).url }}"
           echo "Output from parseProps: ${{ steps.parseProps.outputs.props }}"

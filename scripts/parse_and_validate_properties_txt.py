@@ -23,7 +23,7 @@ def read_properties_txt(properties_url):
 
     if r.status_code != 200:
         return {
-            "status": "fail",
+            "status": "failure",
             "error": f"url returning status code: {r.status_code}"
         }
 
@@ -117,7 +117,7 @@ if __name__ == "__main__":
         print(f'Unable to access url: {url}')
         exit()
 
-    if result['status'] == 'fail':
+    if result['status'] == 'failure':
         print(result['error'])
         exit()
 

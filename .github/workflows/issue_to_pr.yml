@@ -39,7 +39,7 @@ jobs:
 
       - name: Show output
         run: |
-          echo "output from parseProps: ${{ steps.parseProps.outputs.result }}"
+          echo output from parseProps: ${{ steps.parseProps.outputs.result }}
   create-pr:
     needs: validate
     runs-on: ubuntu-latest
@@ -49,5 +49,5 @@ jobs:
 
       - name: Show output
         run: |
-          echo "url: ${{ needs.validate.outputs.props_url }}"
-          echo "props: ${{ needs.validate.outputs.props }}"
+          echo url: ${{ needs.validate.outputs.props_url }}
+          echo props: ${{ needs.validate.outputs.props }}

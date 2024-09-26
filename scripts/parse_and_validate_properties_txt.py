@@ -92,45 +92,53 @@ def parse_and_validate_text(properties_raw):
 
     if msgs:
         return {
-            "status": "invalid",
-            "msgs": msgs,
+            "status": "failure",
+            "message": msgs,
             "data": properties
         }
 
     return {
-        "status": "valid",
-        "msgs": msgs,
+        "status": "success",
+        "message": msgs,
         "data": properties
     }
 
+def set_output(output_object):
+    with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+        f.write(f'result={json.dumps(output_object)}')
+
 
 if __name__ == "__main__":
-    if len(argv) == 2:
-        url = argv[1]
-        print(f"processing url: {url}")  # just for debugging, should do this via logging levels
-    else:
+    github_output = {"status": "failure", "message": "", "data": {}}
+    if len(argv) < 2:
         print("script takes url as argument.\nStopping...")
+        github_output["message"] = "url not provided."
+        set_output(github_output)
         exit()
+
+    url = argv[1]
+    if not url.startswith("http"):
+        print(f"Url not valid: {url}.\nStopping...")
+        github_output["message"] = "url not valid."
+        set_output(github_output)
+        exit()
+
+    print(f"processing url: {url}")  # just for debugging, should do this via logging levels
 
     try:
         result = read_properties_txt(url)
     except Exception as e:
         print(f'Unable to access url: {url}.\nStopping...')
+        github_output["message"] = f"Unable to access url: {url}."
+        set_output(github_output)
         exit()
 
     if result['status'] == 'failure':
         print(f"{result['error']}\nStopping...")
+        github_output["message"] = result['error']
+        set_output(github_output)
         exit()
-
-    print(f"Successfully retrieved text:\n{result['text']}")  # just for debugging, should do this via logging levels
 
     properties_raw = result['text']
-    parsed_result = parse_and_validate_text(properties_raw)
-    if parsed_result['status'] == 'invalid':
-        print(f'invalid properties txt file. errors: {parsed_result["msgs"]}\nStopping...')
-        exit()
-
-    print(f'props={json.dumps(parsed_result["data"])}')  # just for debugging
-
-    with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-        f.write(f'props={json.dumps(parsed_result["data"])}\n')
+    github_output = parse_and_validate_text(properties_raw)
+    set_output(github_output)

@@ -22,15 +22,9 @@ def read_properties_txt(properties_url):
     r = requests.get(properties_url)
 
     if r.status_code != 200:
-        return {
-            "status": "failure",
-            "error": f"url returning status code: {r.status_code}"
-        }
+        raise FileNotFoundError(f"url returning status code: {r.status_code}")
 
-    return {
-            "status": "success",
-            "text": r.text
-        }
+    return r.text
 
 def parse_and_validate_text(properties_raw):
     # PARSE
@@ -66,13 +60,13 @@ def parse_and_validate_text(properties_raw):
     if not str(properties['version']):
         msgs.append('version is empty')
     elif not str(properties['version']).isdigit():
-        msgs.append('version is not an integer')
+        msgs.append(f'version, {properties["version"]}, is not an integer')
 
     if not str(properties['url']).strip():
         msgs.append('url is empty')
     elif not (str(properties['url']).strip().startswith('https://') or
         str(properties['url']).strip().startswith('http://')):
-        msgs.append('url is not a valid url')
+        msgs.append(f'url, {properties["url"]}, is not a valid url')
 
     if not str(properties['sentence']).strip():
         msgs.append('sentence is empty')
@@ -83,64 +77,39 @@ def parse_and_validate_text(properties_raw):
     if not str(properties['minRevision']):
         msgs.append('minRevision is empty')
     elif not str(properties['minRevision']).isdigit():
-        msgs.append('minRevision is not an integer')
+        msgs.append(f'minRevision, {properties["minRevision"]}, is not an integer')
 
     if not str(properties['maxRevision']):
         msgs.append('maxRevision is empty')
     elif not str(properties['maxRevision']).isdigit():
-        msgs.append('maxRevision is not an integer')
+        msgs.append(f'maxRevision, {properties["maxRevision"]}, is not an integer')
 
     if msgs:
-        return {
-            "status": "failure",
-            "message": msgs,
-            "data": properties
-        }
+        raise ValueError(";".join(msgs))
 
-    return {
-        "status": "success",
-        "message": msgs,
-        "data": properties
-    }
+    return properties
+
 
 def set_output(output_object):
     with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-        f.write(f'result={json.dumps(output_object)}')
+        f.write(f'props={json.dumps(output_object)}')
 
 
 if __name__ == "__main__":
-    github_output = {"status": "failure", "message": "", "data": {}}
     if len(argv) < 2:
         print("script takes url as argument.\nStopping...")
-        github_output["message"] = "url not provided."
-        set_output(github_output)
-        exit(1)
+        raise ValueError
 
     url = argv[1]
     if not url.startswith("http"):
         print(f"Url not valid: {url}.\nStopping...")
-        github_output["message"] = "url not valid."
-        set_output(github_output)
-        exit(1)
+        raise AssertionError
 
-    print(f"processing url: {url}")  # just for debugging, should do this via logging levels
+    print(f"url: {url}")  # just for debugging, should do this via logging levels
 
-    try:
-        result = read_properties_txt(url)
-    except Exception as e:
-        print(f'Unable to access url: {url}.\nStopping...')
-        github_output["message"] = f"Unable to access url: {url}."
-        set_output(github_output)
-        exit(1)
+    properties_raw = read_properties_txt(url)
+    print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels
 
-    if result['status'] == 'failure':
-        print(f"{result['error']}\nStopping...")
-        github_output["message"] = result['error']
-        set_output(github_output)
-        exit(1)
-
-    properties_raw = result['text']
-    github_output = parse_and_validate_text(properties_raw)
-    set_output(github_output)
-    if github_output["status"] == "failure":
-        exit(1)
+    props = parse_and_validate_text(properties_raw)
+    print(f"properties dict: {props}")  # just for debugging, should do this via logging levels
+    set_output(props)

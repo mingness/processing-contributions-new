@@ -12,6 +12,9 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    outputs:
+      props_url: ${{ fromJson(steps.parseIssue.outputs.payload).url }}
+      props: ${{ steps.parseProps.outputs.props }}
     steps:
       - name: Parse issue
         id: parseIssue

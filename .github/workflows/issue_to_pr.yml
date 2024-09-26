@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       props_url: ${{ fromJson(steps.parseIssue.outputs.payload).url }}
-      props: ${{ fromJson(steps.parseProps.outputs.result).data }}
+      props: ${{ steps.parseProps.outputs.props }}
     steps:
       - name: Parse issue
         id: parseIssue

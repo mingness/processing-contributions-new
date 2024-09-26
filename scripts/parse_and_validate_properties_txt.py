@@ -105,8 +105,8 @@ def parse_and_validate_text(properties_raw):
 
 
 if __name__ == "__main__":
-    if len(argv) == 1:
-        url = argv[0]
+    if len(argv) == 2:
+        url = argv[1]
     else:
         print("script takes url as argument")
         exit()

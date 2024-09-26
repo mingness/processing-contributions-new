@@ -114,14 +114,14 @@ if __name__ == "__main__":
         print("script takes url as argument.\nStopping...")
         github_output["message"] = "url not provided."
         set_output(github_output)
-        exit()
+        exit(1)
 
     url = argv[1]
     if not url.startswith("http"):
         print(f"Url not valid: {url}.\nStopping...")
         github_output["message"] = "url not valid."
         set_output(github_output)
-        exit()
+        exit(1)
 
     print(f"processing url: {url}")  # just for debugging, should do this via logging levels
 
@@ -131,14 +131,16 @@ if __name__ == "__main__":
         print(f'Unable to access url: {url}.\nStopping...')
         github_output["message"] = f"Unable to access url: {url}."
         set_output(github_output)
-        exit()
+        exit(1)
 
     if result['status'] == 'failure':
         print(f"{result['error']}\nStopping...")
         github_output["message"] = result['error']
         set_output(github_output)
-        exit()
+        exit(1)
 
     properties_raw = result['text']
     github_output = parse_and_validate_text(properties_raw)
     set_output(github_output)
+    if github_output["status"] == "failure":
+        exit(1)

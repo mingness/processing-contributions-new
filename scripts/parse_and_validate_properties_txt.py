@@ -107,25 +107,30 @@ def parse_and_validate_text(properties_raw):
 if __name__ == "__main__":
     if len(argv) == 2:
         url = argv[1]
+        print(f"processing url: {url}")  # just for debugging, should do this via logging levels
     else:
-        print("script takes url as argument")
+        print("script takes url as argument.\nStopping...")
         exit()
 
     try:
         result = read_properties_txt(url)
     except Exception as e:
-        print(f'Unable to access url: {url}')
+        print(f'Unable to access url: {url}.\nStopping...')
         exit()
 
     if result['status'] == 'failure':
-        print(result['error'])
+        print(f"{result['error']}\nStopping...")
         exit()
+
+    print(f"Successfully retrieved text:\n{result['text']}")  # just for debugging, should do this via logging levels
 
     properties_raw = result['text']
     parsed_result = parse_and_validate_text(properties_raw)
     if parsed_result['status'] == 'invalid':
-        print(f'invalid properties txt file. errors: {parsed_result["msgs"]}')
+        print(f'invalid properties txt file. errors: {parsed_result["msgs"]}\nStopping...')
         exit()
+
+    print(f'props={json.dumps(parsed_result["data"])}')  # just for debugging
 
     with open(os.environ['GITHUB_OUTPUT'],'a') as f:
         f.write(f'props={json.dumps(parsed_result["data"])}\n')

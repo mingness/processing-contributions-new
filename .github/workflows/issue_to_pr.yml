@@ -41,3 +41,13 @@ jobs:
         run: |
           echo "url: ${{ fromJson(steps.parseIssue.outputs.payload).url }}"
           echo "Output from parseProps: ${{ steps.parseProps.outputs.props }}"
+  create-pr:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      - name: Show output
+        run: |
+          echo "url: ${{ needs.validate.outputs.props_url }}"

@@ -13,7 +13,6 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     outputs:
-      props_url: ${{ fromJson(steps.parseIssue.outputs.payload).url }}
       props: ${{ steps.parseProps.outputs.props }}
     steps:
       - name: Parse issue
@@ -45,5 +44,22 @@ jobs:
 
       - name: Show output
         run: |
-          echo url: ${{ needs.validate.outputs.props_url }}
           echo props: ${{ needs.validate.outputs.props }}
+
+      - name: edit database
+        run: python scripts/add_new_contribution_to_yaml.py ${{ needs.validate.outputs.props }}
+
+      - name: create branch
+        run: |
+          git config --global user.email 'mingness@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout main
+          gh issue develop ${{ github.event.issue.number }} --name issue-${{ github.event.issue.number }} --checkout
+          git add -u
+          git commit -m "new contribution added"
+          git push
+          
+      - name: Create pull request
+        run: gh pr create -B main -H issue-${{ github.event.issue.number }} --title "new contribution issue ${{github.event.issue.number }}" --body "${{github.event.issue.title }}"
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

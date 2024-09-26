@@ -111,5 +111,6 @@ if __name__ == "__main__":
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels
 
     props = parse_and_validate_text(properties_raw)
+    props["props"] = url
     print(f"properties dict: {props}")  # just for debugging, should do this via logging levels
     set_output(props)

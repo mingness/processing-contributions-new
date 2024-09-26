@@ -55,7 +55,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: edit database
-        run: python scripts/add_new_contribution_to_yaml.py ${{ needs.validate.outputs.props }}
+        run: python scripts/add_new_contribution_to_yaml.py '${{ needs.validate.outputs.props }}'
 
       - name: create branch
         run: |

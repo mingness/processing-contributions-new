@@ -69,10 +69,10 @@ jobs:
 
       - name: check if target branch exists
         id: branchExists
-        run: git branch | grep $BRANCH_NAME
+        run: echo "exists=$(git branch | grep $BRANCH_NAME)" >> $GITHUB_OUTPUT
 
       - name: delete target branch if exists
-        if: branchExists
+        if: steps.branchExists.outputs.exists
         run: git branch -D $BRANCH_NAME
 
       - name: create branch

@@ -67,8 +67,12 @@ jobs:
           git config --global user.email 'github-workflow@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
 
+      - name: check if target branch exists
+        id: branchExists
+        run: git branch | grep $BRANCH_NAME
+
       - name: delete target branch if exists
-        if: git branch | grep $BRANCH_NAME
+        if: branchExists
         run: git branch -D $BRANCH_NAME
 
       - name: create branch

@@ -24,7 +24,7 @@ jobs:
         id: parseIssue
         uses: onmax/issue-form-parser@v1.5
         with:
-          issue_number: ISSUE_NUM
+          issue_number: $ISSUE_NUM
 
       - name: Checkout sources
         uses: actions/checkout@v4
@@ -74,7 +74,7 @@ jobs:
       - name: create branch
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue develop ISSUE_NUM --name $BRANCH_NAME --checkout
+        run: gh issue develop $ISSUE_NUM --name $BRANCH_NAME --checkout
 
       - name: edit database
         run: |
@@ -88,6 +88,6 @@ jobs:
           git push
 
       - name: Create pull request
-        run: gh pr create -B main -H $BRANCH_NAME --title "new contribution issue ISSUE_NUM" --body "${{github.event.issue.title }}"
+        run: gh pr create -B main -H $BRANCH_NAME --title "new contribution issue $ISSUE_NUM" --body "${{github.event.issue.title }}"
         env:
           GH_TOKEN: ${{ github.token }}

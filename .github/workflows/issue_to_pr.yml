@@ -10,10 +10,6 @@ permissions:
   issues: write
   pull-requests: write
 
-env:
-  BRANCH_NAME: issue-${{ github.event.issue.number }}
-  ISSUE_NUM: ${{ github.event.issue.number }}
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -24,7 +20,7 @@ jobs:
         id: parseIssue
         uses: onmax/issue-form-parser@v1.5
         with:
-          issue_number: $ISSUE_NUM
+          issue_number: ${{ github.event.issue.number }}
 
       - name: Checkout sources
         uses: actions/checkout@v4
@@ -42,6 +38,9 @@ jobs:
         run: python -u scripts/parse_and_validate_properties_txt.py "${{ fromJson(steps.parseIssue.outputs.payload).url }}"
   create-pr:
     needs: validate
+    env:
+      BRANCH_NAME: issue-${{ github.event.issue.number }}
+      ISSUE_NUM: ${{ github.event.issue.number }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources

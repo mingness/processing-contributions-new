@@ -55,24 +55,31 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: edit database
-        run: |
-          cd scripts
-          python add_new_contribution_to_yaml.py '${{ needs.validate.outputs.props }}'
-
-      - name: create branch
+      - name: set github profile
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config --global user.name 'Github workflow'
           git config --global user.email 'github-workflow@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout main
+
+      - name: create branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
           gh issue develop ${{ github.event.issue.number }} --name issue-${{ github.event.issue.number }} --checkout
+
+      - name: edit database
+        run: |
+          cd scripts
+          python add_new_contribution_to_yaml.py '${{ needs.validate.outputs.props }}'
+
+      - name: commit changes
+        run: |
           git add -u
           git commit -m "new contribution added"
           git push
-          
+
       - name: Create pull request
         run: gh pr create -B main -H issue-${{ github.event.issue.number }} --title "new contribution issue ${{github.event.issue.number }}" --body "${{github.event.issue.title }}"
         env:

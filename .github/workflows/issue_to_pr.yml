@@ -46,10 +46,6 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v4
 
-      - name: Show output
-        run: |
-          echo props: ${{ needs.validate.outputs.props }}
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -69,6 +65,10 @@ jobs:
       - name: check if target branch exists
         id: branchExists
         run: echo "exists=$(git branch | grep $BRANCH_NAME)" >> $GITHUB_OUTPUT
+
+      - name: Show output
+        run: |
+          echo branchExists: ${{ steps.branchExists.outputs.exists }}
 
       - name: delete target branch if exists
         if: steps.branchExists.outputs.exists

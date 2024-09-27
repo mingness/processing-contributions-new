@@ -68,7 +68,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
 
       - name: delete target branch if exists
-        if: $(git branch) | grep $BRANCH_NAME
+        if: git branch | grep $BRANCH_NAME
         run: git branch -D $BRANCH_NAME
 
       - name: create branch

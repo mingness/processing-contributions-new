@@ -65,9 +65,7 @@ jobs:
       - name: check if target branch exists
         id: branchExists
         run: |
-          echo $(git ls-remote --branches origin $BRANCH_NAME)
           echo "exists=$(git ls-remote --branches origin $BRANCH_NAME | wc -l)" >> $GITHUB_OUTPUT
-          echo $GITHUB_OUTPUT
 
       - name: Show output
         run: |
@@ -75,7 +73,7 @@ jobs:
 
       - name: delete target branch if exists
         if: steps.branchExists.outputs.exists
-        run: git branch -D $BRANCH_NAME
+        run: git branch -D origin $BRANCH_NAME
 
       - name: create branch
         env:

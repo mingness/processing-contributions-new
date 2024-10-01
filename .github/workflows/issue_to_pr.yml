@@ -64,7 +64,10 @@ jobs:
 
       - name: check if target branch exists
         id: branchExists
-        run: echo "exists=$(git branch | grep $BRANCH_NAME)" >> $GITHUB_OUTPUT
+        run: |
+          echo $(git branch)
+          echo "exists=$(git branch | grep $BRANCH_NAME)" >> $GITHUB_OUTPUT
+          echo $GITHUB_OUTPUT
 
       - name: Show output
         run: |

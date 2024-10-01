@@ -73,7 +73,7 @@ jobs:
 
       - name: delete target branch if exists
         if: steps.branchExists.outputs.exists
-        run: git branch -D origin $BRANCH_NAME
+        run: git push -d origin $BRANCH_NAME
 
       - name: create branch
         env:

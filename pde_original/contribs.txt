@@ -43,6 +43,21 @@ type=library
 download=http://mrfeinberg.com/peasycam/peasycam.zip
 
 library
+name=Picking
+authors=[Nicolas Clavaud](http://n.clavaud.free.fr/)
+url=http://n.clavaud.free.fr/processing/library/picking/
+categories=3D
+sentence=Pick an object in a 3D scene easily.
+paragraph=
+version=8
+prettyVersion=0.3.1
+minRevision=0
+maxRevision=0
+id=032
+type=library
+download=http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
+
+library
 name=OCD: Obsessive Camera Direction
 authors=[Kristian Damkjer](http://www.gdsstudios.com/)
 url=http://www.gdsstudios.com/processing/libraries/ocd/
@@ -1984,10 +1999,10 @@ name=Pd4P3
 authors=[Robert Esler](https://www.robertesler.com)
 url=https://github.com/robertesler/Pd4P3
 categories=Sound
-sentence=A real-time audio synthesis library of Pure Data's signal objects for Processing 3 and 4.
-paragraph=Small bug fixes.
-version=9
-prettyVersion=0.0.9
+sentence=A real-time audio synthesis library of Pure Data's signal objects for Processing.
+paragraph=Beta Release with new examples, and bug fixes to the backend.
+version=10
+prettyVersion=0.1.1
 lastUpdated=0
 minRevision=0
 maxRevision=0

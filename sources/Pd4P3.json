@@ -7,8 +7,8 @@
   "categories": [
     "Sound"
   ],
-  "sentence": "A real-time audio synthesis library of Pure Data's signal objects for Processing 3 and 4.",
-  "paragraph": "Small bug fixes.",
+  "sentence": "A real-time audio synthesis library of Pure Data's signal objects for Processing.",
+  "paragraph": "Beta Release with new examples, and bug fixes to the backend.",
   "id": "271",
   "type": "library",
   "packages": [

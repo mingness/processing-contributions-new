@@ -57,26 +57,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: set github profile
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git config --global user.name 'Github workflow'
-          git config --global user.email 'github-workflow@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-
       - name: check if target branch exists
         id: branchExists
-        run: |
-          echo "exists=$(git ls-remote --branches origin $BRANCH_NAME | wc -l)" >> $GITHUB_OUTPUT
-
-      - name: Show output
-        run: |
-          echo branchExists: ${{ steps.branchExists.outputs.exists }}
+        uses: GuillaumeFalourd/branch-exists@v1
+        with:
+          branch: ${{ env.BRANCH_NAME }}
 
       - name: delete target branch if exists
         if: steps.branchExists.outputs.exists
-        run: git push -d origin $BRANCH_NAME
+        uses: dawidd6/action-delete-branch@v3
+        with:
+          github_token: ${{github.token}}
+          branches: ${{ env.BRANCH_NAME }}
 
       - name: create branch
         env:

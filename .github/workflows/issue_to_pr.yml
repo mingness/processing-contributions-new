@@ -65,12 +65,12 @@ jobs:
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: new contribution from issue $ISSUE_NUM
-          branch: $BRANCH_NAME
+          commit_message: new contribution from issue ${{ env.ISSUE_NUM }}
+          branch: ${{ env.BRANCH_NAME }}
           create_branch: true
           add_options: '-u'
 
       - name: Create pull request
-        run: gh pr create -B main -H $BRANCH_NAME --title "new contribution issue $ISSUE_NUM" --body "${{github.event.issue.title }}"
+        run: gh pr create -B main -H ${{ env.BRANCH_NAME }} --title "new contribution issue $ISSUE_NUM" --body "${{github.event.issue.title }}"
         env:
           GH_TOKEN: ${{ github.token }}

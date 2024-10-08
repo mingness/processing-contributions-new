@@ -6,31 +6,30 @@ as an object.
 TODO: write tests for validation
 """
 import json
-from collections import defaultdict
 from sys import argv
 
 import requests
 from tenacity import retry, stop_after_attempt, wait_fixed
-
 import re
 import os
 
 
 @retry(stop=stop_after_attempt(3),
-       wait=wait_fixed(2))
+       wait=wait_fixed(2),
+       reraise=True)
 def read_properties_txt(properties_url):
     r = requests.get(properties_url)
 
     if r.status_code != 200:
-        raise FileNotFoundError(f"url returning status code: {r.status_code}")
+        raise FileNotFoundError(f"status code {r.status_code} returned for url {r.url}")
 
     return r.text
 
-def parse_and_validate_text(properties_raw):
-    # PARSE
+def parse_text(properties_raw):
+    msg = ''
     field_pattern = re.compile(r"^[a-zA-z]+\s*=.*")
 
-    properties = defaultdict()
+    properties = {}
     field_name = ""
     field_value = ""
     properties_lines = properties_raw.split('\n')
@@ -38,9 +37,16 @@ def parse_and_validate_text(properties_raw):
         if line.startswith('#') or not line.strip():
             continue
         if field_pattern.match(line):
+            # store previous key-value pair
             if field_name:
                 properties[field_name] = field_value
-            field_name, field_value = line.split('=')
+            # process current line
+            line_split = line.split('=')
+            if len(line_split) != 2:
+                msg += f'split not equal to 2 for line {line}'
+                field_value += " " + line.strip()
+                continue
+            field_name, field_value = line_split
             field_name = field_name.strip()
             field_value = field_value.split('#')[0].strip()
         else:
@@ -49,40 +55,59 @@ def parse_and_validate_text(properties_raw):
     if field_name:
         properties[field_name] = field_value
 
-    # VALIDATE
+    # manual fixes
+    if 'authorList' in properties:
+        properties['authors'] = properties.pop('authorList')
+
+    if 'categories' not in properties or not str(properties['categories']).strip():
+        properties['categories'] = "Other"
+
+    if 'minRevision' not in properties or not str(properties['minRevision']).strip():
+        properties['minRevision'] = '0'
+
+    if 'maxRevision' not in properties or not str(properties['maxRevision']).strip():
+        properties['maxRevision'] = '0'
+
+    return properties, msg
+
+def validate_text(properties: dict):
     msgs = []
-    if not str(properties['name']).strip():
+    if 'name' not in properties or not str(properties['name']).strip():
         msgs.append('name is empty')
 
-    if not str(properties['authors']).strip():
+    if 'authors' not in properties or not str(properties['authors']).strip():
         msgs.append('authors is empty')
 
-    if not str(properties['version']):
+    if 'version' not in properties or not str(properties['version']):
         msgs.append('version is empty')
     elif not str(properties['version']).isdigit():
         msgs.append(f'version, {properties["version"]}, is not an integer')
 
-    if not str(properties['url']).strip():
+    if 'url' not in properties or not str(properties['url']).strip():
         msgs.append('url is empty')
     elif not (str(properties['url']).strip().startswith('https://') or
         str(properties['url']).strip().startswith('http://')):
         msgs.append(f'url, {properties["url"]}, is not a valid url')
 
-    if not str(properties['sentence']).strip():
+    if 'sentence' not in properties or not str(properties['sentence']).strip():
         msgs.append('sentence is empty')
 
-    if not str(properties['categories']).strip():
-        properties['categories'] = "Other"
-
-    if not str(properties['minRevision']):
+    if 'minRevision' not in properties or not str(properties['minRevision']):
         msgs.append('minRevision is empty')
     elif not str(properties['minRevision']).isdigit():
         msgs.append(f'minRevision, {properties["minRevision"]}, is not an integer')
 
-    if not str(properties['maxRevision']):
+    if 'maxRevision' not in properties or not str(properties['maxRevision']):
         msgs.append('maxRevision is empty')
     elif not str(properties['maxRevision']).isdigit():
         msgs.append(f'maxRevision, {properties["maxRevision"]}, is not an integer')
+
+    return msgs
+
+
+def parse_and_validate_text(properties_raw):
+    properties, _ = parse_text(properties_raw)
+    msgs = validate_text(properties)
 
     if msgs:
         raise ValueError(";".join(msgs))

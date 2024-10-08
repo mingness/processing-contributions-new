@@ -9,6 +9,8 @@ If the content is the same, then the output of the scripts can be compared with 
 import re
 import json
 import pathlib
+from operator import attrgetter, itemgetter
+
 from ruamel.yaml import YAML
 from collections import defaultdict
 
@@ -68,10 +70,7 @@ if __name__ == "__main__":
     source_contrib = sources_dict[contrib["id"]]
     contrib["props"] = source_contrib["packages"][0]["props"]
 
-  def sort_key(the_dict):
-    return the_dict['id']
-
-  contribs_list = sorted(contribs_list, key=sort_key)
+  contribs_list = sorted(contribs_list, key=itemgetter('id'))
 
   yaml = YAML()
   with open(database_file, 'w') as outfile:

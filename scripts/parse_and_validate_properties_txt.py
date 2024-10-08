@@ -6,7 +6,7 @@ as an object.
 TODO: write tests for validation
 """
 import json
-from sys import argv
+import argparse
 
 import requests
 from tenacity import retry, stop_after_attempt, wait_fixed
@@ -121,11 +121,14 @@ def set_output(output_object):
 
 
 if __name__ == "__main__":
-    if len(argv) < 2:
-        print("script takes url as argument.\nStopping...")
-        raise ValueError
+    # this is used by github workflow. Add type to object
+    parser = argparse.ArgumentParser()
+    parser.add_argument('type')
+    parser.add_argument('url')
+    args = parser.parse_args()
 
-    url = argv[1]
+    type_ = args.type
+    url = args.url
     if not url.startswith("http"):
         print(f"Url not valid: {url}.\nStopping...")
         raise AssertionError
@@ -137,5 +140,6 @@ if __name__ == "__main__":
 
     props = parse_and_validate_text(properties_raw)
     props["props"] = url
+    props["type"] = type_
     print(f"properties dict: {props}")  # just for debugging, should do this via logging levels
     set_output(props)

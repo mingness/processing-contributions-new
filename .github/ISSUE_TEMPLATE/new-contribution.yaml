@@ -7,18 +7,31 @@ body:
   - type: markdown
     attributes:
       value: |
-        To add a new contribution to Processing, please provide the URL to the library properties text file. 
+        Thanks for your new contribution to Processing.
+        
+        Please provide the URL to the library properties text file. 
         For example, in your library release artifacts, if your library is called my_library, 
         the file might be called my_library.txt.
         
-        Once you submit this form, this text file will be parsed and validated. The result of this validation 
-        will be added to this issue. If the text file is valid, a pull request will be automatically created, 
-        adding your contribution to the repository. If the text file is not valid, you will need to edit your 
-        text file before the contribution can be added.
+        Also provide the type of contribution. The allowed values are `library`, `examples`, 
+        `tool` or `mode`.
+        
+        Once you submit this form, the properties file found at the url will be parsed and validated. 
+        The result of this validation will be added to this issue. If the text file is valid, 
+        a pull request will be automatically created, adding your contribution to the repository. 
+        If the text file is not valid, you will need to edit your 
+        properties file before the contribution can be added.
   - type: input
     id: url
     attributes:
-      label: url
+      label: properties_url
       description: URL of your properties text file, in your published release artifacts.
+    validations:
+      required: true
+  - type: input
+    id: contribution_type
+    attributes:
+      label: contribution_type
+      description: The type of contribution. Values can be `library`, `examples`, `tool` or `mode`.
     validations:
       required: true

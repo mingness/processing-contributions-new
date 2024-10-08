@@ -35,7 +35,10 @@ jobs:
 
       - name: Read and validate properties txt file
         id: parseProps
-        run: python -u scripts/parse_and_validate_properties_txt.py "${{ fromJson(steps.parseIssue.outputs.payload).url }}"
+        run: >
+          python -u scripts/parse_and_validate_properties_txt.py \
+            ${{ fromJson(steps.parseIssue.outputs.payload).contribution_type }} \
+            "${{ fromJson(steps.parseIssue.outputs.payload).properties_url }}"
   create-pr:
     needs: validate
     env:
@@ -54,42 +57,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: set github profile
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git config --global user.name 'Github workflow'
-          git config --global user.email 'github-workflow@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-
-      - name: check if target branch exists
-        id: branchExists
-        run: |
-          echo "exists=$(git ls-remote --branches origin $BRANCH_NAME | wc -l)" >> $GITHUB_OUTPUT
-
-      - name: Show output
-        run: |
-          echo branchExists: ${{ steps.branchExists.outputs.exists }}
-
-      - name: delete target branch if exists
-        if: steps.branchExists.outputs.exists
-        run: git push -d origin $BRANCH_NAME
-
-      - name: create branch
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh issue develop $ISSUE_NUM --name $BRANCH_NAME --checkout
-
       - name: edit database
         run: |
           cd scripts
           python add_new_contribution_to_yaml.py '${{ needs.validate.outputs.props }}'
 
       - name: commit changes
-        run: |
-          git add -u
-          git commit -m "new contribution added"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: new contribution from issue $ISSUE_NUM
+          branch: $BRANCH_NAME
+          create_branch: true
+          add_options: '-u'
 
       - name: Create pull request
         run: gh pr create -B main -H $BRANCH_NAME --title "new contribution issue $ISSUE_NUM" --body "${{github.event.issue.title }}"

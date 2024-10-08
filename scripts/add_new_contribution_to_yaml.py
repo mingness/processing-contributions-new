@@ -13,6 +13,7 @@ if __name__ == "__main__":
 
     props = json.loads(argv[1])
 
+    # open database
     database_file = '../contributions.yaml'
 
     yaml = YAML()
@@ -21,10 +22,13 @@ if __name__ == "__main__":
 
     contributions_list = list(data['contributions'])
 
+    # find max index
     max_index = max([int(contribution["id"]) for contribution in contributions_list])
 
+    # append new contribution with next index
     props["id"] = f"{(max_index + 1):03d}"
     contributions_list.append(props)
 
+    # write all contributions to database file
     with open(database_file, 'w') as db:
         yaml.dump({"contributions": contributions_list}, db)

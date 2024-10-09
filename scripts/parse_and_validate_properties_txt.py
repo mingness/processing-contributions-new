@@ -78,8 +78,6 @@ def validate_text(properties: dict):
 
     if 'version' not in properties or not str(properties['version']):
         msgs.append('version is empty')
-    elif not str(properties['version']).isdigit():
-        msgs.append(f'version, {properties["version"]}, is not an integer')
 
     if 'url' not in properties or not str(properties['url']).strip():
         msgs.append('url is empty')

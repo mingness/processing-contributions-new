@@ -1660,6 +1660,21 @@ type=library
 download=https://github.com/thwegene/OCT/releases/download/latest/OCT.zip
 
 library
+name=AP-Sync
+authors=[Nigel Tiany](http://nigeltiany.com)
+url=http://ap-sync.github.io
+categories=Arduino,Data,I/O
+sentence=AP-Sync it the easy way to sync data to processing from your arduino or any microcontroller to processing and back.
+paragraph=Its simple api makes syncing data a breeze.
+version=1.0.0
+prettyVersion=peace
+minRevision=100
+maxRevision=0
+id=206
+type=library
+download=https://ap-sync.github.io/libs/AP_sync_processing/APsync.zip
+
+library
 name=Timing Utilities
 authors=Lord of Galaxy
 url=https://github.com/Lord-of-the-Galaxy/Timing-Utilities

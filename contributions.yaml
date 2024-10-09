@@ -3387,12 +3387,24 @@ contributions:
   override:
     categories:
     - Books
-- id: '206'
+- name: AP-Sync
+  authors: '[Nigel Tiany](http://nigeltiany.com)'
+  url: http://ap-sync.github.io
+  categories:
+  - Arduino
+  - Data
+  - I/O
+  sentence: AP-Sync it the easy way to sync data to processing from your arduino or any microcontroller to processing and back.
+  paragraph: Its simple api makes syncing data a breeze.
+  version: '1.0.0'
+  prettyVersion: peace
+  minRevision: '100'
+  maxRevision: '0'
   source: https://ap-sync.github.io/libs/AP_sync_processing/APsync.txt
+  id: '206'
+  status: VALID
   type: library
-  status: BROKEN
-  log:
-  - invalid file, ['version, 1.0.0, is not an integer']
+  download: https://ap-sync.github.io/libs/AP_sync_processing/APsync.zip
 - name: Timing Utilities
   authors: Lord of Galaxy
   url: https://github.com/Lord-of-the-Galaxy/Timing-Utilities

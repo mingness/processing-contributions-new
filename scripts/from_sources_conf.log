@@ -1,0 +1,137 @@
+002,  http://www.carljohanrosen.com/processing/images/cellnoise-latest.txt , commented out with 404; 
+002,  http://www.carljohanrosen.com/processing/images/cellnoise-latest.txt , file not found: status code 404 returned for url https://www.carljohanrosen.com/processing/images/cellnoise-latest.txt%20
+005,  http://nootropicdesign.com/processing-layers/downloads/layers.txt , commented out with Deprecated; 
+005,  http://nootropicdesign.com/processing-layers/downloads/layers.txt , file not found: status code 404 returned for url https://nootropicdesign.com/processing-layers/downloads/layers.txt
+007, https://github.com/generative-design/GenerativeDesignLibrary2/releases/download/latest/generativedesign.txt, in skipped conf
+008, http://www.saint-clair.net/download/gml4u/GML4U.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+009,  http://www.wblut.com/hemesh/hemesh.txt , commented out with Deprecated; 
+009,  http://www.wblut.com/hemesh/hemesh.txt , file not found: status code 403 returned for url http://www.wblut.com/hemesh/hemesh.txt%20
+010, http://shiffman.net/p5/libraries/mpe/mpe.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+012, http://www.shiffman.net/p5/libraries/qrcode/qrcodeprocessing.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+013, http://shiffman.net/p5/libraries/openkinect_processing/openkinect_processing.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+014, http://shiffman.net/p5/libraries/box2d_processing/box2d_processing.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+015, http://www.shiffman.net/p5/libraries/sms/sms.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+016, http://www.silentlycrashing.net/ezgestures/files/ezgestures.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+020, https://dl.dropboxusercontent.com/u/69944346/ColorSelectorPlus/ColorSelectorPlusTool.txt, file not found: status code 404 returned for url https://dl.dropboxusercontent.com/u/69944346/ColorSelectorPlus/ColorSelectorPlusTool.txt
+021, http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.txt, in broken conf
+022,  http://fluidforms.eu/processing/fluid-forms-libs/download/FluidFormsLibs.txt , commented out with Deprecated; 
+022,  http://fluidforms.eu/processing/fluid-forms-libs/download/FluidFormsLibs.txt , invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+026, http://jorgecardoso.eu/processing/MindSetProcessing/download/MindsetProcessing.txt, in broken conf
+028, http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.txt, file not found: status code 404 returned for url http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.txt
+029,  http://libraries.seltar.org/unzipit/unzipit.txt , commented out with Deprecated; 
+029,  http://libraries.seltar.org/unzipit/unzipit.txt , file not found: status code 404 returned for url http://libraries.seltar.org/unzipit/unzipit.txt%20
+030, http://libraries.seltar.org/motion/motion.txt, file not found: status code 404 returned for url http://libraries.seltar.org/motion/motion.txt
+031, http://libraries.seltar.org/postToWeb/postToWeb.txt, file not found: status code 404 returned for url http://libraries.seltar.org/postToWeb/postToWeb.txt
+033, http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.txt, file not found: status code 404 returned for url https://studioijeoma.com/processing/ijeomamotion/download/ijeomamotion.txt
+039, https://github.com/codeanticode/tablet/releases/download/latestv2/Tablet.txt, in skipped conf
+042,  http://wyldco.com/romefeeder/download/romefeeder.txt , commented out with Deprecated; 
+042,  http://wyldco.com/romefeeder/download/romefeeder.txt , file not found: status code 410 returned for url http://wyldco.com/romefeeder/download/romefeeder.txt%20
+043, http://saitoobjloader.googlecode.com/files/OBJLoader.txt, file not found: status code 404 returned for url http://saitoobjloader.googlecode.com/files/OBJLoader.txt
+045,  https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.txt , commented out with Deprecated; 
+045,  https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.txt , file not found: status code 404 returned for url https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.txt%20
+047, http://transmote.com/nest/download/Nest.txt, in broken conf
+048,  http://kenai.com/downloads/l-system-utilities/lsystem.txt , commented out with 404; 
+048,  http://kenai.com/downloads/l-system-utilities/lsystem.txt , url timeout
+049, http://thomasdiewald.com/processing/tools/TabManager/download/TabManager.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+050, http://www.lagers.org.uk/processing/shapes3d/Shapes3D.txt, in broken conf
+050, http://www.lagers.org.uk/processing/shapes3d/Shapes3D.txt, in skipped conf
+051, http://www.lagers.org.uk/processing/g4p/G4P.txt, in skipped conf
+052, http://www.lagers.org.uk/processing/guibuilder/G4PTool.txt, in skipped conf
+053,  http://mrzl.net/yahooweather/YahooWeather.txt , commented out with Deprecated; 
+053,  http://mrzl.net/yahooweather/YahooWeather.txt , file not found: status code 404 returned for url https://schwittlick.net/yahooweather/YahooWeather.txt%20
+059,  http://thomasdiewald.at/processing/libraries/dLibs_freenect/download/dLibs_freenect.txt , commented out with 404; 
+059,  http://thomasdiewald.at/processing/libraries/dLibs_freenect/download/dLibs_freenect.txt , url timeout
+060, https://dl.dropbox.com/u/87680069/gamepad.txt, file not found: status code 404 returned for url https://dl.dropbox.com/u/87680069/gamepad.txt
+061,  https://dl.dropbox.com/u/87680069/piccolo2d.txt , commented out with Deprecated; 
+061,  https://dl.dropbox.com/u/87680069/piccolo2d.txt , file not found: status code 404 returned for url https://dl.dropbox.com/u/87680069/piccolo2d.txt%20
+064,  http://www.muvium.com/frappuccino/frappuccino.txt , commented out with Deprecated; 
+064,  http://www.muvium.com/frappuccino/frappuccino.txt , url timeout
+065,  http://blog.stainpixels.com/public/share.txt , commented out with 404; 
+065,  http://blog.stainpixels.com/public/share.txt , url timeout
+067, http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.txt, file not found: status code 404 returned for url http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.txt
+068, http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.txt, in broken conf
+070, http://bezier.de/processing/modes/CoffeeScriptMode.txt, in broken conf
+074,  http://s373.net/code/cellularautomata/download/cellularautomata.txt , commented out with Deprecated; 
+074,  http://s373.net/code/cellularautomata/download/cellularautomata.txt , url timeout
+075,  http://s373.net/code/dna/download/dna.txt , commented out with Deprecated; 
+075,  http://s373.net/code/dna/download/dna.txt , url timeout
+076,  http://s373.net/code/boids/download/boids.txt , commented out with Deprecated; 
+076,  http://s373.net/code/boids/download/boids.txt , url timeout
+077,  http://s373.net/code/flob/download/flob.txt , commented out with Deprecated; 
+077,  http://s373.net/code/flob/download/flob.txt , url timeout
+078,  http://s373.net/code/marchingcubes/download/marchingcubes.txt , commented out with Deprecated; 
+078,  http://s373.net/code/marchingcubes/download/marchingcubes.txt , url timeout
+081,  http://ubaa.net/shared/processing/opencv/download/opencv.txt , commented out with Deprecated; 
+081,  http://ubaa.net/shared/processing/opencv/download/opencv.txt , file not found: status code 404 returned for url http://ubaa.net/shared/processing/opencv/download/opencv.txt%20
+083, http://rdlester.github.com/hermes/downloads/hermes.txt, file not found: status code 404 returned for url http://rdlester.github.com/hermes/downloads/hermes.txt
+085, http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.txt, file not found: status code 404 returned for url https://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.txt
+087, http://bezier.de/processing/modes/JavaScriptMode.txt, in broken conf
+089, https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.txt, in broken conf
+090, https://dl.dropbox.com/u/87680069/LeapMotion.txt, file not found: status code 404 returned for url https://dl.dropbox.com/u/87680069/LeapMotion.txt
+094, https://dl.dropbox.com/u/87680069/executor.txt, file not found: status code 404 returned for url https://dl.dropbox.com/u/87680069/executor.txt
+095, https://dl.dropbox.com/u/87680069/frames.txt, file not found: status code 404 returned for url https://dl.dropbox.com/u/87680069/frames.txt
+096, http://www.lagers.org.uk/processing/appletmaker/AppletMaker.txt, in broken conf
+098, http://vialab.science.uoit.ca/smt/dl/SMT.txt, file not found: status code 404 returned for url http://vialab.science.uoit.ca/smt/dl/SMT.txt
+099, http://poifox.com/templater/download/Templater.txt, url timeout
+100, http://poifox.com/bootstrap/download/Bootstrap.txt, url timeout
+102,  http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.txt , commented out with Deprecated; 
+107, https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.txt, file not found: status code 404 returned for url https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.txt
+108, https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.txt, file not found: status code 404 returned for url https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.txt
+110, https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.txt, in broken conf
+112, http://larskaltenbach.de/code/speedTool/download/SpeedTool.txt, in broken conf
+113, http://sixthsensor.dk/code/p5/point2line/download/point2line.txt, file not found: status code 404 returned for url https://sixthsensor.dk/code/p5/point2line/download/point2line.txt
+114, http://drifkin.net/processing/beziereditor/download/BezierEditorTool.txt, file not found: status code 404 returned for url https://drifkin.net/processing/beziereditor/download/BezierEditorTool.txt
+116,  https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.txt , commented out with Deprecated; 
+116,  https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.txt , in broken conf
+117,  http://ccl.angusforbes.com/stereo.txt , commented out with 404; 
+117,  http://ccl.angusforbes.com/stereo.txt , url timeout
+118,  http://www.abstract-codex.net/tactu5/download/tactu5.txt , commented out with EZ: Missing properties file; 
+118,  http://www.abstract-codex.net/tactu5/download/tactu5.txt , file not found: status code 404 returned for url http://www.abstract-codex.net/tactu5/download/tactu5.txt%20
+122,  http://galsasson.com/tweakmode/tweakmode.txt , commented out with Deprecated; 
+122,  http://galsasson.com/tweakmode/tweakmode.txt , file not found: status code 404 returned for url http://galsasson.com/tweakmode/tweakmode.txt%20
+123, http://igeo.jp/igeo.txt, in broken conf
+124,  http://download.processing.org/pdeX.txt , commented out with Deprecated; 
+124,  http://download.processing.org/pdeX.txt , file not found: status code 404 returned for url https://download.processing.org/pdeX.txt%20
+125,  http://shiffman.net/p5/libraries/rekognition_processing/rekognition_processing.txt , commented out with Deprecated; 
+125,  http://shiffman.net/p5/libraries/rekognition_processing/rekognition_processing.txt , invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+128,  http://dasmithii.com/GNet.txt , commented out with 404; 
+128,  http://dasmithii.com/GNet.txt , url timeout
+129, https://github.com/onar3d/processing-mother/releases/download/latest/Mother.txt, in broken conf
+134, http://decoder.x10host.com/blobscanner/blobscanner.txt, url timeout
+141, http://s3.staticvoidgames.com/JarMatey/JarMateyProcessingTool.txt, in broken conf
+142,  http://py.processing.org/PythonMode.txt , commented out with Deprecated; 
+142,  http://py.processing.org/PythonMode.txt , file not found: status code 404 returned for url https://py.processing.org/PythonMode.txt%20
+143, http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.txt, in skipped conf
+144, http://unfoldingmaps.org/Unfolding.txt, in broken conf
+145, http://www.heroicrobotics.com/software/PixelPusher.txt, file not found: status code 404 returned for url http://www.heroicrobotics.com/software/PixelPusher.txt
+148,  https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt , commented out with Deprecated; 
+149, http://www.magicandlove.com/software/Kinect4WinSDK.txt, file not found: status code 403 returned for url http://www.magicandlove.com/software/Kinect4WinSDK.txt
+152, https://imaginary-institute.com/resources/AULibrary/AULib.txt, file not found: status code 406 returned for url https://imaginary-institute.com/resources/AULibrary/AULib.txt
+154, http://shiffman.net/p5/examples/natureofcode.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+163, http://shiffman.net/p5/examples/learningprocessing2.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+165, https://processing.org/handbook/handbook_2e.txt, file not found: status code 404 returned for url https://processing.org/handbook/handbook_2e.txt
+166, https://processing.org/books/gswp_2e.txt, file not found: status code 404 returned for url https://processing.org/books/gswp_2e.txt
+169, https://py.processing.org/3/PythonMode.txt, commented out; 
+169, https://py.processing.org/3/PythonMode.txt, file not found: status code 404 returned for url https://py.processing.org/3/PythonMode.txt
+176, http://www.stefanobaldan.com/projects/ipcapture/download/IPCapture.txt, url timeout
+185, http://softlab.pt/ptmx/ptmx.txt, file not found: status code 403 returned for url http://softlab.pt/ptmx/ptmx.txt
+188, http://developers.gausstoys.com/processing/GaussSense.txt, url timeout
+193, http://shiffman.net/p5/libraries/processing3/mpe/mpe.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+197,  https://github.com/sgeigers/Phidgets-For-Processing/releases/download/latest/PhidgetsForProcessing.txt , commented out with Deprecated; 
+198, http://cagewebdev.com/zxing4p/zxing4p3.txt, file not found: status code 403 returned for url http://cagewebdev.com/zxing4p/zxing4p3.txt
+200, http://shiffman.net/p5/libraries/processing3/toxiclibs/toxiclibs.txt, invalid file: ['name is empty', 'authors is empty', 'version is empty', 'url is empty', 'sentence is empty']
+206, https://ap-sync.github.io/libs/AP_sync_processing/APsync.txt, invalid file: ['version, 1.0.0, is not an integer']
+210, http://cagewebdev.com/colorharmony/colorharmony.txt, file not found: status code 403 returned for url http://cagewebdev.com/colorharmony/colorharmony.txt
+223, https://github.com/nyatla/NyARToolkit-for-Processing/releases/download/latest/nyar4psg.txt, file not found: status code 404 returned for url https://github.com/nyatla/NyARToolkit-for-Processing/releases/download/latest/nyar4psg.txt
+228, https://perceptualcolor.org/distribution/PerceptualColorPicker/download/PerceptualColorPicker.txt, file not found: status code 522 returned for url https://perceptualcolor.org/distribution/PerceptualColorPicker/download/PerceptualColorPicker.txt
+231, http://objectstothinkwith.com/tracer/tracer.txt, file not found: status code 404 returned for url http://www.objectstothinkwith.com/tracer/tracer.txt
+235, https://openpatch.github.io/scratch-for-java/scratch.txt, file not found: status code 404 returned for url https://openpatch.github.io/scratch-for-java/scratch.txt
+236, http://softlab.pt/VLCJVideo/VLCJVideo.txt, file not found: status code 403 returned for url http://softlab.pt/VLCJVideo/VLCJVideo.txt
+239, http://skweezee.net/processing/download/SkweezeeForProcessing.txt, url timeout
+252, http://www.bdhont.net/lunar.txt, file not found: status code 404 returned for url https://www.bdhont.net/lunar.txt
+255, https://bdhont.net/LiveBrush.txt, file not found: status code 404 returned for url https://bdhont.net/LiveBrush.txt
+257, https://rect.dev/processing/infinidecimal/GRInfinidecimalCanvas.txt, file not found: status code 404 returned for url https://rect.dev/processing/infinidecimal/GRInfinidecimalCanvas.txt
+262,  https://github.com/SamuelAl/SQuelized-for-Processing/releases/latest/download/SQuelized.txt , commented out with EZ: Includes core.jar; 
+269, https://augmenta-tech.com/libs/processing/Augmenta.txt, file not found: status code 406 returned for url https://augmenta-tech.com/libs/processing/Augmenta.txt
+274, https://py.processing.org/4/PythonMode.txt, commented out; 
+274, https://py.processing.org/4/PythonMode.txt, file not found: status code 404 returned for url https://py.processing.org/4/PythonMode.txt

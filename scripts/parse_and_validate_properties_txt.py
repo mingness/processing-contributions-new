@@ -27,7 +27,7 @@ def read_properties_txt(properties_url):
 
 def parse_text(properties_raw):
     msg = ''
-    field_pattern = re.compile(r"^[a-zA-z]+\s*=.*")
+    field_pattern = re.compile(r"^([a-zA-z]+)\s*=(.*)")
 
     properties = {}
     field_name = ""
@@ -36,18 +36,13 @@ def parse_text(properties_raw):
     for line in properties_lines:
         if line.startswith('#') or not line.strip():
             continue
-        if field_pattern.match(line):
+        if line_match := field_pattern.match(line):
             # store previous key-value pair
             if field_name:
                 properties[field_name] = field_value
             # process current line
-            line_split = line.split('=')
-            if len(line_split) != 2:
-                msg += f'split not equal to 2 for line {line}'
-                field_value += " " + line.strip()
-                continue
-            field_name, field_value = line_split
-            field_name = field_name.strip()
+            field_name = line_match[1].strip()
+            field_value = line_match[2].strip()
             field_value = field_value.split('#')[0].strip()
         else:
             field_value += " " + line.strip()
@@ -59,8 +54,11 @@ def parse_text(properties_raw):
     if 'authorList' in properties:
         properties['authors'] = properties.pop('authorList')
 
-    if 'categories' not in properties or not str(properties['categories']).strip():
-        properties['categories'] = "Other"
+    if 'category' in properties:
+        properties['categories'] = properties.pop('category')
+
+    if 'categories' not in properties:
+        properties['categories'] = None
 
     if 'minRevision' not in properties or not str(properties['minRevision']).strip():
         properties['minRevision'] = '0'

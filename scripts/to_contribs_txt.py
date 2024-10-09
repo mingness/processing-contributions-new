@@ -49,23 +49,39 @@ if __name__ == "__main__":
   contribs_text_file = '../pde/contribs.txt'
   database_file = '../contributions.yaml'
 
+  # read in database yaml file
   yaml = YAML()
   with open(database_file, 'r') as db:
     data = yaml.load(db)
 
   contributions_list = data['contributions']
+
+  # filter contributions list, remove contribution status == BROKEN
+  contributions_list = [
+    contribution for contribution in contributions_list if contribution['status'] not in ["BROKEN", "DEPRECATED"]
+  ]
+
+  # apply override. if field additional_category, add value to categories
+  for contribution in contributions_list:
+    if 'override' in contribution.keys():
+      for key in contribution['override'].keys():
+        contribution[key] =  contribution['override'][key]
+
+  # sort contributions list by type
   def sort_key(d):
     return type_list.index(d['type'])
   contributions_list = sorted(contributions_list, key=sort_key)
 
+  # write contribs.txt file
   with open(contribs_text_file, 'w+') as f:
     for contribution in contributions_list:
       f.write(contribution['type']+'\n')
       for field in contribs_fields_list:
         if field in contribution:
-          f.write(f'{field}={contribution[field]}\n')
-        elif field == 'categories':
-          f.write(f'{field}=\n')
+          if field == 'categories':
+            f.write(f'{field}={",".join(contribution[field]) if contribution[field] else ""}\n')
+          else:
+            f.write(f'{field}={contribution[field] if contribution[field] else ""}\n')
       f.write('\n')
 
 

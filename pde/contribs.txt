@@ -1135,6 +1135,21 @@ type=library
 download=http://code.compartmental.net/minim/distro/minim_for_processing.zip
 
 library
+name=Kinect4WinSDK
+authors=[Bryan Chung](http://www.magicandlove.com)
+url=http://www.magicandlove.com/blog/research/kinect-for-processing-library/
+categories=Video & Vision
+sentence=A simple wrapper for the Microsoft Kinect for Windows SDK version 1.8.
+paragraph=It works in the Windows environment only.
+version=120
+prettyVersion=1.2.0
+minRevision=0
+maxRevision=0
+id=149
+type=library
+download=http://www.magicandlove.com/software/Kinect4WinSDK.zip
+
+library
 name=Video Library for Processing 3
 authors=The Processing Foundation
 url=http://processing.org/reference/libraries/video/index.html
@@ -1493,6 +1508,21 @@ maxRevision=0
 id=184
 type=library
 download=https://github.com/gohai/processing-glvideo/releases/download/latest/processing-glvideo.zip
+
+library
+name=Ptmx
+authors=[Caldas Lopes](http://softlab.pt)
+url=https://github.com/linux-man/ptmx
+categories=Other
+sentence=Add Tiled maps to your sketch.
+paragraph=
+version=3
+prettyVersion=0.3
+minRevision=246
+maxRevision=0
+id=185
+type=library
+download=http://softlab.pt/ptmx/ptmx.zip
 
 library
 name=Spout for Processing
@@ -1958,6 +1988,21 @@ maxRevision=0
 id=232
 type=library
 download=https://github.com/haschdl/pLaunchController/releases/download/latest/pLaunchControl.zip
+
+library
+name=VLCJVideo
+authors=[Caldas Lopes](http://softlab.pt)
+url=https://github.com/linux-man/VLCJVideo
+categories=Video & Vision
+sentence=VLCJ binding for Processing.
+paragraph=Requires VLC 3.x or later.
+version=7
+prettyVersion=0.4.1
+minRevision=228
+maxRevision=0
+id=236
+type=library
+download=http://softlab.pt/VLCJVideo/VLCJVideo.zip
 
 library
 name=handy
@@ -2922,6 +2967,21 @@ type=mode
 download=https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.zip
 
 mode
+name=Python Mode for Processing 3
+authors=[Jonathan Feinberg](http://MrFeinberg.com/)
+url=https://github.com/jdf/processing.py
+categories=
+sentence=Write Processing sketches in Python.
+paragraph=
+version=3063
+prettyVersion=3063
+minRevision=246
+maxRevision=270
+id=169
+type=mode
+download=https://contribs.processing.org/pythonmode/3/PythonMode.zip
+
+mode
 name=p5.js Mode
 authors=[Fathom Information Design](http://fathom.info/)
 url=https://github.com/fathominfo/processing-p5js-mode
@@ -2967,6 +3027,21 @@ imports=processing.mode.java.JavaMode
 id=250
 type=mode
 download=https://github.com/Izza11/shader-mode/releases/download/latest/ShaderMode.zip
+
+mode
+name=Python Mode for Processing 4
+authors=[Jonathan Feinberg](http://MrFeinberg.com/)
+url=https://github.com/jdf/processing.py
+categories=
+sentence=Write Processing 4 sketches in Python.
+paragraph=
+version=4001
+prettyVersion=4001
+minRevision=1279
+maxRevision=0
+id=274
+type=mode
+download=https://contribs.processing.org/pythonmode/4/PythonMode.zip
 
 mode
 name=Android Mode for Processing 4

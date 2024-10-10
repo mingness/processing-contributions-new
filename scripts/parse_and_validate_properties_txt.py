@@ -18,7 +18,11 @@ import os
        wait=wait_fixed(2),
        reraise=True)
 def read_properties_txt(properties_url):
-    r = requests.get(properties_url)
+    headers = {
+        'User-Agent': 'Mozilla/5.0',
+        'Accept': 'text/html',
+    }
+    r = requests.get(properties_url, headers=headers)
 
     if r.status_code != 200:
         raise FileNotFoundError(f"status code {r.status_code} returned for url {r.url}")

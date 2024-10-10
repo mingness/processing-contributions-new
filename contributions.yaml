@@ -2366,9 +2366,21 @@ contributions:
 - id: '149'
   source: http://www.magicandlove.com/software/Kinect4WinSDK.txt
   type: library
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 403 returned for url http://www.magicandlove.com/software/Kinect4WinSDK.txt
+  name: Kinect4WinSDK
+  url: http://www.magicandlove.com/blog/research/kinect-for-processing-library/
+  sentence: A simple wrapper for the Microsoft Kinect for Windows SDK version 1.8.
+  paragraph: It works in the Windows environment only.
+  version: '120'
+  prettyVersion: 1.2.0
+  authors: '[Bryan Chung](http://www.magicandlove.com)'
+  categories:
+  - Video & Vision
+  minRevision: '0'
+  maxRevision: '0'
+  download: http://www.magicandlove.com/software/Kinect4WinSDK.zip
 - name: Video Library for Processing 3
   url: http://processing.org/reference/libraries/video/index.html
   sentence: GStreamer-based video library for Processing.
@@ -2698,11 +2710,22 @@ contributions:
     categories:
     - I/O
 - id: '169'
-  source: https://py.processing.org/3/PythonMode.txt
+  source: https://contribs.processing.org/pythonmode/3/PythonMode.txt
   type: mode
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 404 returned for url https://py.processing.org/3/PythonMode.txt
+  name: Python Mode for Processing 3
+  url: https://github.com/jdf/processing.py
+  sentence: Write Processing sketches in Python.
+  paragraph: ''
+  version: '3063'
+  prettyVersion: '3063'
+  minRevision: '246'
+  maxRevision: '270'
+  authors: '[Jonathan Feinberg](http://MrFeinberg.com/)'
+  categories: []
+  download: https://contribs.processing.org/pythonmode/3/PythonMode.zip
 - name: Cassette
   authors: Shlomi Hod
   url: https://github.com/shlomihod/cassette
@@ -3013,9 +3036,21 @@ contributions:
 - id: '185'
   source: http://softlab.pt/ptmx/ptmx.txt
   type: library
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 403 returned for url http://softlab.pt/ptmx/ptmx.txt
+  name: Ptmx
+  authors: '[Caldas Lopes](http://softlab.pt)'
+  url: https://github.com/linux-man/ptmx
+  categories:
+  - Other
+  sentence: Add Tiled maps to your sketch.
+  paragraph: ''
+  version: '3'
+  prettyVersion: '0.3'
+  minRevision: '246'
+  maxRevision: '0'
+  download: http://softlab.pt/ptmx/ptmx.zip
 - name: Spout for Processing
   authors: '[Lynn Jarvis](https://spout.zeal.co) and [Martin Froehlich](http://maybites.ch)'
   url: https://github.com/leadedge/SpoutProcessing/wiki
@@ -3394,9 +3429,10 @@ contributions:
   - Arduino
   - Data
   - I/O
-  sentence: AP-Sync it the easy way to sync data to processing from your arduino or any microcontroller to processing and back.
+  sentence: AP-Sync it the easy way to sync data to processing from your arduino or
+    any microcontroller to processing and back.
   paragraph: Its simple api makes syncing data a breeze.
-  version: '1.0.0'
+  version: 1.0.0
   prettyVersion: peace
   minRevision: '100'
   maxRevision: '0'
@@ -3965,9 +4001,21 @@ contributions:
 - id: '236'
   source: http://softlab.pt/VLCJVideo/VLCJVideo.txt
   type: library
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 403 returned for url http://softlab.pt/VLCJVideo/VLCJVideo.txt
+  name: VLCJVideo
+  authors: '[Caldas Lopes](http://softlab.pt)'
+  url: https://github.com/linux-man/VLCJVideo
+  categories:
+  - Video & Vision
+  sentence: VLCJ binding for Processing.
+  paragraph: Requires VLC 3.x or later.
+  version: '7'
+  prettyVersion: 0.4.1
+  minRevision: '228'
+  maxRevision: '0'
+  download: http://softlab.pt/VLCJVideo/VLCJVideo.zip
 - name: handy
   authors: '[Jo Wood](http://gicentre.net/) and [Aidan Slingsby](http://gicentre.net/)'
   url: https://www.gicentre.net/software/
@@ -4690,11 +4738,22 @@ contributions:
     categories:
     - Other
 - id: '274'
-  source: https://py.processing.org/4/PythonMode.txt
+  source: https://contribs.processing.org/pythonmode/4/PythonMode.txt
   type: mode
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 404 returned for url https://py.processing.org/4/PythonMode.txt
+  name: Python Mode for Processing 4
+  url: https://github.com/jdf/processing.py
+  sentence: Write Processing 4 sketches in Python.
+  paragraph: ''
+  version: '4001'
+  prettyVersion: '4001'
+  minRevision: '1279'
+  maxRevision: '0'
+  authors: '[Jonathan Feinberg](http://MrFeinberg.com/)'
+  categories: []
+  download: https://contribs.processing.org/pythonmode/4/PythonMode.zip
 - name: Oklab for Processing
   authors: '[Yash Gupta](https://refuse.ink/)'
   url: https://github.com/yashbutno/Oklab-for-Processing

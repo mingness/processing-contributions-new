@@ -79,7 +79,13 @@ if __name__ == "__main__":
       for field in contribs_fields_list:
         if field in contribution:
           if field == 'categories':
-            f.write(f'{field}={",".join(contribution[field]) if contribution[field] else ""}\n')
+            if contribution['type'] == 'library':
+              f.write(f'{field}={",".join(contribution[field]) if contribution[field] else ""}\n')
+            else:
+              # categories are only relevant for libraries, except for examples with "Books" as category
+              if contribution[field] and 'Books' in contribution[field]:
+                f.write(f'{field}={",".join(contribution[field]) if contribution[field] else ""}\n')
+              f.write(f'{field}=\n')
           else:
             f.write(f'{field}={contribution[field] if contribution[field] else ""}\n')
       f.write('\n')

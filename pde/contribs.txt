@@ -2517,7 +2517,7 @@ examples
 name=WOVNS Examples
 authors=[David Mellis](http://web.media.mit.edu/~mellis/) for [WOVNS](http://wovns.com/)
 url=http://www.wovns.com/tutorials/designing-computational-textiles-with-processing/
-categories=Fabrication
+categories=
 sentence=Drawing computational textile patterns for the WOVNS platform.
 paragraph=
 version=1
@@ -2533,6 +2533,7 @@ name=Manuale di Programmazione Cinematografica
 authors=[Daniele Olmisani](https://github.com/mad4j)
 url=https://github.com/mad4j/book-mdpc
 categories=Books
+categories=
 sentence=All code snippets from "Manuale di Programmazione Cinematografica" book.
 paragraph=
 version=1177
@@ -2547,7 +2548,7 @@ examples
 name=Processing for Android, 1st Edition
 authors=[Andres Colubri](http://andrescolubri.net/)
 url=http://p5android-book.andrescolubri.net/
-categories=Android
+categories=
 sentence=Code examples of the book "Processing for Android: Create Mobile, Sensor-Aware, and VR Applications Using Processing" (Apress, 2017).
 paragraph=
 version=1
@@ -2562,7 +2563,7 @@ examples
 name=Coding Creative
 authors=[Giles Dring](https://dringtech.com/)
 url=http://coding-creative.dringtech.com/
-categories=Tutorial
+categories=
 sentence=Example sketches for each lesson in the Coding Creative workshop.
 version=2
 prettyVersion=1.0.1
@@ -2576,7 +2577,7 @@ examples
 name=Rosetta Examples for P5
 authors=[Jeremy Douglass](http://jeremydouglass.com)
 url=https://github.com/jeremydouglass/rosetta_examples_p5
-categories=Other
+categories=
 sentence=Common coding tasks in Processing (Java, Python, and R modes) from the Rosetta Code chrestomathy website.
 paragraph=Rosetta Code is a programming chrestomathy site. The idea is to present solutions to the same task in as many different languages as possible, to demonstrate how languages are similar and different, and to aid a person with a grounding in one approach to a problem in learning another. This example set compiles the available RosettaCode.org tasks for Processing (Java, Python, and R modes).
 version=14
@@ -2592,6 +2593,7 @@ name=Coding Art Book
 authors=[Mathias Funk](https://mathias-funk.com) and [Yu Zhang](https://yuzhang.nl)
 url=https://codingart-book.com
 categories=Books
+categories=
 sentence=All examples from the "Coding Art" book, second edition, published by Apress.
 paragraph=The examples library contains all source code examples from the "Coding Art" book, second edition, published by Apress. All Processing examples are directly usable and identical to the source code provided in the book. The p5.js examples need to be hosted to work, see book for instructions.
 version=200
@@ -2606,7 +2608,7 @@ examples
 name=Basins of Attraction (Newton's Fractals)
 authors=[Saptarshi Dey](http://github.com/DarkMortal)
 url=https://github.com/DarkMortal/Newton_Fractal
-categories=Math
+categories=
 sentence=A set of sketches demonstrating the recursive nature of Newton's Fractals.
 version=2
 prettyVersion=1.1.2
@@ -2621,6 +2623,7 @@ name=Processing for Android, 2nd Edition
 authors=[Andres Colubri](https://andrescolubri.net/)
 url=https://andrescolubri.net/processing-for-android-book/
 categories=Books
+categories=
 sentence=Code examples of the book "Processing for Android: Create Mobile, Sensor-Aware, and XR Applications Using Processing" (Apress, 2023).
 paragraph=
 version=2
@@ -2635,7 +2638,7 @@ tool
 name=G4P GUI Builder
 authors=[Peter Lager](http://www.lagers.org.uk)
 url=http://www.lagers.org.uk/g4ptool/index.html
-categories=GUI
+categories=
 sentence=Graphic design tool for creating user interfaces with G4P.
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
 version=25
@@ -2650,7 +2653,7 @@ tool
 name=Applet Maker & Signer
 authors=[Peter Lager](http://www.lagers.org.uk)
 url=http://www.lagers.org.uk/appletutil/
-categories=Utilities
+categories=
 sentence=Enables the creation of self-signed Java Applets
 paragraph=Simple wizard style interface to export and sign (optional) applets from Processing 2.0
 version=4
@@ -2665,7 +2668,7 @@ tool
 name=SpeedTool
 authors=[Lars Kaltenbach](http://larskaltenbach.de)
 url=http://larskaltenbach.de/code/speedTool
-categories=Utilities
+categories=
 sentence=Adding features for faster code editing to the PDE.
 paragraph=Brackets and Quotes get closed automatically.
 version=2
@@ -2680,7 +2683,7 @@ tool
 name=JarMatey
 authors=[Kevin Workman](http://StaticVoidGames.com)
 url=http://StaticVoidGames.com/JarMatey/
-categories=Utilities
+categories=
 sentence=A utility that creates a self-extracting jar that runs on any platform.
 paragraph=This is a workaround for Processing only exporting applications.
 version=2
@@ -2695,7 +2698,7 @@ tool
 name=Git Manager
 authors=[Joel Moniz](http://joelmoniz.com)
 url=http://joelmoniz.com/git-manager
-categories=${tool.category}
+categories=
 sentence=A GUI Git Client for Processing
 paragraph=A tool to act as a complete and convenient interface for users of various online git repository hosting services, and to integrate the awesomeness of version control with Processing.
 version=3
@@ -2710,7 +2713,7 @@ tool
 name=Shape-Sketch
 authors=[Joel Moniz](http://joelmoniz.com)
 url=https://github.com/joelmoniz/Shape-Sketch
-categories=GUI,Geometry
+categories=
 sentence=Paint on a canvas; generate processing code. Easy peasy!
 paragraph=This tool enables quickly drawing and coloring in shapes, and then automatically converts everything into processing code.
 version=1
@@ -2725,7 +2728,7 @@ tool
 name=Font Highlighting Editor
 authors=[Rostyslav Zatserkovnyi](https://github.com/rzats)
 url=https://github.com/rzats/font-highlighting-editor
-categories= Utilities,GUI
+categories=
 sentence=A visual editor for Processing's font coloring settings.
 paragraph=
 version=3
@@ -2740,7 +2743,7 @@ tool
 name=Upload to Pi
 authors=[Gottfried Haider](http://gottfriedhaider.com/)
 url=https://github.com/gohai/processing-uploadtopi
-categories=Other
+categories=
 sentence=Uploads and runs a sketch on a Raspberry Pi.
 paragraph=This currently attempts to connect to a Raspberry Pi in the local network (hostname raspberrypi.local) with the default credentials. In development.
 version=7
@@ -2755,7 +2758,7 @@ tool
 name=Extended Code Completion
 authors=[Jonathan Dahlberg](http://jonathan.dahlberg.media/)
 url=http://jonathan.dahlberg.media/ecc/
-categories=Utilities
+categories=
 sentence=Extended code completion for statements like if, while and for etc.
 paragraph=The principle of Extended Code Completion is based on the principle that you write something and then presses ctrl+space to expand it, e.g. write if and press ctrl+space and it will expand to if(){ }
 version=2
@@ -2770,7 +2773,7 @@ tool
 name=Getting Started
 authors=[Jae Hyun](http://www.github.com/jaewhyun)
 url=http://www.github.com/jaewhyun/GettingStarted
-categories=Other
+categories=
 sentence=A Tool that provides a quick introduction to the PDE for new/beginner users.
 paragraph=
 version=1
@@ -2785,7 +2788,7 @@ tool
 name=Reference Tool
 authors=[Jae Hyun](https://www.github.com/jaewhyun)
 url=https://www.github.com/ReferenceTool
-categories=Other
+categories=
 sentence=A Tool that provides a built in reference for the Processing Development Environment.
 paragraph=
 version=1
@@ -2800,7 +2803,7 @@ tool
 name=Art Station
 authors=[Justin Wilder](https://github.com/jwilder4690)
 url=https://jwilder4690.github.io/tools/ArtStation/index.html
-categories= Utilities,Geometry
+categories=
 sentence=A drawing tool to aid developers
 paragraph=This application was created as a developer tool to aid in the creation of Processing sketches. Various shapes can be drawn and edited on screen. The export option can be used output the processing code to your clipboard or to create an image or SVG file.
 version=1
@@ -2815,7 +2818,7 @@ tool
 name=Processing2JS
 authors=[Jonathan Dahlberg](http://jonathan.dahlberg.media)
 url=http://jonathan.dahlberg.media/processing2js
-categories=Utilities
+categories=
 sentence=A porting tool, thats helps you to port an applicating from Processing/Java to p5.js/Javascript
 paragraph=
 version=1
@@ -2830,7 +2833,7 @@ tool
 name=JavaDoc
 authors=[Henning Kiel](https://github.com/hkiel)
 url=https://github.com/hkiel/JavaDoc
-categories=Utilities
+categories=
 sentence=Generate JavaDoc for sketch.
 paragraph=
 version=7
@@ -2845,7 +2848,7 @@ tool
 name=Discord Rich Presence
 authors=[Torben Haase](https://letorbi.com)
 url=https://github.com/letorbi/discord-rich-presence-for-processing
-categories=Utilities
+categories=
 sentence=Shows that you are using Processing in your Discord status.
 paragraph=Show the world that you are using Processing! The Discord Rich Presence tool checks regularly what you are working on and updates your Discord rich presence status accordingly. Currently it shows that you are "playing" Processing and what mode (Java, p5.js etc.) you are using.
 version=010100
@@ -2922,7 +2925,7 @@ mode
 name=p5.js Mode
 authors=[Fathom Information Design](http://fathom.info/)
 url=https://github.com/fathominfo/processing-p5js-mode
-categories=Unknown
+categories=
 sentence=Adds a simple editor for p5.js code
 paragraph=p5jsMode is a simple editor for p5.js
 version=16

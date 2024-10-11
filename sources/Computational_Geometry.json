@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "http://www.thecloudlab.org/processing/download/ComputationalGeometry.txt",
       "download": "http://www.thecloudlab.org/processing/download/ComputationalGeometry.zip"
     }

@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
+      "minRevision": 0,
       "maxRevision": "228",
       "props": "http://transmote.com/nest/download/Nest.txt",
       "download": "http://transmote.com/nest/download/Nest.zip"

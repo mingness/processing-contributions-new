@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "218",
+      "minRevision": 218,
       "maxRevision": "228",
       "props": " https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.txt ",
       "download": " https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.zip"

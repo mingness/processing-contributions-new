@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "243",
-      "maxRevision": "0",
+      "minRevision": 243,
+      "maxRevision": 0,
       "props": "http://www.deadpixel.ca/keystone/download/keystone.txt",
       "download": "http://www.deadpixel.ca/keystone/download/keystone.zip"
     }

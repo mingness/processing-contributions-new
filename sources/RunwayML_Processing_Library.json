@@ -15,8 +15,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://github.com/runwayml/processing-library/releases/download/latest/RunwayML.txt",
       "download": "https://github.com/runwayml/processing-library/releases/download/latest/RunwayML.zip"
     }

@@ -8,13 +8,14 @@
     "Geometry"
   ],
   "sentence": "An implementation of Non-uniform Rational B-Splines for Processing",
+  "paragraph": null,
   "id": "277",
   "type": "library",
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://arnoudvanderleer.github.io/processing-nurbs/download/Nurbs.txt",
       "download": "https://arnoudvanderleer.github.io/processing-nurbs/download/Nurbs.zip"
     }

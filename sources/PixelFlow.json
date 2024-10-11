@@ -16,8 +16,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://github.com/diwi/PixelFlow/releases/download/latest/PixelFlow.txt",
       "download": "https://github.com/diwi/PixelFlow/releases/download/latest/PixelFlow.zip"
     }

@@ -15,8 +15,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.txt",
       "download": "https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip"
     }

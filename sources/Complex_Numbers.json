@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://github.com/vmathmachine/Complex-Numbers/releases/download/latest/ComplexNumbers.txt",
       "download": "https://github.com/vmathmachine/Complex-Numbers/releases/download/latest/ComplexNumbers.zip"
     }

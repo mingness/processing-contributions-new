@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "197",
-      "maxRevision": "0",
+      "minRevision": 197,
+      "maxRevision": 0,
       "props": "https://raw.githubusercontent.com/nok/redis-processing/master/download/Redis.txt",
       "download": "https://raw.githubusercontent.com/nok/redis-processing/master/download/Redis.zip"
     }

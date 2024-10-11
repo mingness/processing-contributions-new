@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "249",
-      "maxRevision": "0",
+      "minRevision": 249,
+      "maxRevision": 0,
       "props": "https://github.com/gohai/processing-glvideo/releases/download/latest/processing-glvideo.txt",
       "download": "https://github.com/gohai/processing-glvideo/releases/download/latest/processing-glvideo.zip"
     }

@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://github.com/keshrath/Console/releases/download/latest/Console.txt",
       "download": "https://github.com/keshrath/Console/releases/download/latest/Console.zip"
     }

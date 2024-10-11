@@ -5,7 +5,6 @@
   ],
   "url": "http://ap-sync.github.io",
   "categories": [
-    "Arduino",
     "Data",
     "I/O"
   ],
@@ -16,8 +15,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "100",
-      "maxRevision": "0",
+      "minRevision": 100,
+      "maxRevision": 0,
       "props": "https://ap-sync.github.io/libs/AP_sync_processing/APsync.txt",
       "download": "https://ap-sync.github.io/libs/AP_sync_processing/APsync.zip"
     }

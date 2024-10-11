@@ -8,13 +8,14 @@
     "Math"
   ],
   "sentence": "Useful for critical matrix operations",
+  "paragraph": null,
   "id": "251",
   "type": "library",
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://github.com/pallav12/matrixMath-for-processing/releases/download/latest/MatrixMath.txt",
       "download": "https://github.com/pallav12/matrixMath-for-processing/releases/download/latest/MatrixMath.zip"
     }

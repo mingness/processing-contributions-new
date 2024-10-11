@@ -93,6 +93,8 @@ if __name__ == "__main__":
   # create a json file in the sources folder for each contribution
   for contribution in contributions_list:
     if 'name' in contribution:
+      # output zero padded string for id
+      contribution['id'] = f"{contribution['id']:03}"
       filename = contribution['name'].replace(':','').replace('/','').replace(' ','_') + '.json'
       this_filepath = sources_folder / filename
       with open(this_filepath, 'w') as f:

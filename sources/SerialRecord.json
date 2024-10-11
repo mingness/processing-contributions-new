@@ -15,8 +15,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0264",
-      "maxRevision": "0",
+      "minRevision": 264,
+      "maxRevision": 0,
       "props": "http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.txt",
       "download": "http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.zip"
     }

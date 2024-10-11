@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
+      "minRevision": 0,
       "maxRevision": "228",
       "props": "http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.txt",
       "download": "http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.zip"

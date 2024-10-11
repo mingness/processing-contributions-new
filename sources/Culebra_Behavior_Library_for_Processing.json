@@ -16,8 +16,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "250",
-      "maxRevision": "0",
+      "minRevision": 250,
+      "maxRevision": 0,
       "props": "http://culebra.technology/culebra.txt",
       "download": "http://culebra.technology/culebra.zip"
     }

@@ -16,8 +16,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://teddavis.org/xyscope/download/XYscope.txt",
       "download": "https://teddavis.org/xyscope/download/XYscope.zip"
     }

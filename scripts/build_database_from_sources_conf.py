@@ -10,13 +10,10 @@ the script build_contribs.py was used as a reference.
 """
 from operator import itemgetter
 import re
-from pathlib import Path
-
 from ruamel.yaml import YAML
-from tenacity import RetryError
 
-from parse_and_validate_properties_txt import read_properties_txt, parse_text
-from scripts.parse_and_validate_properties_txt import validate_text
+from parse_and_validate_properties_txt import read_properties_txt, parse_and_validate_text
+
 
 def read_sources_file(sources_file):
   sources_dict = {}
@@ -108,7 +105,7 @@ if __name__ == "__main__":
         log.write(f'{index_str}, {props_url}, file not found: {e}\n')
         contribs_list.append(
           {
-            'id': index_str,
+            'id': int(index_str),
             'source': props_url,
             'type': type_,
             'status': 'BROKEN',
@@ -121,7 +118,7 @@ if __name__ == "__main__":
         log.write(f'{index_str}, {props_url}, url timeout\n')
         contribs_list.append(
           {
-            'id': index_str,
+            'id': int(index_str),
             'source': props_url,
             'type': type_,
             'status': 'BROKEN',
@@ -130,19 +127,14 @@ if __name__ == "__main__":
         )
         continue
 
-      props, msg = parse_text(properties_raw)
-      if msg:
-        log_msg.append(f'parse found unexpected line, {msg}')
-        log.write(f'{index_str}, {props_url}, parse found unexpected line: {msg}\n')
-
-      msgs = validate_text(props)
-
-      if msgs:
-        log_msg.append(f'invalid file, {msgs}')
-        log.write(f'{index_str}, {props_url}, invalid file: {msgs}\n')
+      try:
+        props = parse_and_validate_text(properties_raw)
+      except Exception as e:
+        log_msg.append(f'invalid file')
+        log.write(f'{index_str}, {props_url}, invalid file\n')
         contribs_list.append(
           {
-            'id': index_str,
+            'id': int(index_str),
             'source': props_url,
             'type': type_,
             'status': 'BROKEN',
@@ -152,13 +144,14 @@ if __name__ == "__main__":
         continue
 
       props['source'] = props_url
-      props['id'] = index_str
+      props['id'] = int(index_str)
       props['status'] = 'VALID'
       props['type'] = type_
 
       # process category list
       if props['categories']:
-        props['categories'] = sorted(props['categories'].strip('"').split(','))
+        props['categories'] = sorted(props['categories'].replace('"','').split(','))
+        props['categories'] = [category.strip() for category in props['categories']]
       else:
         props['categories'] = None
 

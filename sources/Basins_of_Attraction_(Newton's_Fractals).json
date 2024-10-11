@@ -8,13 +8,14 @@
     "Math"
   ],
   "sentence": "A set of sketches demonstrating the recursive nature of Newton's Fractals.",
+  "paragraph": null,
   "id": "289",
   "type": "examples",
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://raw.githubusercontent.com/DarkMortal/Newton_Fractal/main/Newton_Fractals.txt",
       "download": "https://raw.githubusercontent.com/DarkMortal/Newton_Fractal/main/Newton_Fractals.zip"
     }

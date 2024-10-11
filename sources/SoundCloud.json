@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "215",
+      "minRevision": 215,
       "maxRevision": "228",
       "props": "https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.txt",
       "download": "https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.zip"

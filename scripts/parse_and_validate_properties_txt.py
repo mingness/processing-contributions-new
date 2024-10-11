@@ -12,7 +12,26 @@ import requests
 from tenacity import retry, stop_after_attempt, wait_fixed
 import re
 import os
+from typing import Optional, Union
+from pydantic import BaseModel, Field, ConfigDict
 
+
+class Properties(BaseModel):
+    name: str
+    authors: str = Field(alias='authorList')
+    url: str
+    categories: Optional[str] = Field(None, alias='category')
+    sentence: str
+    paragraph: Optional[str] = None
+    version: Union[int, str]
+    prettyVersion: str
+    minRevision: int = Field(0)
+    maxRevision: int = Field(0)
+
+    model_config = ConfigDict(
+        extra='allow',
+        populate_by_name=True,
+    )
 
 @retry(stop=stop_after_attempt(3),
        wait=wait_fixed(2),
@@ -29,11 +48,10 @@ def read_properties_txt(properties_url):
 
     return r.text
 
-def parse_text(properties_raw):
-    msg = ''
+def parse_and_validate_text(properties_raw):
     field_pattern = re.compile(r"^([a-zA-z]+)\s*=(.*)")
 
-    properties = {}
+    properties_dict = {}
     field_name = ""
     field_value = ""
     properties_lines = properties_raw.split('\n')
@@ -43,76 +61,20 @@ def parse_text(properties_raw):
         if line_match := field_pattern.match(line):
             # store previous key-value pair
             if field_name:
-                properties[field_name] = field_value
+                properties_dict[field_name] = field_value
             # process current line
             field_name = line_match[1].strip()
             field_value = line_match[2].strip()
             field_value = field_value.split('#')[0].strip()
         else:
             field_value += " " + line.strip()
-
+    # store last key-pair
     if field_name:
-        properties[field_name] = field_value
+        properties_dict[field_name] = field_value
 
-    # manual fixes
-    if 'authorList' in properties:
-        properties['authors'] = properties.pop('authorList')
+    properties = Properties.model_validate(properties_dict)
 
-    if 'category' in properties:
-        properties['categories'] = properties.pop('category')
-
-    if 'categories' not in properties:
-        properties['categories'] = None
-
-    if 'minRevision' not in properties or not str(properties['minRevision']).strip():
-        properties['minRevision'] = '0'
-
-    if 'maxRevision' not in properties or not str(properties['maxRevision']).strip():
-        properties['maxRevision'] = '0'
-
-    return properties, msg
-
-def validate_text(properties: dict):
-    msgs = []
-    if 'name' not in properties or not str(properties['name']).strip():
-        msgs.append('name is empty')
-
-    if 'authors' not in properties or not str(properties['authors']).strip():
-        msgs.append('authors is empty')
-
-    if 'version' not in properties or not str(properties['version']):
-        msgs.append('version is empty')
-
-    if 'url' not in properties or not str(properties['url']).strip():
-        msgs.append('url is empty')
-    elif not (str(properties['url']).strip().startswith('https://') or
-        str(properties['url']).strip().startswith('http://')):
-        msgs.append(f'url, {properties["url"]}, is not a valid url')
-
-    if 'sentence' not in properties or not str(properties['sentence']).strip():
-        msgs.append('sentence is empty')
-
-    if 'minRevision' not in properties or not str(properties['minRevision']):
-        msgs.append('minRevision is empty')
-    elif not str(properties['minRevision']).isdigit():
-        msgs.append(f'minRevision, {properties["minRevision"]}, is not an integer')
-
-    if 'maxRevision' not in properties or not str(properties['maxRevision']):
-        msgs.append('maxRevision is empty')
-    elif not str(properties['maxRevision']).isdigit():
-        msgs.append(f'maxRevision, {properties["maxRevision"]}, is not an integer')
-
-    return msgs
-
-
-def parse_and_validate_text(properties_raw):
-    properties, _ = parse_text(properties_raw)
-    msgs = validate_text(properties)
-
-    if msgs:
-        raise ValueError(";".join(msgs))
-
-    return properties
+    return properties.model_dump()
 
 
 def set_output(output_object):

@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
+      "minRevision": 0,
       "maxRevision": "228",
       "props": "http://igeo.jp/igeo.txt",
       "download": "http://igeo.jp/igeo.zip"

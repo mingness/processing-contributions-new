@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "0",
-      "maxRevision": "0",
+      "minRevision": 0,
+      "maxRevision": 0,
       "props": "https://howieliang.github.io/Weka4P/download/Weka4P.txt",
       "download": "https://howieliang.github.io/Weka4P/download/Weka4P.zip"
     }

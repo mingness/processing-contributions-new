@@ -16,8 +16,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": "1292",
-      "maxRevision": "0",
+      "minRevision": 1292,
+      "maxRevision": 0,
       "props": "https://github.com/VisualComputing/nub/releases/download/latest/nub.txt",
       "download": "https://github.com/VisualComputing/nub/releases/download/latest/nub.zip"
     }

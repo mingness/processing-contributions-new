@@ -46,7 +46,8 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            There was an error in reading in your file and parsing it.            
+            There was an error in reading in your file and parsing it.
+            
             ${{ steps.parseProps.outputs.error }}
   create-pr:
     needs: validate

@@ -117,10 +117,11 @@ def parse_and_validate_text(properties_raw):
 
 def set_output(output_object):
     with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-        if isinstance(output_object, str):
-            f.write(f'props={output_object}')
-        else:
-            f.write(f'props={json.dumps(output_object)}')
+        f.write(f'props={json.dumps(output_object)}')
+
+def set_output_error(msg):
+    with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+        f.write(f'error={msg}')
 
 
 if __name__ == "__main__":
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     url = args.url
     if not url.startswith("http"):
         print(f"Url not valid: {url}.\nStopping...")
-        set_output(f"Url is not valid. It should start with http(s).")
+        set_output_error(f"Url is not valid. It should start with http(s).")
         raise AssertionError
 
     print(f"url: {url}")  # just for debugging, should do this via logging levels
@@ -142,7 +143,7 @@ if __name__ == "__main__":
     try:
         properties_raw = read_properties_txt(url)
     except FileNotFoundError as e:
-        set_output(f'Error: {e}')
+        set_output_error(f'Error: {e}')
         raise e
 
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels
@@ -150,7 +151,7 @@ if __name__ == "__main__":
     try:
         props = parse_and_validate_text(properties_raw)
     except Exception as e:
-        set_output(f'Error(s) when parsing file: {e}')
+        set_output_error(f'Error(s) when parsing file: {e}')
         raise e
 
     props["props"] = url

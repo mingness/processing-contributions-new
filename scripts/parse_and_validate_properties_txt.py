@@ -142,8 +142,8 @@ if __name__ == "__main__":
 
     try:
         properties_raw = read_properties_txt(url)
-    except FileNotFoundError as e:
-        set_output_error(f'Error: {e}')
+    except Exception as e:
+        set_output_error(f'Error when accessing url: {e}')
         raise e
 
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels

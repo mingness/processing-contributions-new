@@ -26,6 +26,7 @@ body:
     attributes:
       label: properties_url
       description: URL of your properties text file, in your published release artifacts.
+      placeholder: https://
     validations:
       required: true
   - type: input

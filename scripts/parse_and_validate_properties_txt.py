@@ -131,14 +131,25 @@ if __name__ == "__main__":
     url = args.url
     if not url.startswith("http"):
         print(f"Url not valid: {url}.\nStopping...")
+        set_output(f"Url is not valid. It should start with http(s).")
         raise AssertionError
 
     print(f"url: {url}")  # just for debugging, should do this via logging levels
 
-    properties_raw = read_properties_txt(url)
+    try:
+        properties_raw = read_properties_txt(url)
+    except FileNotFoundError as e:
+        set_output(f'Error: {e}')
+        raise e
+
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels
 
-    props = parse_and_validate_text(properties_raw)
+    try:
+        props = parse_and_validate_text(properties_raw)
+    except Exception as e:
+        set_output(f'Error(s) when parsing file: {e}')
+        raise e
+
     props["props"] = url
     props["type"] = type_
     print(f"properties dict: {props}")  # just for debugging, should do this via logging levels

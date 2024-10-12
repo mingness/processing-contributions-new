@@ -117,7 +117,10 @@ def parse_and_validate_text(properties_raw):
 
 def set_output(output_object):
     with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-        f.write(f'props={json.dumps(output_object)}')
+        if isinstance(output_object, str):
+            f.write(f'props={output_object}')
+        else:
+            f.write(f'props={json.dumps(output_object)}')
 
 
 if __name__ == "__main__":

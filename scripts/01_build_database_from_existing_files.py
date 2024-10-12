@@ -58,7 +58,7 @@ def read_sources_folder(folderpath):
 if __name__ == "__main__":
   sources_dir = '../sources_original'
   contribs_text_file = '../pde_original/contribs.txt'
-  database_file = '../contributions.yaml'
+  database_file = '../contributions_01.yaml'
 
   # read in from source files
   sources_dict = read_sources_folder(sources_dir)

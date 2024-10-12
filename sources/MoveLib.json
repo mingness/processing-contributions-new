@@ -1,0 +1,23 @@
+{
+  "name": "MoveLib",
+  "authors": [
+    "[Raphael de Courville](https://vimeo.com/sableraf/)"
+  ],
+  "url": "https://github.com/SableRaf/movelib",
+  "categories": [
+    "Hardware"
+  ],
+  "sentence": "Add support for the PS Move Motion Controller in Processing. MoveLib is based on Thomas Perl's PSMove API.",
+  "paragraph": "The lib was tested on OSX and should also run on Linux. On Windows, bluetooth pairing is still an issue so the OS is considered unsupported until a workaround is found.",
+  "id": "102",
+  "type": "library",
+  "packages": [
+    {
+      "mode": "java",
+      "minRevision": 0,
+      "maxRevision": 0,
+      "props": " http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.txt ",
+      "download": " http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.zip"
+    }
+  ]
+}

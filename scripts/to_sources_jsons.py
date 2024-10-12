@@ -2,13 +2,10 @@
 Creates the json files in the sources folder from the contributions.yaml file.
 """
 
-import re
 import json
 import pathlib
 from ruamel.yaml import YAML
 import shutil
-from string import punctuation
-from collections import defaultdict
 
 
 json_fields_library = [
@@ -31,6 +28,7 @@ json_package_fields_list = ['mode', 'minRevision', 'maxRevision', 'props', 'down
 
 
 def to_sources_dict(contribution_dict):
+  contribution_dict['props'] = contribution_dict.pop('source')
   if contribution_dict['type'] == 'library':
     sources_dict = {
       field: contribution_dict[field]
@@ -54,9 +52,6 @@ def to_sources_dict(contribution_dict):
 
   # put authors and categories in list
   sources_dict['authors'] = [sources_dict['authors']] if sources_dict['authors'] else sources_dict['authors']
-  sources_dict['categories'] = [
-    category for category in sources_dict['categories'].split(',')
-  ] if sources_dict['categories'] else None
 
   sources_dict['packages'] = [
     {
@@ -72,18 +67,35 @@ if __name__ == "__main__":
   sources_folder = pathlib.Path(__file__).parent.parent / 'sources/'
   database_file = '../contributions.yaml'
 
+  # read in database yaml file
   yaml = YAML()
   with open(database_file, 'r') as db:
     data = yaml.load(db)
 
+  contributions_list = data['contributions']
+
+  # filter contributions list, remove contribution status == BROKEN
+  contributions_list = [
+    contribution for contribution in contributions_list if contribution['status']!="BROKEN"
+  ]
+
+  # apply override. if field additional_category, add value to categories
+  for contribution in contributions_list:
+    if 'override' in contribution.keys():
+      for key in contribution['override'].keys():
+        contribution[key] =  contribution['override'][key]
+
+  # remove sources folder if it already exists
   if sources_folder.is_dir():
     shutil.rmtree(sources_folder)
   sources_folder.mkdir(parents=True, exist_ok=True)
 
-  for contribution in data['contributions']:
-    filename = contribution['name'].replace(':','').replace('/','').replace(' ','_') + '.json'
-    this_filepath = sources_folder / filename
-    with open(this_filepath, 'w') as f:
-      json.dump(to_sources_dict(contribution),f,indent=2)
-
-
+  # create a json file in the sources folder for each contribution
+  for contribution in contributions_list:
+    if 'name' in contribution:
+      # output zero padded string for id
+      contribution['id'] = f"{contribution['id']:03}"
+      filename = contribution['name'].replace(':','').replace('/','').replace(' ','_') + '.json'
+      this_filepath = sources_folder / filename
+      with open(this_filepath, 'w') as f:
+        json.dump(to_sources_dict(contribution),f,indent=2)

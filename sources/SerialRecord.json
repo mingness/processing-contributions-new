@@ -1,0 +1,24 @@
+{
+  "name": "SerialRecord",
+  "authors": [
+    "[Oliver Steele](steele@osteele.com)"
+  ],
+  "url": "https://osteele.github.io/Processing_SerialRecord/",
+  "categories": [
+    "Data",
+    "I/O"
+  ],
+  "sentence": "Send and receive multiple values over the serial port, with error reporting for bad input and for common cases such as mismatched value counts, and with the ability to display sent and received data to the Processing console and canvas. It includes a utility function to find the first available serial port that follows the Arduino naming scheme.",
+  "paragraph": "This library intended for novice programmers: it is designed to be easy to use, to detect when it is used incorrectly, and to detect and report when it receives invalid data. It also has an option to display the data sent to the and received from the serial port on the canvas.",
+  "id": "278",
+  "type": "library",
+  "packages": [
+    {
+      "mode": "java",
+      "minRevision": 264,
+      "maxRevision": 0,
+      "props": "http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.txt",
+      "download": "http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.zip"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Zxing For Processing (QRCode lib)",
+  "authors": [
+    "[Rolf van Gelder](http://cagewebdev.com/)"
+  ],
+  "url": "http://cagewebdev.com/zxing4processing-processing-library/",
+  "categories": [
+    "Data"
+  ],
+  "sentence": "Zxing wrapper for decoding and generating QRCodes",
+  "paragraph": "",
+  "id": "198",
+  "type": "library",
+  "packages": [
+    {
+      "mode": "java",
+      "minRevision": 227,
+      "maxRevision": 0,
+      "props": "http://cagewebdev.com/zxing4p/zxing4p3.txt",
+      "download": "http://cagewebdev.com/zxing4p/zxing4p3.zip"
+    }
+  ]
+}

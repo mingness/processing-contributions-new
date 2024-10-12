@@ -12,13 +12,63 @@ import requests
 from tenacity import retry, stop_after_attempt, wait_fixed
 import re
 import os
+from typing import Optional, Union
+from pydantic import BaseModel, Field, ConfigDict, field_validator, validator
+
+
+class Properties(BaseModel):
+    name: str
+    authors: str = Field(alias='authorList')
+    url: str
+    categories: Optional[str] = Field(None, alias='category')
+    sentence: str
+    paragraph: Optional[str] = None
+    version: Union[int, str]
+    prettyVersion: Optional[str] = None
+    minRevision: int = Field(0)
+    maxRevision: int = Field(0)
+
+    model_config = ConfigDict(
+        extra='allow',
+        populate_by_name=True,
+    )
+
+    @field_validator('minRevision', 'maxRevision', mode='before')
+    def default_on_error(cls, v):
+        if v.isdigit():
+            return int(v)
+        else:
+            return 0
+
+
+
+class PropertiesNew(BaseModel):
+    name: str
+    authors: str
+    url: str
+    categories: Optional[str] = Field(None)
+    sentence: str
+    paragraph: Optional[str] = None
+    version: Union[int, str]
+    prettyVersion: str
+    minRevision: int = Field(0)
+    maxRevision: int = Field(0)
+
+    model_config = ConfigDict(
+        extra='allow',
+        populate_by_name=True,
+    )
 
 
 @retry(stop=stop_after_attempt(3),
        wait=wait_fixed(2),
        reraise=True)
 def read_properties_txt(properties_url):
-    r = requests.get(properties_url)
+    headers = {
+        'User-Agent': 'Mozilla/5.0',
+        'Accept': 'text/html',
+    }
+    r = requests.get(properties_url, headers=headers)
 
     if r.status_code != 200:
         raise FileNotFoundError(f"status code {r.status_code} returned for url {r.url}")
@@ -26,93 +76,42 @@ def read_properties_txt(properties_url):
     return r.text
 
 def parse_text(properties_raw):
-    msg = ''
-    field_pattern = re.compile(r"^[a-zA-z]+\s*=.*")
+    field_pattern = re.compile(r"^([a-zA-z]+)\s*=(.*)")
 
-    properties = {}
+    properties_dict = {}
     field_name = ""
     field_value = ""
     properties_lines = properties_raw.split('\n')
     for line in properties_lines:
         if line.startswith('#') or not line.strip():
             continue
-        if field_pattern.match(line):
+        if line_match := field_pattern.match(line):
             # store previous key-value pair
             if field_name:
-                properties[field_name] = field_value
+                properties_dict[field_name] = field_value
             # process current line
-            line_split = line.split('=')
-            if len(line_split) != 2:
-                msg += f'split not equal to 2 for line {line}'
-                field_value += " " + line.strip()
-                continue
-            field_name, field_value = line_split
-            field_name = field_name.strip()
+            field_name = line_match[1].strip()
+            field_value = line_match[2].strip()
             field_value = field_value.split('#')[0].strip()
         else:
             field_value += " " + line.strip()
-
+    # store last key-pair
     if field_name:
-        properties[field_name] = field_value
+        properties_dict[field_name] = field_value
 
-    # manual fixes
-    if 'authorList' in properties:
-        properties['authors'] = properties.pop('authorList')
+    return properties_dict
 
-    if 'categories' not in properties or not str(properties['categories']).strip():
-        properties['categories'] = "Other"
+def validate_existing(properties_dict):
+    # validation on existing contribution is weaker
+    properties = Properties.model_validate(properties_dict)
 
-    if 'minRevision' not in properties or not str(properties['minRevision']).strip():
-        properties['minRevision'] = '0'
+    return properties.model_dump()
 
-    if 'maxRevision' not in properties or not str(properties['maxRevision']).strip():
-        properties['maxRevision'] = '0'
+def validate_new(properties_dict):
+    # new contribution has stronger validation
+    properties = PropertiesNew.model_validate(properties_dict)
 
-    return properties, msg
-
-def validate_text(properties: dict):
-    msgs = []
-    if 'name' not in properties or not str(properties['name']).strip():
-        msgs.append('name is empty')
-
-    if 'authors' not in properties or not str(properties['authors']).strip():
-        msgs.append('authors is empty')
-
-    if 'version' not in properties or not str(properties['version']):
-        msgs.append('version is empty')
-    elif not str(properties['version']).isdigit():
-        msgs.append(f'version, {properties["version"]}, is not an integer')
-
-    if 'url' not in properties or not str(properties['url']).strip():
-        msgs.append('url is empty')
-    elif not (str(properties['url']).strip().startswith('https://') or
-        str(properties['url']).strip().startswith('http://')):
-        msgs.append(f'url, {properties["url"]}, is not a valid url')
-
-    if 'sentence' not in properties or not str(properties['sentence']).strip():
-        msgs.append('sentence is empty')
-
-    if 'minRevision' not in properties or not str(properties['minRevision']):
-        msgs.append('minRevision is empty')
-    elif not str(properties['minRevision']).isdigit():
-        msgs.append(f'minRevision, {properties["minRevision"]}, is not an integer')
-
-    if 'maxRevision' not in properties or not str(properties['maxRevision']):
-        msgs.append('maxRevision is empty')
-    elif not str(properties['maxRevision']).isdigit():
-        msgs.append(f'maxRevision, {properties["maxRevision"]}, is not an integer')
-
-    return msgs
-
-
-def parse_and_validate_text(properties_raw):
-    properties, _ = parse_text(properties_raw)
-    msgs = validate_text(properties)
-
-    if msgs:
-        raise ValueError(";".join(msgs))
-
-    return properties
+    return properties.model_dump()
 
 
 def set_output(output_object):
@@ -125,7 +124,8 @@ def set_output_error(msg):
 
 
 if __name__ == "__main__":
-    # this is used by github workflow. Add type to object
+    # this is used by github workflow, on new contributions. Use strong validation.
+    # Add type to object
     parser = argparse.ArgumentParser()
     parser.add_argument('type')
     parser.add_argument('url')
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels
 
     try:
-        props = parse_and_validate_text(properties_raw)
+        props = validate_new(parse_text(properties_raw))
     except Exception as e:
         set_output_error(f'Errors when parsing file. Please check all required fields, and file format.\n\n{e}')
         raise e

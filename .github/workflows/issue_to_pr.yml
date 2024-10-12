@@ -44,7 +44,7 @@ jobs:
         if: failure()
         uses: peter-evans/create-or-update-comment@v4
         with:
-          issue-number: ${{ env.ISSUE_NUM }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             There was an error in reading in your file and parsing it.
             

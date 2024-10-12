@@ -39,6 +39,16 @@ jobs:
           python -u scripts/parse_and_validate_properties_txt.py \
             ${{ fromJson(steps.parseIssue.outputs.payload).contribution_type }} \
             "${{ fromJson(steps.parseIssue.outputs.payload).properties_url }}"
+
+      - name: if failure, add comment to issue
+        if: failure()
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ env.ISSUE_NUM }}
+          body: |
+            There was an error in reading in your file and parsing it.
+            
+            ${{ steps.parseProps.outputs.props }}
   create-pr:
     needs: validate
     env:

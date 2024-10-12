@@ -135,7 +135,7 @@ if __name__ == "__main__":
     url = args.url
     if not url.startswith("http"):
         print(f"Url not valid: {url}.\nStopping...")
-        set_output_error(f"Url is not valid. It should start with http or https.")
+        set_output_error(f"Url is not valid. It should start with http:// or https://")
         raise AssertionError
 
     print(f"url: {url}")  # just for debugging, should do this via logging levels
@@ -143,7 +143,7 @@ if __name__ == "__main__":
     try:
         properties_raw = read_properties_txt(url)
     except Exception as e:
-        set_output_error(f'Error when accessing url. Please ensure the url returns a valid properties text file.')
+        set_output_error(f'Error when accessing url. Please ensure the url returns a valid properties text file')
         raise e
 
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels

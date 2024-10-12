@@ -269,6 +269,19 @@ type=library
 download=http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.zip
 
 library
+name=Patchy
+authors=[Jonathan Feinberg](http://mrfeinberg.com/)
+url=http://mrfeinberg.com/patchy/
+categories=3D
+sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
+version=200
+minRevision=0
+maxRevision=0
+id=037
+type=library
+download=http://mrfeinberg.com/patchy/patchy.zip
+
+library
 name=Geomerative
 authors=[Ricard Marxer](http://www.ricardmarxer.com/)
 url=http://www.ricardmarxer.com/geomerative
@@ -2605,6 +2618,7 @@ version=1177
 prettyVersion=v1.2
 minRevision=0
 maxRevision=0
+modes=
 id=205
 type=examples
 download=http://mad4j.github.io/book-mdpc/book-mdpc.zip
@@ -2635,6 +2649,7 @@ version=2
 prettyVersion=1.0.1
 minRevision=0
 maxRevision=0
+modes=jycessing.mode.PythonMode
 id=243
 type=examples
 download=https://coding-creative.dringtech.com/examples/coding-creative-examples.zip
@@ -2713,6 +2728,21 @@ maxRevision=0
 id=057
 type=tool
 download=http://www.lagers.org.uk/processing3/guibuilder/G4PTool.zip
+
+tool
+name=Applet Maker & Signer
+authors=[Peter Lager](http://www.lagers.org.uk)
+url=http://www.lagers.org.uk/appletutil/
+categories=
+sentence=Enables the creation of self-signed Java Applets
+paragraph=Simple wizard style interface to export and sign (optional) applets from Processing 2.0
+version=4
+prettyVersion=1.2
+minRevision=0
+maxRevision=0
+id=096
+type=tool
+download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 
 tool
 name=SpeedTool
@@ -2972,6 +3002,21 @@ type=mode
 download=https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.zip
 
 mode
+name=Python Mode for Processing 3
+authors=[Jonathan Feinberg](http://MrFeinberg.com/)
+url=https://github.com/jdf/processing.py
+categories=
+sentence=Write Processing sketches in Python.
+paragraph=
+version=3063
+prettyVersion=3063
+minRevision=246
+maxRevision=270
+id=169
+type=mode
+download=https://contribs.processing.org/pythonmode/3/PythonMode.zip
+
+mode
 name=p5.js Mode
 authors=[Fathom Information Design](http://fathom.info/)
 url=https://github.com/fathominfo/processing-p5js-mode
@@ -3017,6 +3062,21 @@ imports=processing.mode.java.JavaMode
 id=250
 type=mode
 download=https://github.com/Izza11/shader-mode/releases/download/latest/ShaderMode.zip
+
+mode
+name=Python Mode for Processing 4
+authors=[Jonathan Feinberg](http://MrFeinberg.com/)
+url=https://github.com/jdf/processing.py
+categories=
+sentence=Write Processing 4 sketches in Python.
+paragraph=
+version=4001
+prettyVersion=4001
+minRevision=1279
+maxRevision=0
+id=274
+type=mode
+download=https://contribs.processing.org/pythonmode/4/PythonMode.zip
 
 mode
 name=Android Mode for Processing 4

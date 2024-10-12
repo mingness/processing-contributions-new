@@ -5,7 +5,8 @@ import argparse
 from datetime import datetime
 from ruamel.yaml import YAML
 
-from parse_and_validate_properties_txt import read_properties_txt, parse_text, validate_text
+from parse_and_validate_properties_txt import read_properties_txt, parse_text, validate_existing
+
 
 def update_contribution(contribution, props):
   # update from online
@@ -46,11 +47,10 @@ def process_contribution(contribution):
       log_broken(contribution, f'url timeout, {date_today}')
       return
 
-    props, _ = parse_text(properties_raw)
-    msgs = validate_text(props)
-
-    if msgs:
-      log_broken(contribution, f'invalid file, {msgs}, {date_today}')
+    try:
+        props = validate_existing(parse_text(properties_raw))
+    except Exception:
+      log_broken(contribution, f'invalid file, {date_today}')
       return
 
     if int(props['version']) > this_version:
@@ -83,8 +83,10 @@ if __name__ == "__main__":
       process_contribution(contribution)
   else:
     # update only contribution with id==index
-    contribution = next((x for x in contributions_list if x['id'] == index), None)
+    contribution = next((x for x in contributions_list if x['id'] == int(index)), None)
+    print(contribution)
     process_contribution(contribution)
+    print(contribution)
 
   # write all contributions to database file
   yaml = YAML()

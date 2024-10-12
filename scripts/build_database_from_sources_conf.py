@@ -12,7 +12,7 @@ from operator import itemgetter
 import re
 from ruamel.yaml import YAML
 
-from parse_and_validate_properties_txt import read_properties_txt, parse_and_validate_text
+from parse_and_validate_properties_txt import read_properties_txt, validate_existing, parse_text
 
 
 def read_sources_file(sources_file):
@@ -128,7 +128,7 @@ if __name__ == "__main__":
         continue
 
       try:
-        props = parse_and_validate_text(properties_raw)
+        props = validate_existing(parse_text(properties_raw))
       except Exception as e:
         log_msg.append(f'invalid file')
         log.write(f'{index_str}, {props_url}, invalid file\n')

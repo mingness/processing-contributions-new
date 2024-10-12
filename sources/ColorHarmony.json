@@ -1,0 +1,23 @@
+{
+  "name": "ColorHarmony",
+  "authors": [
+    "[Rolf van Gelder](http://cagewebdev.com/)"
+  ],
+  "url": "http://cagewebdev.com/colorharmony-processing-library/",
+  "categories": [
+    "Utilities"
+  ],
+  "sentence": "Harmonized color palette generator",
+  "paragraph": "",
+  "id": "210",
+  "type": "library",
+  "packages": [
+    {
+      "mode": "java",
+      "minRevision": 227,
+      "maxRevision": 0,
+      "props": "http://cagewebdev.com/colorharmony/colorharmony.txt",
+      "download": "http://cagewebdev.com/colorharmony/colorharmony.zip"
+    }
+  ]
+}

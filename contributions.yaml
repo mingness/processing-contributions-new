@@ -531,9 +531,19 @@ contributions:
 - id: 37
   source: http://mrfeinberg.com/patchy/patchy.txt
   type: library
-  status: BROKEN
+  status: VALID
   log:
   - invalid file
+  name: Patchy
+  authors: '[Jonathan Feinberg](http://mrfeinberg.com/)'
+  url: http://mrfeinberg.com/patchy/
+  categories:
+  - 3D
+  sentence: Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
+  version: '200'
+  minRevision: 0
+  maxRevision: 0
+  download: http://mrfeinberg.com/patchy/patchy.zip
 - name: Geomerative
   authors: '[Ricard Marxer](http://www.ricardmarxer.com/)'
   url: http://www.ricardmarxer.com/geomerative
@@ -1434,9 +1444,22 @@ contributions:
 - id: 96
   source: http://www.lagers.org.uk/processing/appletmaker/AppletMaker.txt
   type: tool
-  status: BROKEN
+  status: VALID
   log:
   - invalid file
+  name: Applet Maker & Signer
+  authors: '[Peter Lager](http://www.lagers.org.uk)'
+  url: http://www.lagers.org.uk/appletutil/
+  categories:
+  - Utilities
+  sentence: Enables the creation of self-signed Java Applets
+  paragraph: Simple wizard style interface to export and sign (optional) applets from
+    Processing 2.0
+  version: '4'
+  prettyVersion: '1.2'
+  minRevision: 0
+  maxRevision: 0
+  download: http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 - name: SelectFile
   authors: '[Ostap Andrusiv](http://andrusiv.com)'
   url: https://andrusiv.com/android-select-file/
@@ -2658,11 +2681,22 @@ contributions:
     categories:
     - I/O
 - id: 169
-  source: https://py.processing.org/3/PythonMode.txt
+  source: https://contribs.processing.org/pythonmode/3/PythonMode.txt
   type: mode
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 404 returned for url https://py.processing.org/3/PythonMode.txt
+  name: Python Mode for Processing 3
+  authors: '[Jonathan Feinberg](http://MrFeinberg.com/)'
+  url: https://github.com/jdf/processing.py
+  categories: []
+  sentence: Write Processing sketches in Python.
+  paragraph: ''
+  version: '3063'
+  prettyVersion: '3063'
+  minRevision: 246
+  maxRevision: 270
+  download: https://contribs.processing.org/pythonmode/3/PythonMode.zip
 - name: Cassette
   authors: Shlomi Hod
   url: https://github.com/shlomihod/cassette
@@ -4707,11 +4741,22 @@ contributions:
     categories:
     - Other
 - id: 274
-  source: https://py.processing.org/4/PythonMode.txt
+  source: https://contribs.processing.org/pythonmode/4/PythonMode.txt
   type: mode
-  status: BROKEN
+  status: VALID
   log:
   - file not found, status code 404 returned for url https://py.processing.org/4/PythonMode.txt
+  name: Python Mode for Processing 4
+  authors: '[Jonathan Feinberg](http://MrFeinberg.com/)'
+  url: https://github.com/jdf/processing.py
+  categories: []
+  sentence: Write Processing 4 sketches in Python.
+  paragraph: ''
+  version: '4001'
+  prettyVersion: '4001'
+  minRevision: 1279
+  maxRevision: 0
+  download: https://contribs.processing.org/pythonmode/4/PythonMode.zip
 - name: Oklab for Processing
   authors: '[Yash Gupta](https://refuse.ink/)'
   url: https://github.com/yashbutno/Oklab-for-Processing

@@ -13,7 +13,7 @@ type_list = ['library', 'examples', 'tool', 'mode']
 contribs_fields_list = [
     'name', 'authors', 'url', 'categories', 'sentence', 'paragraph',
     'version', 'prettyVersion', 'minRevision', 'maxRevision', 'imports',
-    'modes', 'id', 'type', 'download'
+    'compatibleModesList', 'id', 'type', 'download'
 ]
 
 
@@ -89,6 +89,8 @@ if __name__ == "__main__":
                 f.write(f'{field}={",".join(contribution[field]) if contribution[field] else ""}\n')
               else:
                 f.write(f'{field}=\n')
+          elif field == 'compatibleModesList':
+            f.write(f'modes={contribution[field]}\n')
           else:
             f.write(f'{field}={"" if contribution[field] is None else contribution[field]}\n')
       f.write('\n')

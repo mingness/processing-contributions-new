@@ -4,9 +4,9 @@ Creates the json files in the sources folder from the contributions.yaml file.
 
 import json
 import pathlib
-from ruamel.yaml import YAML
 import shutil
 
+from utils import get_valid_contributions
 
 json_fields_library = [
     'name', 'authors', 'url', 'categories', 'sentence', 'paragraph', 'imports',
@@ -65,25 +65,8 @@ def to_sources_dict(contribution_dict):
 
 if __name__ == "__main__":
   sources_folder = pathlib.Path(__file__).parent.parent / 'sources/'
-  database_file = '../contributions.yaml'
 
-  # read in database yaml file
-  yaml = YAML()
-  with open(database_file, 'r') as db:
-    data = yaml.load(db)
-
-  contributions_list = data['contributions']
-
-  # filter contributions list, remove contribution status == BROKEN
-  contributions_list = [
-    contribution for contribution in contributions_list if contribution['status']!="BROKEN"
-  ]
-
-  # apply override. if field additional_category, add value to categories
-  for contribution in contributions_list:
-    if 'override' in contribution.keys():
-      for key in contribution['override'].keys():
-        contribution[key] =  contribution['override'][key]
+  contributions_list = get_valid_contributions()
 
   # remove sources folder if it already exists
   if sources_folder.is_dir():

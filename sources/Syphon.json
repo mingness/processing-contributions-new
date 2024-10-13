@@ -9,15 +9,15 @@
   ],
   "sentence": "This library allows the sharing of video and images between applications in macOS using the Syphon framework.",
   "paragraph": "Syphon is an open source macOS technology that allows applications to share frames - full frame rate video or stills - with one another in realtime. This library wraps Syphon using Java and provides a simple interface for frame sharing in Processing.",
-  "id": "148",
+  "id": "041",
   "type": "library",
   "packages": [
     {
       "mode": "java",
       "minRevision": 249,
       "maxRevision": 0,
-      "props": " https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt ",
-      "download": " https://github.com/Syphon/Processing/releases/download/latest/Syphon.zip"
+      "props": "https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt",
+      "download": "https://github.com/Syphon/Processing/releases/download/latest/Syphon.zip"
     }
   ]
 }

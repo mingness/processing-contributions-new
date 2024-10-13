@@ -2,12 +2,10 @@
 Creates the contribs.txt file from the contributions.yaml file.
 """
 
-import re
 import json
-import pathlib
-from ruamel.yaml import YAML
 from collections import defaultdict
 
+from utils import get_valid_contributions
 
 type_list = ['library', 'examples', 'tool', 'mode']
 contribs_fields_list = [
@@ -47,25 +45,8 @@ def read_contribs_text(filepath):
 
 if __name__ == "__main__":
   contribs_text_file = '../pde/contribs.txt'
-  database_file = '../contributions.yaml'
 
-  # read in database yaml file
-  yaml = YAML()
-  with open(database_file, 'r') as db:
-    data = yaml.load(db)
-
-  contributions_list = data['contributions']
-
-  # filter contributions list, remove contribution status == BROKEN
-  contributions_list = [
-    contribution for contribution in contributions_list if contribution['status'] not in ["BROKEN", "DEPRECATED"]
-  ]
-
-  # apply override. if field additional_category, add value to categories
-  for contribution in contributions_list:
-    if 'override' in contribution.keys():
-      for key in contribution['override'].keys():
-        contribution[key] =  contribution['override'][key]
+  contributions_list = get_valid_contributions()
 
   # sort contributions list by type
   def sort_key(d):

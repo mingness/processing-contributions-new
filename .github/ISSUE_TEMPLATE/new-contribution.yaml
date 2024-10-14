@@ -15,12 +15,6 @@ body:
         
         Also provide the type of contribution. The allowed values are `library`, `examples`, 
         `tool` or `mode`.
-        
-        Once you submit this form, the properties file found at the url will be parsed and validated. 
-        The result of this validation will be added to this issue. If the text file is valid, 
-        a pull request will be automatically created, adding your contribution to the repository. 
-        If the text file is not valid, you will need to edit your 
-        properties file before the contribution can be added.
   - type: input
     id: url
     attributes:
@@ -36,3 +30,11 @@ body:
       description: The type of contribution. Values can be `library`, `examples`, `tool` or `mode`.
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        Once you submit this form, the properties file found at the url will be parsed and validated. 
+        The result of this validation will be added to this issue. If the text file is valid, 
+        a pull request will be automatically created, adding your contribution to the repository. 
+        If the text file is not valid, you will need to edit your 
+        properties file before the contribution can be added.

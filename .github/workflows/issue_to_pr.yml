@@ -74,7 +74,7 @@ jobs:
           branch: ${{ env.BRANCH_NAME }}
 
       - name: delete target branch if exists
-        if: steps.branchExists.outputs.exists
+        if: steps.branchExists.outputs.exists == 'true'
         uses: dawidd6/action-delete-branch@v3
         with:
           github_token: ${{github.token}}

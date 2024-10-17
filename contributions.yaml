@@ -1,5 +1,9 @@
 contributions:
-- name: proscene
+- id: 1
+  source: https://github.com/remixlab/proscene/releases/download/latest/proscene.txt
+  status: VALID
+  type: library
+  name: proscene
   authors: '[Jean Pierre Charalambos](http://otrolado.info)'
   url: http://otrolado.info
   categories:
@@ -22,10 +26,6 @@ contributions:
   prettyVersion: 3.0.1
   minRevision: 256
   maxRevision: 0
-  source: https://github.com/remixlab/proscene/releases/download/latest/proscene.txt
-  id: 1
-  status: VALID
-  type: library
   download: https://github.com/remixlab/proscene/releases/download/latest/proscene.zip
   override:
     categories:
@@ -37,11 +37,15 @@ contributions:
     - Utilities
 - id: 2
   source: ' http://www.carljohanrosen.com/processing/images/cellnoise-latest.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://www.carljohanrosen.com/processing/images/cellnoise-latest.txt%20
-- name: Ani
+- id: 3
+  source: https://dev.benedikt-gross.de/libraries/Ani/Ani-latest.txt
+  status: VALID
+  type: library
+  name: Ani
   authors: '[Benedikt Gross](http://benedikt-gross.de/)'
   url: http://benedikt-gross.de/libraries/Ani/
   categories:
@@ -52,15 +56,15 @@ contributions:
   prettyVersion: '2.7'
   minRevision: 0
   maxRevision: 0
-  source: https://dev.benedikt-gross.de/libraries/Ani/Ani-latest.txt
-  id: 3
-  status: VALID
-  type: library
   download: https://dev.benedikt-gross.de/libraries/Ani/Ani-latest.zip
   override:
     categories:
     - Animation
-- name: gicentreUtils
+- id: 4
+  source: http://staff.city.ac.uk/~jwo/giCentre/utils/gicentreUtils.txt
+  status: VALID
+  type: library
+  name: gicentreUtils
   authors: '[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)'
   url: http://www.gicentre.org/utils/
   categories:
@@ -75,21 +79,21 @@ contributions:
   prettyVersion: 3.4.0
   minRevision: 228
   maxRevision: 0
-  source: http://staff.city.ac.uk/~jwo/giCentre/utils/gicentreUtils.txt
-  id: 4
-  status: VALID
-  type: library
   download: http://staff.city.ac.uk/~jwo/giCentre/utils/gicentreUtils.zip
   override:
     categories:
     - Compilation
 - id: 5
   source: ' http://nootropicdesign.com/processing-layers/downloads/layers.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://nootropicdesign.com/processing-layers/downloads/layers.txt
-- name: Collada Loader for SketchUp and Blender
+- id: 6
+  source: http://www.die-seite.ch/colladaloader/colladaLoader.txt
+  status: VALID
+  type: library
+  name: Collada Loader for SketchUp and Blender
   authors: '[Markus Zimmermann](http://www.die-seite.ch/)'
   url: http://www.die-seite.ch/
   categories:
@@ -103,15 +107,16 @@ contributions:
   prettyVersion: '3.1'
   minRevision: 242
   maxRevision: 0
-  source: http://www.die-seite.ch/colladaloader/colladaLoader.txt
-  id: 6
-  status: VALID
-  type: library
   download: http://www.die-seite.ch/colladaloader/colladaLoader.zip
   override:
     categories:
     - 3D
-- name: GenerativeDesign
+- id: 7
+  source: 
+    https://github.com/generative-design/GenerativeDesignLibrary2/releases/download/latest/generativedesign.txt
+  status: BROKEN
+  type: library
+  name: GenerativeDesign
   authors: '[Benedikt Gross, Hartmut Bohnacker](http://www.generative-gestaltung.de/)'
   url: http://www.generative-gestaltung.de/
   categories:
@@ -125,11 +130,6 @@ contributions:
   prettyVersion: 1.0.5
   minRevision: 0
   maxRevision: 227
-  source: 
-    https://github.com/generative-design/GenerativeDesignLibrary2/releases/download/latest/generativedesign.txt
-  id: 7
-  status: BROKEN
-  type: library
   download: 
     https://github.com/generative-design/GenerativeDesignLibrary2/releases/download/latest/generativedesign.zip
   override:
@@ -139,23 +139,27 @@ contributions:
   - in skipped conf
 - id: 8
   source: http://www.saint-clair.net/download/gml4u/GML4U.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
 - id: 9
   source: ' http://www.wblut.com/hemesh/hemesh.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 403 returned for url http://www.wblut.com/hemesh/hemesh.txt%20
 - id: 10
   source: http://shiffman.net/p5/libraries/mpe/mpe.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
-- name: SFTP
+- id: 11
+  source: https://github.com/shiffman/SFTP-Processing/releases/download/latest/sftp.txt
+  status: VALID
+  type: library
+  name: SFTP
   authors: '[Daniel Shiffman](http://www.shiffman.net)'
   url: https://github.com/shiffman/SFTP-Processing
   categories:
@@ -166,45 +170,45 @@ contributions:
   prettyVersion: 0.1a
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/shiffman/SFTP-Processing/releases/download/latest/sftp.txt
-  id: 11
-  status: VALID
-  type: library
   download: https://github.com/shiffman/SFTP-Processing/releases/download/latest/sftp.zip
   override:
     categories:
     - Data
 - id: 12
   source: http://www.shiffman.net/p5/libraries/qrcode/qrcodeprocessing.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
 - id: 13
   source: http://shiffman.net/p5/libraries/openkinect_processing/openkinect_processing.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
 - id: 14
   source: http://shiffman.net/p5/libraries/box2d_processing/box2d_processing.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
 - id: 15
   source: http://www.shiffman.net/p5/libraries/sms/sms.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
 - id: 16
   source: http://www.silentlycrashing.net/ezgestures/files/ezgestures.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
-- name: PeasyCam
+- id: 17
+  source: http://mrfeinberg.com/peasycam/peasycam.txt
+  status: VALID
+  type: library
+  name: PeasyCam
   authors: '[Jonathan Feinberg](http://mrfeinberg.com/)'
   url: http://mrfeinberg.com/peasycam/
   categories:
@@ -215,15 +219,15 @@ contributions:
   prettyVersion: '302'
   minRevision: 227
   maxRevision: 0
-  source: http://mrfeinberg.com/peasycam/peasycam.txt
-  id: 17
-  status: VALID
-  type: library
   download: http://mrfeinberg.com/peasycam/peasycam.zip
   override:
     categories:
     - 3D
-- name: Fisica
+- id: 18
+  source: http://www.ricardmarxer.com/fisica/download/fisica.txt
+  status: VALID
+  type: library
+  name: Fisica
   authors: '[Ricard Marxer](http://www.ricardmarxer.com/)'
   url: http://www.ricardmarxer.com/fisica
   categories:
@@ -237,15 +241,15 @@ contributions:
   prettyVersion: ''
   minRevision: 0
   maxRevision: 0
-  source: http://www.ricardmarxer.com/fisica/download/fisica.txt
-  id: 18
-  status: VALID
-  type: library
   download: http://www.ricardmarxer.com/fisica/download/fisica.zip
   override:
     categories:
     - Simulation
-- name: The MidiBus
+- id: 19
+  source: http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.txt
+  status: VALID
+  type: library
+  name: The MidiBus
   authors: '[Severin Smith](https://www.smallbutdigital.com/)'
   url: https://www.smallbutdigital.com/themidibus.php
   categories:
@@ -260,10 +264,6 @@ contributions:
   prettyVersion: '8'
   minRevision: 0
   maxRevision: 0
-  source: http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.txt
-  id: 19
-  status: VALID
-  type: library
   download: http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
   override:
     categories:
@@ -271,12 +271,16 @@ contributions:
 - id: 20
   source: 
     https://dl.dropboxusercontent.com/u/69944346/ColorSelectorPlus/ColorSelectorPlusTool.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - file not found, status code 404 returned for url 
     https://dl.dropboxusercontent.com/u/69944346/ColorSelectorPlus/ColorSelectorPlusTool.txt
-- name: gwoptics
+- id: 21
+  source: http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.txt
+  status: VALID
+  type: library
+  name: gwoptics
   authors: '[Daniel Brown and Andreas Freise](http://www.gwoptics.org/processing/gwoptics_p5lib/)'
   url: http://www.gwoptics.org/processing/gwoptics_p5lib/
   categories:
@@ -288,10 +292,6 @@ contributions:
   prettyVersion: 0.5.0
   minRevision: 0
   maxRevision: 0
-  source: http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.txt
-  id: 21
-  status: VALID
-  type: library
   download: http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
   override:
     maxRevision: '228'
@@ -301,11 +301,15 @@ contributions:
   - in broken conf
 - id: 22
   source: ' http://fluidforms.eu/processing/fluid-forms-libs/download/FluidFormsLibs.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
-- name: BlobDetection
+- id: 23
+  source: http://www.v3ga.net/processing/BlobDetection/blobDetection.txt
+  status: VALID
+  type: library
+  name: BlobDetection
   authors: "[Julien 'v3ga' Gachadoat](http://www.v3ga.net)"
   url: http://www.v3ga.net/processing/BlobDetection/
   categories:
@@ -316,15 +320,16 @@ contributions:
   prettyVersion: '1.00'
   minRevision: 0
   maxRevision: 0
-  source: http://www.v3ga.net/processing/BlobDetection/blobDetection.txt
-  id: 23
-  status: VALID
-  type: library
   download: http://www.v3ga.net/processing/BlobDetection/blobDetection.zip
   override:
     categories:
     - Video & Vision
-- name: Arduino (Firmata)
+- id: 24
+  source: 
+    https://github.com/firmata/processing/releases/download/latest/processing-arduino.txt
+  status: VALID
+  type: library
+  name: Arduino (Firmata)
   authors: '[David A. Mellis](http://dam.mellis.org/)'
   url: http://arduino.cc/playground/Interfacing/Processing
   categories:
@@ -336,17 +341,16 @@ contributions:
   prettyVersion: '9'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/firmata/processing/releases/download/latest/processing-arduino.txt
-  id: 24
-  status: VALID
-  type: library
   download: 
     https://github.com/firmata/processing/releases/download/latest/processing-arduino.zip
   override:
     categories:
     - Hardware
-- name: NXTComm Processing
+- id: 25
+  source: http://jorgecardoso.eu/processing/NXTComm/NXTComm.txt
+  status: VALID
+  type: library
+  name: NXTComm Processing
   authors: '[Jorge C. S. Cardoso](http://jorgecardoso.eu)'
   url: http://jorgecardoso.eu/processing/NXTComm/
   categories:
@@ -358,15 +362,16 @@ contributions:
   prettyVersion: '0.99'
   minRevision: 0
   maxRevision: 0
-  source: http://jorgecardoso.eu/processing/NXTComm/NXTComm.txt
-  id: 25
-  status: VALID
-  type: library
   download: http://jorgecardoso.eu/processing/NXTComm/NXTComm.zip
   override:
     categories:
     - I/O
-- name: MindSet Processing
+- id: 26
+  source: 
+    http://jorgecardoso.eu/processing/MindSetProcessing/download/MindsetProcessing.txt
+  status: VALID
+  type: library
+  name: MindSet Processing
   authors: '[Jorge C. S. Cardoso](http://jorgecardoso.eu)'
   url: http://jorgecardoso.eu/processing/MindSetProcessing/
   categories:
@@ -381,11 +386,6 @@ contributions:
   prettyVersion: 0.1.2
   minRevision: 0
   maxRevision: 0
-  source: 
-    http://jorgecardoso.eu/processing/MindSetProcessing/download/MindsetProcessing.txt
-  id: 26
-  status: VALID
-  type: library
   download: 
     http://jorgecardoso.eu/processing/MindSetProcessing/download/MindsetProcessing.zip
   override:
@@ -394,7 +394,11 @@ contributions:
     - I/O
   log:
   - in broken conf
-- name: ID3
+- id: 27
+  source: http://jorgecardoso.eu/processing/ID3/ID3.txt
+  status: VALID
+  type: library
+  name: ID3
   authors: '[Jorge C. S. Cardoso](http://jorgecardoso.eu)'
   url: http://jorgecardoso.eu/processing/ID3/
   categories:
@@ -406,39 +410,39 @@ contributions:
   prettyVersion: '0.9'
   minRevision: 0
   maxRevision: 0
-  source: http://jorgecardoso.eu/processing/ID3/ID3.txt
-  id: 27
-  status: VALID
-  type: library
   download: http://jorgecardoso.eu/processing/ID3/ID3.zip
   override:
     categories:
     - Utilities
 - id: 28
   source: http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.txt
 - id: 29
   source: ' http://libraries.seltar.org/unzipit/unzipit.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://libraries.seltar.org/unzipit/unzipit.txt%20
 - id: 30
   source: http://libraries.seltar.org/motion/motion.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://libraries.seltar.org/motion/motion.txt
 - id: 31
   source: http://libraries.seltar.org/postToWeb/postToWeb.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://libraries.seltar.org/postToWeb/postToWeb.txt
-- name: Picking
+- id: 32
+  source: http://n.clavaud.free.fr/processing/library/picking/download/Picking.txt
+  status: VALID
+  type: library
+  name: Picking
   authors: '[Nicolas Clavaud](http://n.clavaud.free.fr/)'
   url: http://n.clavaud.free.fr/processing/library/picking/
   categories:
@@ -450,21 +454,21 @@ contributions:
   prettyVersion: 0.3.1
   minRevision: 0
   maxRevision: 0
-  source: http://n.clavaud.free.fr/processing/library/picking/download/Picking.txt
-  id: 32
-  status: VALID
-  type: library
   download: http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
   override:
     categories:
     - 3D
 - id: 33
   source: http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://studioijeoma.com/processing/ijeomamotion/download/ijeomamotion.txt
-- name: Keystone
+- id: 34
+  source: http://www.deadpixel.ca/keystone/download/keystone.txt
+  status: VALID
+  type: library
+  name: Keystone
   authors: '[David Bouchard](http://www.deadpixel.ca)'
   url: https://github.com/davidbouchard/keystone
   categories:
@@ -476,15 +480,15 @@ contributions:
   prettyVersion: '006'
   minRevision: 243
   maxRevision: 0
-  source: http://www.deadpixel.ca/keystone/download/keystone.txt
-  id: 34
-  status: VALID
-  type: library
   download: http://www.deadpixel.ca/keystone/download/keystone.zip
   override:
     categories:
     - Utilities
-- name: SuperCollider client for Processing
+- id: 35
+  source: http://www.erase.net/projects/processing-sc/files/processing-sc.txt
+  status: VALID
+  type: library
+  name: SuperCollider client for Processing
   authors: '[Daniel Jones](http://www.erase.net/)'
   url: http://www.erase.net/projects/processing-sc/
   categories:
@@ -498,15 +502,15 @@ contributions:
   prettyVersion: 0.3.0
   minRevision: 0
   maxRevision: 0
-  source: http://www.erase.net/projects/processing-sc/files/processing-sc.txt
-  id: 35
-  status: VALID
-  type: library
   download: http://www.erase.net/projects/processing-sc/files/processing-sc.zip
   override:
     categories:
     - Sound
-- name: 'OCD: Obsessive Camera Direction'
+- id: 36
+  source: http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.txt
+  status: VALID
+  type: library
+  name: 'OCD: Obsessive Camera Direction'
   authors: '[Kristian Damkjer](http://www.gdsstudios.com/)'
   url: http://www.gdsstudios.com/processing/libraries/ocd/
   categories:
@@ -520,18 +524,14 @@ contributions:
   prettyVersion: '1.5'
   minRevision: 0
   maxRevision: 0
-  source: http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.txt
-  id: 36
-  status: VALID
-  type: library
   download: http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.zip
   override:
     categories:
     - 3D
 - id: 37
   source: http://mrfeinberg.com/patchy/patchy.txt
-  type: library
   status: VALID
+  type: library
   log:
   - invalid file
   name: Patchy
@@ -544,7 +544,11 @@ contributions:
   minRevision: 0
   maxRevision: 0
   download: http://mrfeinberg.com/patchy/patchy.zip
-- name: Geomerative
+- id: 38
+  source: http://www.ricardmarxer.com/geomerative/geomerative.txt
+  status: VALID
+  type: library
+  name: Geomerative
   authors: '[Ricard Marxer](http://www.ricardmarxer.com/)'
   url: http://www.ricardmarxer.com/geomerative
   categories:
@@ -559,10 +563,6 @@ contributions:
   prettyVersion: ''
   minRevision: 0
   maxRevision: 0
-  source: http://www.ricardmarxer.com/geomerative/geomerative.txt
-  id: 38
-  status: VALID
-  type: library
   download: http://www.ricardmarxer.com/geomerative/geomerative.zip
   override:
     categories:
@@ -570,11 +570,15 @@ contributions:
     - Typography
 - id: 39
   source: https://github.com/codeanticode/tablet/releases/download/latestv2/Tablet.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 500 returned for url https://github.com/codeanticode/tablet/releases/download/latestv2/Tablet.txt
-- name: Carnivore
+- id: 40
+  source: http://r-s-g.org/carnivore/download/carnivore_p5lib.txt
+  status: VALID
+  type: library
+  name: Carnivore
   authors: '[RSG](http://r-s-g.org)'
   url: http://r-s-g.org/carnivore
   categories:
@@ -586,16 +590,16 @@ contributions:
   prettyVersion: '9'
   minRevision: 0
   maxRevision: 0
-  source: http://r-s-g.org/carnivore/download/carnivore_p5lib.txt
-  id: 40
-  status: VALID
-  type: library
   download: http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
   override:
     categories:
     - Data
     - Simulation
-- name: Syphon
+- id: 41
+  source: https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt
+  status: VALID
+  type: library
+  name: Syphon
   authors: '[Andres Colubri](http://andrescolubri.net/), [Tom Butterworth](http://kriss.cx/tom),
     [Anton Marini](http://vade.info/)'
   url: https://github.com/Syphon/Processing
@@ -612,27 +616,27 @@ contributions:
   prettyVersion: '4.0'
   minRevision: 249
   maxRevision: 0
-  source: https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt
-  id: 41
-  status: VALID
-  type: library
   download: https://github.com/Syphon/Processing/releases/download/latest/Syphon.zip
   override:
     categories:
     - Video & Vision
 - id: 42
   source: ' http://wyldco.com/romefeeder/download/romefeeder.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 410 returned for url http://wyldco.com/romefeeder/download/romefeeder.txt%20
 - id: 43
   source: http://saitoobjloader.googlecode.com/files/OBJLoader.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://saitoobjloader.googlecode.com/files/OBJLoader.txt
-- name: MapThing
+- id: 44
+  source: http://www.reades.com/MapThing/MapThing.txt
+  status: VALID
+  type: library
+  name: MapThing
   authors: '[Jon Reades](http://www.reades.com/)'
   url: http://www.reades.com/MapThing
   categories:
@@ -649,21 +653,21 @@ contributions:
   prettyVersion: '1.4'
   minRevision: 0
   maxRevision: 0
-  source: http://www.reades.com/MapThing/MapThing.txt
-  id: 44
-  status: VALID
-  type: library
   download: http://www.reades.com/MapThing/MapThing.zip
   override:
     categories:
     - Data
 - id: 45
   source: ' https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.txt%20
-- name: G4P
+- id: 46
+  source: http://www.lagers.org.uk/processing3/g4p/G4P.txt
+  status: VALID
+  type: library
+  name: G4P
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/g4p
   categories:
@@ -677,15 +681,15 @@ contributions:
   prettyVersion: 4.3.11
   minRevision: 245
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing3/g4p/G4P.txt
-  id: 46
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing3/g4p/G4P.zip
   override:
     categories:
     - GUI
-- name: Nest
+- id: 47
+  source: http://transmote.com/nest/download/Nest.txt
+  status: VALID
+  type: library
+  name: Nest
   authors: '[Eric Socolofsky](http://transmote.com/)'
   url: http://transmote.com/nest/
   categories:
@@ -699,10 +703,6 @@ contributions:
   prettyVersion: 0.7.0
   minRevision: 0
   maxRevision: 0
-  source: http://transmote.com/nest/download/Nest.txt
-  id: 47
-  status: VALID
-  type: library
   download: http://transmote.com/nest/download/Nest.zip
   override:
     maxRevision: '228'
@@ -712,17 +712,21 @@ contributions:
   - in broken conf
 - id: 48
   source: ' http://kenai.com/downloads/l-system-utilities/lsystem.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
 - id: 49
   source: http://thomasdiewald.com/processing/tools/TabManager/download/TabManager.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - invalid file
-- name: Shapes 3D
+- id: 50
+  source: http://www.lagers.org.uk/processing/shapes3d/Shapes3D.txt
+  status: BROKEN
+  type: library
+  name: Shapes 3D
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/s3d4p/index.html
   categories:
@@ -736,10 +740,6 @@ contributions:
   prettyVersion: 2.1.5
   minRevision: 197
   maxRevision: 227
-  source: http://www.lagers.org.uk/processing/shapes3d/Shapes3D.txt
-  id: 50
-  status: BROKEN
-  type: library
   download: http://www.lagers.org.uk/processing/shapes3d/Shapes3D.zip
   override:
     maxRevision: '228'
@@ -748,7 +748,11 @@ contributions:
   log:
   - in broken conf
   - in skipped conf
-- name: G4P
+- id: 51
+  source: http://www.lagers.org.uk/processing/g4p/G4P.txt
+  status: BROKEN
+  type: library
+  name: G4P
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/g4p
   categories:
@@ -762,17 +766,17 @@ contributions:
   prettyVersion: 4.1.1
   minRevision: 245
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/g4p/G4P.txt
-  id: 51
-  status: BROKEN
-  type: library
   download: http://www.lagers.org.uk/processing/g4p/G4P.zip
   override:
     categories:
     - GUI
   log:
   - in skipped conf
-- name: G4P GUI Builder
+- id: 52
+  source: http://www.lagers.org.uk/processing/guibuilder/G4PTool.txt
+  status: BROKEN
+  type: tool
+  name: G4P GUI Builder
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/g4ptool/index.html
   categories:
@@ -787,20 +791,20 @@ contributions:
   prettyVersion: '2.6'
   minRevision: 227
   maxRevision: 227
-  source: http://www.lagers.org.uk/processing/guibuilder/G4PTool.txt
-  id: 52
-  status: BROKEN
-  type: tool
   download: http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
   log:
   - in skipped conf
 - id: 53
   source: ' http://mrzl.net/yahooweather/YahooWeather.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://schwittlick.net/yahooweather/YahooWeather.txt%20
-- name: Guido
+- id: 54
+  source: https://raw.github.com/fjenett/Guido/latest/releases/Guido.txt
+  status: VALID
+  type: library
+  name: Guido
   authors: '[Florian Jenett](http://www.bezier.de/)'
   url: https://github.com/fjenett/Guido
   categories:
@@ -812,15 +816,15 @@ contributions:
   prettyVersion: 0.0.4
   minRevision: 0
   maxRevision: 0
-  source: https://raw.github.com/fjenett/Guido/latest/releases/Guido.txt
-  id: 54
-  status: VALID
-  type: library
   download: https://raw.github.com/fjenett/Guido/latest/releases/Guido.zip
   override:
     categories:
     - GUI
-- name: Combinatorics
+- id: 55
+  source: https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.txt
+  status: VALID
+  type: library
+  name: Combinatorics
   authors: '[Florian Jenett](http://www.bezier.de/)'
   url: https://github.com/fjenett/combinatorics
   categories:
@@ -832,16 +836,17 @@ contributions:
   prettyVersion: 0.0.11
   minRevision: 0
   maxRevision: 0
-  source: https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.txt
-  id: 55
-  status: VALID
-  type: library
   download: https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
   override:
     categories:
     - Math
     - Simulation
-- name: GenerativeDesign
+- id: 56
+  source: 
+    https://github.com/generative-design/GenerativeDesignLibrary3/releases/download/latest/generativedesign.txt
+  status: VALID
+  type: library
+  name: GenerativeDesign
   authors: '[Hartmut Bohnacker, Benedikt Gross](http://www.generative-gestaltung.de/)'
   url: http://www.generative-gestaltung.de/
   categories:
@@ -855,17 +860,16 @@ contributions:
   prettyVersion: 1.0.6
   minRevision: 239
   maxRevision: 0
-  source: 
-    https://github.com/generative-design/GenerativeDesignLibrary3/releases/download/latest/generativedesign.txt
-  id: 56
-  status: VALID
-  type: library
   download: 
     https://github.com/generative-design/GenerativeDesignLibrary3/releases/download/latest/generativedesign.zip
   override:
     categories:
     - Compilation
-- name: G4P GUI Builder
+- id: 57
+  source: http://www.lagers.org.uk/processing3/guibuilder/G4PTool.txt
+  status: VALID
+  type: tool
+  name: G4P GUI Builder
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/g4ptool/index.html
   categories:
@@ -880,12 +884,12 @@ contributions:
   prettyVersion: 4.4.2
   minRevision: 246
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing3/guibuilder/G4PTool.txt
-  id: 57
-  status: VALID
-  type: tool
   download: http://www.lagers.org.uk/processing3/guibuilder/G4PTool.zip
-- name: ControlP5
+- id: 58
+  source: http://www.sojamo.de/libraries/controlP5/controlP5.txt
+  status: VALID
+  type: library
+  name: ControlP5
   authors: '[Andreas Schlegel](http://www.sojamo.de/)'
   url: http://www.sojamo.de/libraries/controlp5
   categories:
@@ -898,33 +902,33 @@ contributions:
   prettyVersion: 2.2.6
   minRevision: 0
   maxRevision: 0
-  source: http://www.sojamo.de/libraries/controlP5/controlP5.txt
-  id: 58
-  status: VALID
-  type: library
   download: http://www.sojamo.de/libraries/controlP5/controlP5.zip
   override:
     categories:
     - GUI
 - id: 59
   source: ' http://thomasdiewald.at/processing/libraries/dLibs_freenect/download/dLibs_freenect.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
 - id: 60
   source: https://dl.dropbox.com/u/87680069/gamepad.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropbox.com/u/87680069/gamepad.txt
 - id: 61
   source: ' https://dl.dropbox.com/u/87680069/piccolo2d.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropbox.com/u/87680069/piccolo2d.txt%20
-- name: Sprites
+- id: 62
+  source: http://www.lagers.org.uk/processing/sprites/Sprites.txt
+  status: VALID
+  type: library
+  name: Sprites
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/s4p
   categories:
@@ -936,15 +940,15 @@ contributions:
   prettyVersion: 2.1.1
   minRevision: 227
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/sprites/Sprites.txt
-  id: 62
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing/sprites/Sprites.zip
   override:
     categories:
     - Animation
-- name: RiTa
+- id: 63
+  source: http://rednoise.org/rita/rita.txt
+  status: VALID
+  type: library
+  name: RiTa
   authors: '[Daniel C. Howe](https://rednoise.org/daniel)'
   url: https://rednoise.org/rita/
   categories:
@@ -962,27 +966,27 @@ contributions:
   prettyVersion: 2.8.21
   minRevision: 0
   maxRevision: 0
-  source: http://rednoise.org/rita/rita.txt
-  id: 63
-  status: VALID
-  type: library
   download: http://rednoise.org/rita/rita.zip
   override:
     categories:
     - Language
 - id: 64
   source: ' http://www.muvium.com/frappuccino/frappuccino.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
 - id: 65
   source: ' http://blog.stainpixels.com/public/share.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
-- name: Ketai
+- id: 66
+  source: http://ketai.org/ketai.txt
+  status: VALID
+  type: library
+  name: Ketai
   authors: '[Daniel Sauter](http://daniel-sauter.com/) and j.duran'
   url: http://ketai.org/
   categories:
@@ -998,21 +1002,21 @@ contributions:
   prettyVersion: v14
   minRevision: 243
   maxRevision: 0
-  source: http://ketai.org/ketai.txt
-  id: 66
-  status: VALID
-  type: library
   download: http://ketai.org/ketai.zip
   override:
     categories:
     - Hardware
 - id: 67
   source: http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.txt
-- name: P8gGraphicsSVG
+- id: 68
+  source: http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.txt
+  status: VALID
+  type: library
+  name: P8gGraphicsSVG
   authors: '[Philippe Lhoste](http://Phi.Lho.free.fr/)'
   url: http://Phi.Lho.free.fr/programming/Processing/P8gGraphicsSVG/
   categories:
@@ -1024,10 +1028,6 @@ contributions:
   prettyVersion: '2.0'
   minRevision: 0
   maxRevision: 0
-  source: http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.txt
-  id: 68
-  status: VALID
-  type: library
   download: http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.zip
   override:
     maxRevision: '228'
@@ -1035,7 +1035,12 @@ contributions:
     - Utilities
   log:
   - in broken conf
-- name: $1 Unistroke Recognizer
+- id: 69
+  source: 
+    https://raw.githubusercontent.com/nok/onedollar-unistroke-recognizer/master/download/OneDollarUnistrokeRecognizer.txt
+  status: VALID
+  type: library
+  name: $1 Unistroke Recognizer
   authors: '[Darius Morawiec](http://nok.onl)'
   url: https://github.com/nok/onedollar-unistroke-recognizer
   categories:
@@ -1047,17 +1052,16 @@ contributions:
   prettyVersion: 1.0.3
   minRevision: 215
   maxRevision: 0
-  source: 
-    https://raw.githubusercontent.com/nok/onedollar-unistroke-recognizer/master/download/OneDollarUnistrokeRecognizer.txt
-  id: 69
-  status: VALID
-  type: library
   download: 
     https://raw.githubusercontent.com/nok/onedollar-unistroke-recognizer/master/download/OneDollarUnistrokeRecognizer.zip
   override:
     categories:
     - Utilities
-- name: CoffeeScript Mode
+- id: 70
+  source: http://bezier.de/processing/modes/CoffeeScriptMode.txt
+  status: VALID
+  type: mode
+  name: CoffeeScript Mode
   authors: '[Florian Jenett](http://bezier.de/)'
   url: https://github.com/fjenett/coffeescript-mode-processing
   categories:
@@ -1070,16 +1074,16 @@ contributions:
   prettyVersion: 0.0.7
   minRevision: 0
   maxRevision: 0
-  source: http://bezier.de/processing/modes/CoffeeScriptMode.txt
-  id: 70
-  status: VALID
-  type: mode
   download: http://bezier.de/processing/modes/CoffeeScriptMode.zip
   override:
     maxRevision: '228'
   log:
   - in broken conf
-- name: dmxP512
+- id: 71
+  source: http://motscousus.com/stuff/2011-01_dmxP512/dmxP512.txt
+  status: VALID
+  type: library
+  name: dmxP512
   authors: Henri DAVID
   url: http://motscousus.com/stuff/2011-01_dmxP512/
   categories:
@@ -1090,15 +1094,15 @@ contributions:
   prettyVersion: '1.3'
   minRevision: 0
   maxRevision: 0
-  source: http://motscousus.com/stuff/2011-01_dmxP512/dmxP512.txt
-  id: 71
-  status: VALID
-  type: library
   download: http://motscousus.com/stuff/2011-01_dmxP512/dmxP512.zip
   override:
     categories:
     - Hardware
-- name: oscP5
+- id: 72
+  source: http://sojamo.de/libraries/oscp5/oscP5.txt
+  status: VALID
+  type: library
+  name: oscP5
   authors: '[Andreas Schlegel](http://www.sojamo.de/)'
   url: http://www.sojamo.de/libraries/oscp5
   categories:
@@ -1110,15 +1114,15 @@ contributions:
   prettyVersion: 0.9.9
   minRevision: 0
   maxRevision: 0
-  source: http://sojamo.de/libraries/oscp5/oscP5.txt
-  id: 72
-  status: VALID
-  type: library
   download: http://sojamo.de/libraries/oscp5/oscP5.zip
   override:
     categories:
     - Data
-- name: UDP
+- id: 73
+  source: http://ubaa.net/shared/processing/udp/udp.txt
+  status: VALID
+  type: library
+  name: UDP
   authors: '[Stephane Cousot](http://ubaa.net/)'
   url: http://ubaa.net/shared/processing/udp/
   categories:
@@ -1129,45 +1133,45 @@ contributions:
   prettyVersion: '0.1'
   minRevision: 0
   maxRevision: 0
-  source: http://ubaa.net/shared/processing/udp/udp.txt
-  id: 73
-  status: VALID
-  type: library
   download: http://ubaa.net/shared/processing/udp/udp.zip
   override:
     categories:
     - Data
 - id: 74
   source: ' http://s373.net/code/cellularautomata/download/cellularautomata.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://s373.net/code/cellularautomata/download/cellularautomata.txt%20
 - id: 75
   source: ' http://s373.net/code/dna/download/dna.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://s373.net/code/dna/download/dna.txt%20
 - id: 76
   source: ' http://s373.net/code/boids/download/boids.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://s373.net/code/boids/download/boids.txt%20
 - id: 77
   source: ' http://s373.net/code/flob/download/flob.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://s373.net/code/flob/download/flob.txt%20
 - id: 78
   source: ' http://s373.net/code/marchingcubes/download/marchingcubes.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://s373.net/code/marchingcubes/download/marchingcubes.txt%20
-- name: Shapes 3D
+- id: 79
+  source: http://www.lagers.org.uk/processing3/shapes3d/Shapes3D.txt
+  status: VALID
+  type: library
+  name: Shapes 3D
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/s3d4p/index.html
   categories:
@@ -1181,15 +1185,15 @@ contributions:
   prettyVersion: '3.0'
   minRevision: 246
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing3/shapes3d/Shapes3D.txt
-  id: 79
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing3/shapes3d/Shapes3D.zip
   override:
     categories:
     - 3D
-- name: Dawesome Toolkit
+- id: 80
+  source: http://cloud.brendandawes.com/dawesometoolkit/dawesometoolkit.txt
+  status: VALID
+  type: library
+  name: Dawesome Toolkit
   authors: '[Brendan Dawes](http://www.brendandawes.com/)'
   url: http://cloud.brendandawes.com/dawesometoolkit/
   categories:
@@ -1203,21 +1207,21 @@ contributions:
   prettyVersion: '0.9'
   minRevision: 227
   maxRevision: 0
-  source: http://cloud.brendandawes.com/dawesometoolkit/dawesometoolkit.txt
-  id: 80
-  status: VALID
-  type: library
   download: http://cloud.brendandawes.com/dawesometoolkit/dawesometoolkit.zip
   override:
     categories:
     - Utilities
 - id: 81
   source: ' http://ubaa.net/shared/processing/opencv/download/opencv.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://ubaa.net/shared/processing/opencv/download/opencv.txt%20
-- name: TimedEvents
+- id: 82
+  source: http://www.multiply.org/processing/TimedEvents.txt
+  status: VALID
+  type: library
+  name: TimedEvents
   authors: '[Jason Gessner](http://multiply.org/)'
   url: http://multiply.org/processing/
   categories:
@@ -1229,21 +1233,21 @@ contributions:
   prettyVersion: 1.0.1
   minRevision: 0
   maxRevision: 0
-  source: http://www.multiply.org/processing/TimedEvents.txt
-  id: 82
-  status: VALID
-  type: library
   download: http://www.multiply.org/processing/TimedEvents.zip
   override:
     categories:
     - Utilities
 - id: 83
   source: http://rdlester.github.com/hermes/downloads/hermes.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://rdlester.github.com/hermes/downloads/hermes.txt
-- name: OOCSI for Processing
+- id: 84
+  source: http://iddi.github.io/oocsi-processing/oocsi.txt
+  status: VALID
+  type: library
+  name: OOCSI for Processing
   authors: '[Mathias Funk](http://www.mathias-funk.com/)'
   url: http://iddi.github.io/oocsi-processing/
   categories:
@@ -1263,10 +1267,6 @@ contributions:
   prettyVersion: 1.4.3
   minRevision: 0
   maxRevision: 0
-  source: http://iddi.github.io/oocsi-processing/oocsi.txt
-  id: 84
-  status: VALID
-  type: library
   download: http://iddi.github.io/oocsi-processing/oocsi.zip
   override:
     categories:
@@ -1275,11 +1275,15 @@ contributions:
     - Utilities
 - id: 85
   source: http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - file not found, status code 404 returned for url https://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.txt
-- name: spacebrewP5
+- id: 86
+  source: http://spacebrew.github.io/spacebrewP5/download/spacebrew.txt
+  status: VALID
+  type: library
+  name: spacebrewP5
   authors: '[Brett Renfer](http://www.robotconscience.com)'
   url: http://spacebrew.cc
   categories:
@@ -1292,15 +1296,15 @@ contributions:
   prettyVersion: 0.4.1
   minRevision: 223
   maxRevision: 0
-  source: http://spacebrew.github.io/spacebrewP5/download/spacebrew.txt
-  id: 86
-  status: VALID
-  type: library
   download: http://spacebrew.github.io/spacebrewP5/download/spacebrew.zip
   override:
     categories:
     - Utilities
-- name: JavaScript Mode
+- id: 87
+  source: http://bezier.de/processing/modes/JavaScriptMode.txt
+  status: VALID
+  type: mode
+  name: JavaScript Mode
   authors: '[Florian Jenett](http://bezier.de/)'
   url: https://github.com/fjenett/javascript-mode-processing
   categories:
@@ -1311,16 +1315,16 @@ contributions:
   prettyVersion: 0.3.3
   minRevision: 0
   maxRevision: 0
-  source: http://bezier.de/processing/modes/JavaScriptMode.txt
-  id: 87
-  status: VALID
-  type: mode
   download: http://bezier.de/processing/modes/JavaScriptMode.zip
   override:
     maxRevision: '228'
   log:
   - in broken conf
-- name: Fontastic
+- id: 88
+  source: https://raw.github.com/andreaskoller/Fontastic/master/download/Fontastic.txt
+  status: VALID
+  type: library
+  name: Fontastic
   authors: '[Andreas Koller](http://andreaskoller.com)'
   url: http://code.andreaskoller.com/libraries/fontastic
   categories:
@@ -1331,15 +1335,16 @@ contributions:
   prettyVersion: '0.4'
   minRevision: 0
   maxRevision: 0
-  source: https://raw.github.com/andreaskoller/Fontastic/master/download/Fontastic.txt
-  id: 88
-  status: VALID
-  type: library
   download: https://raw.github.com/andreaskoller/Fontastic/master/download/Fontastic.zip
   override:
     categories:
     - Typography
-- name: SoundCloud
+- id: 89
+  source: 
+    https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.txt
+  status: VALID
+  type: library
+  name: SoundCloud
   authors: '[Darius Morawiec](http://nok.onl)'
   url: https://github.com/nok/soundcloud-processing
   categories:
@@ -1351,11 +1356,6 @@ contributions:
   prettyVersion: 0.1.6
   minRevision: 215
   maxRevision: 0
-  source: 
-    https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.txt
-  id: 89
-  status: VALID
-  type: library
   download: 
     https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.zip
   override:
@@ -1366,11 +1366,15 @@ contributions:
   - in broken conf
 - id: 90
   source: https://dl.dropbox.com/u/87680069/LeapMotion.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropbox.com/u/87680069/LeapMotion.txt
-- name: OBJExport
+- id: 91
+  source: http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.txt
+  status: VALID
+  type: library
+  name: OBJExport
   authors: '[Jesse Louis-Rosenberg](http://n-e-r-v-o-u-s.com)'
   url: http://n-e-r-v-o-u-s.com/tools/obj
   categories:
@@ -1382,15 +1386,15 @@ contributions:
   prettyVersion: 0.2.4
   minRevision: 0
   maxRevision: 0
-  source: http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.txt
-  id: 91
-  status: VALID
-  type: library
   download: http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.zip
   override:
     categories:
     - I/O
-- name: ttslib
+- id: 92
+  source: http://www.local-guru.net/projects/ttslib/ttslib.txt
+  status: VALID
+  type: library
+  name: ttslib
   authors: '[Nikolaus Gradwohl](http://www.local-guru.net)'
   url: http://www.local-guru.net/blog/pages/ttslib
   categories:
@@ -1401,15 +1405,15 @@ contributions:
   prettyVersion: '0.4'
   minRevision: 0
   maxRevision: 0
-  source: http://www.local-guru.net/projects/ttslib/ttslib.txt
-  id: 92
-  status: VALID
-  type: library
   download: http://www.local-guru.net/projects/ttslib/ttslib.zip
   override:
     categories:
     - Sound
-- name: Path Finder
+- id: 93
+  source: http://www.lagers.org.uk/processing/pathfinder/Path_Finder.txt
+  status: VALID
+  type: library
+  name: Path Finder
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/pfind/index.html
   categories:
@@ -1421,30 +1425,26 @@ contributions:
   prettyVersion: 1.0.1
   minRevision: 227
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/pathfinder/Path_Finder.txt
-  id: 93
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing/pathfinder/Path_Finder.zip
   override:
     categories:
     - Other
 - id: 94
   source: https://dl.dropbox.com/u/87680069/executor.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropbox.com/u/87680069/executor.txt
 - id: 95
   source: https://dl.dropbox.com/u/87680069/frames.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropbox.com/u/87680069/frames.txt
 - id: 96
   source: http://www.lagers.org.uk/processing/appletmaker/AppletMaker.txt
-  type: tool
   status: VALID
+  type: tool
   log:
   - invalid file
   name: Applet Maker & Signer
@@ -1460,7 +1460,11 @@ contributions:
   minRevision: 0
   maxRevision: 0
   download: http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
-- name: SelectFile
+- id: 97
+  source: https://andrusiv.com/android-select-file/download/SelectFile.txt
+  status: VALID
+  type: library
+  name: SelectFile
   authors: '[Ostap Andrusiv](http://andrusiv.com)'
   url: https://andrusiv.com/android-select-file/
   categories:
@@ -1473,33 +1477,34 @@ contributions:
   prettyVersion: 0.0.2
   minRevision: 228
   maxRevision: 0
-  source: https://andrusiv.com/android-select-file/download/SelectFile.txt
-  id: 97
-  status: VALID
-  type: library
   download: https://andrusiv.com/android-select-file/download/SelectFile.zip
   override:
     categories:
     - I/O
 - id: 98
   source: http://vialab.science.uoit.ca/smt/dl/SMT.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://vialab.science.uoit.ca/smt/dl/SMT.txt
 - id: 99
   source: http://poifox.com/templater/download/Templater.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - url timeout
 - id: 100
   source: http://poifox.com/bootstrap/download/Bootstrap.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - url timeout
-- name: Android Mode for Processing 3
+- id: 101
+  source: 
+    https://github.com/processing/processing-android/releases/download/latest-processing3/AndroidMode.txt
+  status: VALID
+  type: mode
+  name: Android Mode for Processing 3
   authors: '[The Processing Foundation](https://processingfoundation.org/)'
   url: http://android.processing.org
   categories:
@@ -1510,14 +1515,13 @@ contributions:
   minRevision: 249
   maxRevision: 270
   imports: processing.mode.java.JavaMode
-  source: 
-    https://github.com/processing/processing-android/releases/download/latest-processing3/AndroidMode.txt
-  id: 101
-  status: VALID
-  type: mode
   download: 
     https://github.com/processing/processing-android/releases/download/latest-processing3/AndroidMode.zip
-- name: MoveLib
+- id: 102
+  source: ' http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.txt '
+  status: DEPRECATED
+  type: library
+  name: MoveLib
   authors: '[Raphael de Courville](https://vimeo.com/sableraf/)'
   url: https://github.com/SableRaf/movelib
   categories:
@@ -1531,15 +1535,15 @@ contributions:
   prettyVersion: 0.1b1
   minRevision: 0
   maxRevision: 0
-  source: ' http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.txt '
-  id: 102
-  status: DEPRECATED
-  type: library
   download: ' http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.zip'
   override:
     categories:
     - Hardware
-- name: ShortMessage
+- id: 103
+  source: http://hamzeen.github.io/ShortMessage/ShortMessage.txt
+  status: VALID
+  type: library
+  name: ShortMessage
   authors: '[Hamzeen. H.](http://www.hamzeen.com)'
   url: http://hamzeen.github.io/smsP5
   categories:
@@ -1551,15 +1555,15 @@ contributions:
   prettyVersion: 1.0.2
   minRevision: 0
   maxRevision: 0
-  source: http://hamzeen.github.io/ShortMessage/ShortMessage.txt
-  id: 103
-  status: VALID
-  type: library
   download: http://hamzeen.github.io/ShortMessage/ShortMessage.zip
   override:
     categories:
     - Data
-- name: BlinkStick
+- id: 104
+  source: http://arvydas.github.io/blinkstick-processing/download/BlinkStick.txt
+  status: VALID
+  type: library
+  name: BlinkStick
   authors: '[Arvydas Juskevicius](http://www.blinkstick.com)'
   url: http://arvydas.github.io/blinkstick-processing/
   categories:
@@ -1571,15 +1575,15 @@ contributions:
   prettyVersion: 0.2.0
   minRevision: 0
   maxRevision: 0
-  source: http://arvydas.github.io/blinkstick-processing/download/BlinkStick.txt
-  id: 104
-  status: VALID
-  type: library
   download: http://arvydas.github.io/blinkstick-processing/download/BlinkStick.zip
   override:
     categories:
     - Hardware
-- name: IgnoCodeLib
+- id: 105
+  source: http://paulhertz.net/ignocodelib/download/IgnoCodeLib.txt
+  status: VALID
+  type: library
+  name: IgnoCodeLib
   authors: '[Paul Hertz](http://paulhertz.net/)'
   url: http://paulhertz.net/ignocodelib/index.html
   categories:
@@ -1592,15 +1596,15 @@ contributions:
   prettyVersion: '0.3'
   minRevision: 0
   maxRevision: 0
-  source: http://paulhertz.net/ignocodelib/download/IgnoCodeLib.txt
-  id: 105
-  status: VALID
-  type: library
   download: http://paulhertz.net/ignocodelib/download/IgnoCodeLib.zip
   override:
     categories:
     - I/O
-- name: Computational Geometry
+- id: 106
+  source: http://www.thecloudlab.org/processing/download/ComputationalGeometry.txt
+  status: VALID
+  type: library
+  name: Computational Geometry
   authors: '[Mark Collins & Toru Hasegawa](http://thecloudlab.org)'
   url: http://thecloudlab.org/processing/library.html
   categories:
@@ -1614,27 +1618,28 @@ contributions:
   prettyVersion: '3.0'
   minRevision: 0
   maxRevision: 0
-  source: http://www.thecloudlab.org/processing/download/ComputationalGeometry.txt
-  id: 106
-  status: VALID
-  type: library
   download: http://www.thecloudlab.org/processing/download/ComputationalGeometry.zip
   override:
     categories:
     - Geometry
 - id: 107
   source: https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.txt
 - id: 108
   source: https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.txt
-- name: Leap Motion for Processing
+- id: 109
+  source: 
+    https://raw.githubusercontent.com/nok/leap-motion-processing/master/download/LeapMotionForProcessing.txt
+  status: VALID
+  type: library
+  name: Leap Motion for Processing
   authors: '[Darius Morawiec](http://nok.onl)'
   url: https://github.com/nok/leap-motion-processing
   categories:
@@ -1647,17 +1652,17 @@ contributions:
   prettyVersion: 2.3.1.6
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://raw.githubusercontent.com/nok/leap-motion-processing/master/download/LeapMotionForProcessing.txt
-  id: 109
-  status: VALID
-  type: library
   download: 
     https://raw.githubusercontent.com/nok/leap-motion-processing/master/download/LeapMotionForProcessing.zip
   override:
     categories:
     - Hardware
-- name: XlsReader
+- id: 110
+  source: 
+    https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.txt
+  status: VALID
+  type: library
+  name: XlsReader
   authors: '[Florian Jenett](http://www.bezier.de/)'
   url: https://github.com/fjenett/xlsreader-library-processing
   categories:
@@ -1668,11 +1673,6 @@ contributions:
   prettyVersion: 0.1.2
   minRevision: 218
   maxRevision: 0
-  source: 
-    https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.txt
-  id: 110
-  status: VALID
-  type: library
   download: 
     https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.zip
   override:
@@ -1681,7 +1681,12 @@ contributions:
     - Data
   log:
   - in broken conf
-- name: BezierSQLib
+- id: 111
+  source: 
+    https://github.com/benfry/sql-library-processing/raw/master/release/BezierSQLib.txt
+  status: VALID
+  type: library
+  name: BezierSQLib
   authors: '[Florian Jenett](http://www.bezier.de/)'
   url: https://github.com/fjenett/sql-library-processing
   categories:
@@ -1692,17 +1697,16 @@ contributions:
   prettyVersion: 0.3.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/benfry/sql-library-processing/raw/master/release/BezierSQLib.txt
-  id: 111
-  status: VALID
-  type: library
   download: 
     https://github.com/benfry/sql-library-processing/raw/master/release/BezierSQLib.zip
   override:
     categories:
     - Data
-- name: SpeedTool
+- id: 112
+  source: http://larskaltenbach.de/code/speedTool/download/SpeedTool.txt
+  status: VALID
+  type: tool
+  name: SpeedTool
   authors: '[Lars Kaltenbach](http://larskaltenbach.de)'
   url: http://larskaltenbach.de/code/speedTool
   categories:
@@ -1713,10 +1717,6 @@ contributions:
   prettyVersion: '0.2'
   minRevision: 0
   maxRevision: 0
-  source: http://larskaltenbach.de/code/speedTool/download/SpeedTool.txt
-  id: 112
-  status: VALID
-  type: tool
   download: http://larskaltenbach.de/code/speedTool/download/SpeedTool.zip
   override:
     maxRevision: '228'
@@ -1724,17 +1724,22 @@ contributions:
   - in broken conf
 - id: 113
   source: http://sixthsensor.dk/code/p5/point2line/download/point2line.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://sixthsensor.dk/code/p5/point2line/download/point2line.txt
 - id: 114
   source: http://drifkin.net/processing/beziereditor/download/BezierEditorTool.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - file not found, status code 404 returned for url https://drifkin.net/processing/beziereditor/download/BezierEditorTool.txt
-- name: Signal Filter
+- id: 115
+  source: 
+    http://s176381904.onlinehome.fr/processing/SignalFilter/download/signalFilter.txt
+  status: VALID
+  type: library
+  name: Signal Filter
   authors: '[Raphael de Courville](https://vimeo.com/sableraf/)'
   url: https://github.com/SableRaf/signalfilter
   categories:
@@ -1747,17 +1752,16 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    http://s176381904.onlinehome.fr/processing/SignalFilter/download/signalFilter.txt
-  id: 115
-  status: VALID
-  type: library
   download: 
     http://s176381904.onlinehome.fr/processing/SignalFilter/download/signalFilter.zip
   override:
     categories:
     - Data
-- name: NextText
+- id: 116
+  source: ' https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.txt '
+  status: DEPRECATED
+  type: library
+  name: NextText
   authors: '[Elie Zananiri](http://www.silentlycrashing.net) / [Obx Labs](http://www.obxlabs.net/)'
   url: http://nexttext.net/
   categories:
@@ -1770,10 +1774,6 @@ contributions:
   prettyVersion: 2.0.2
   minRevision: 218
   maxRevision: 0
-  source: ' https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.txt '
-  id: 116
-  status: DEPRECATED
-  type: library
   download: ' https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.zip'
   override:
     maxRevision: '228'
@@ -1783,17 +1783,21 @@ contributions:
   - in broken conf
 - id: 117
   source: ' http://ccl.angusforbes.com/stereo.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
 - id: 118
   source: ' http://www.abstract-codex.net/tactu5/download/tactu5.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://www.abstract-codex.net/tactu5/download/tactu5.txt%20
-- name: Eliza
+- id: 119
+  source: https://github.com/codeanticode/eliza/releases/download/latest/Eliza.txt
+  status: VALID
+  type: library
+  name: Eliza
   authors: '[Andres Colubri](http://interfaze.info/)'
   url: http://interfaze.info/libraries/eliza/
   categories:
@@ -1805,15 +1809,15 @@ contributions:
   prettyVersion: '1.0'
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/codeanticode/eliza/releases/download/latest/Eliza.txt
-  id: 119
-  status: VALID
-  type: library
   download: https://github.com/codeanticode/eliza/releases/download/latest/Eliza.zip
   override:
     categories:
     - Language
-- name: SimpleOpenNI
+- id: 120
+  source: https://fox-gieg.com/patches/processing/libraries/SimpleOpenNI/SimpleOpenNI.txt
+  status: VALID
+  type: library
+  name: SimpleOpenNI
   authors: '[Max Rheiner & Antonio Vega](http://code.google.com/p/simple-openni/)'
   url: https://github.com/totovr/SimpleOpenNI
   categories:
@@ -1824,15 +1828,15 @@ contributions:
   prettyVersion: 2.0.0
   minRevision: 266
   maxRevision: 0
-  source: https://fox-gieg.com/patches/processing/libraries/SimpleOpenNI/SimpleOpenNI.txt
-  id: 120
-  status: VALID
-  type: library
   download: https://fox-gieg.com/patches/processing/libraries/SimpleOpenNI/SimpleOpenNI.zip
   override:
     categories:
     - 3D
-- name: Tablet
+- id: 121
+  source: https://github.com/codeanticode/tablet/releases/download/latest/Tablet.txt
+  status: VALID
+  type: library
+  name: Tablet
   authors: '[Andres Colubri](http://andrescolubri.net/)'
   url: http://interfaze.info/libraries/tablet/
   categories:
@@ -1845,21 +1849,21 @@ contributions:
   prettyVersion: 2.0-alpha3
   minRevision: 239
   maxRevision: 0
-  source: https://github.com/codeanticode/tablet/releases/download/latest/Tablet.txt
-  id: 121
-  status: VALID
-  type: library
   download: https://github.com/codeanticode/tablet/releases/download/latest/Tablet.zip
   override:
     categories:
     - I/O
 - id: 122
   source: ' http://galsasson.com/tweakmode/tweakmode.txt '
-  type: mode
   status: BROKEN
+  type: mode
   log:
   - file not found, status code 404 returned for url http://galsasson.com/tweakmode/tweakmode.txt%20
-- name: iGeo
+- id: 123
+  source: http://igeo.jp/igeo.txt
+  status: VALID
+  type: library
+  name: iGeo
   authors: '[Satoru Sugihara](http://atlv.org/)'
   url: http://igeo.jp/
   categories:
@@ -1872,10 +1876,6 @@ contributions:
   prettyVersion: 0.9.0.1
   minRevision: 0
   maxRevision: 0
-  source: http://igeo.jp/igeo.txt
-  id: 123
-  status: VALID
-  type: library
   download: http://igeo.jp/igeo.zip
   override:
     maxRevision: '228'
@@ -1885,17 +1885,21 @@ contributions:
   - in broken conf
 - id: 124
   source: ' http://download.processing.org/pdeX.txt '
-  type: mode
   status: BROKEN
+  type: mode
   log:
   - file not found, status code 404 returned for url https://download.processing.org/pdeX.txt%20
 - id: 125
   source: ' http://shiffman.net/p5/libraries/rekognition_processing/rekognition_processing.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
-- name: grafica
+- id: 126
+  source: https://raw.github.com/jagracar/grafica/master/releases/grafica.txt
+  status: VALID
+  type: library
+  name: grafica
   authors: '[Javier Gracia Carpio](http://jagracar.com)'
   url: http://jagracar.com/grafica.php
   categories:
@@ -1906,15 +1910,15 @@ contributions:
   prettyVersion: 1.9.1
   minRevision: 0
   maxRevision: 0
-  source: https://raw.github.com/jagracar/grafica/master/releases/grafica.txt
-  id: 126
-  status: VALID
-  type: library
   download: https://raw.github.com/jagracar/grafica/master/releases/grafica.zip
   override:
     categories:
     - Math
-- name: AI for 2D Games
+- id: 127
+  source: http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.txt
+  status: VALID
+  type: library
+  name: AI for 2D Games
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/ai4g/index.html
   categories:
@@ -1928,21 +1932,21 @@ contributions:
   prettyVersion: 1.1.1
   minRevision: 227
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.txt
-  id: 127
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.zip
   override:
     categories:
     - Simulation
 - id: 128
   source: ' http://dasmithii.com/GNet.txt '
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
-- name: Mother
+- id: 129
+  source: https://github.com/onar3d/processing-mother/releases/download/latest/Mother.txt
+  status: VALID
+  type: library
+  name: Mother
   authors: '[Ilias Bergstrom](http://www.onar3d.com)'
   url: http://www.onar3d.com/mother
   categories:
@@ -1953,10 +1957,6 @@ contributions:
   prettyVersion: 1.6.0
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/onar3d/processing-mother/releases/download/latest/Mother.txt
-  id: 129
-  status: VALID
-  type: library
   download: https://github.com/onar3d/processing-mother/releases/download/latest/Mother.zip
   override:
     maxRevision: '228'
@@ -1964,7 +1964,12 @@ contributions:
     - Utilities
   log:
   - in broken conf
-- name: planetarium
+- id: 130
+  source: 
+    https://github.com/codeanticode/planetarium/releases/download/latest/planetarium.txt
+  status: VALID
+  type: library
+  name: planetarium
   authors: '[Andres Colubri](http://andrescolubri.net/)'
   url: https://github.com/codeanticode/planetarium
   categories:
@@ -1977,17 +1982,16 @@ contributions:
   prettyVersion: '0.5'
   minRevision: 246
   maxRevision: 0
-  source: 
-    https://github.com/codeanticode/planetarium/releases/download/latest/planetarium.txt
-  id: 130
-  status: VALID
-  type: library
   download: 
     https://github.com/codeanticode/planetarium/releases/download/latest/planetarium.zip
   override:
     categories:
     - 3D
-- name: QScript
+- id: 131
+  source: http://www.lagers.org.uk/processing/qscript/QScript.txt
+  status: VALID
+  type: library
+  name: QScript
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/qscript
   categories:
@@ -2001,15 +2005,16 @@ contributions:
   prettyVersion: 2.1.2
   minRevision: 227
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/qscript/QScript.txt
-  id: 131
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing/qscript/QScript.zip
   override:
     categories:
     - Math
-- name: OpenCV for Processing
+- id: 132
+  source: 
+    https://github.com/cansik/opencv-processing/releases/download/contribution-manager/opencv_processing.txt
+  status: VALID
+  type: library
+  name: OpenCV for Processing
   authors: '[Greg Borenstein](http://gregborenstein.com) and [Florian Bruggisser](https://broox.ch/)'
   url: https://github.com/cansik/opencv-processing
   categories:
@@ -2022,17 +2027,16 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://github.com/cansik/opencv-processing/releases/download/contribution-manager/opencv_processing.txt
-  id: 132
-  status: VALID
-  type: library
   download: 
     https://github.com/cansik/opencv-processing/releases/download/contribution-manager/opencv_processing.zip
   override:
     categories:
     - Video & Vision
-- name: Redis
+- id: 133
+  source: https://raw.githubusercontent.com/nok/redis-processing/master/download/Redis.txt
+  status: VALID
+  type: library
+  name: Redis
   authors: '[Darius Morawiec](http://nok.onl)'
   url: https://github.com/nok/redis-processing
   categories:
@@ -2045,21 +2049,21 @@ contributions:
   prettyVersion: 1.1.3
   minRevision: 197
   maxRevision: 0
-  source: https://raw.githubusercontent.com/nok/redis-processing/master/download/Redis.txt
-  id: 133
-  status: VALID
-  type: library
   download: https://raw.githubusercontent.com/nok/redis-processing/master/download/Redis.zip
   override:
     categories:
     - Data
 - id: 134
   source: http://decoder.x10host.com/blobscanner/blobscanner.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
-- name: Temboo
+- id: 135
+  source: https://temboo.com/files/temboo-processing.txt
+  status: VALID
+  type: library
+  name: Temboo
   authors: '[Temboo](http://temboo.com/)'
   url: http://www.temboo.com/processing
   categories:
@@ -2072,15 +2076,15 @@ contributions:
   prettyVersion: 2.24.0
   minRevision: 0
   maxRevision: 0
-  source: https://temboo.com/files/temboo-processing.txt
-  id: 135
-  status: VALID
-  type: library
   download: https://temboo.com/files/temboo-processing.zip
   override:
     categories:
     - Data
-- name: GifAnimation
+- id: 136
+  source: https://fox-gieg.com/patches/processing/libraries/gifAnimation/gifAnimation.txt
+  status: VALID
+  type: library
+  name: GifAnimation
   authors: '[Patrick Meister, Jerome Saint-Clair](http://www.extrapixel.ch)'
   url: https://github.com/extrapixel/gif-animation
   categories:
@@ -2092,15 +2096,16 @@ contributions:
   prettyVersion: 3.0.0
   minRevision: 246
   maxRevision: 0
-  source: https://fox-gieg.com/patches/processing/libraries/gifAnimation/gifAnimation.txt
-  id: 136
-  status: VALID
-  type: library
   download: https://fox-gieg.com/patches/processing/libraries/gifAnimation/gifAnimation.zip
   override:
     categories:
     - I/O
-- name: HTTP Requests for Processing
+- id: 137
+  source: 
+    https://github.com/runemadsen/HTTP-Requests-for-Processing/releases/download/latest/httprequests_processing.txt
+  status: VALID
+  type: library
+  name: HTTP Requests for Processing
   authors: '[Rune Madsen](http://www.runemadsen.com), [Daniel Shiffman](http://shiffman.net)'
   url: https://github.com/runemadsen/HTTP-Requests-for-Processing
   categories:
@@ -2112,17 +2117,16 @@ contributions:
   prettyVersion: 0.1.5
   minRevision: 218
   maxRevision: 0
-  source: 
-    https://github.com/runemadsen/HTTP-Requests-for-Processing/releases/download/latest/httprequests_processing.txt
-  id: 137
-  status: VALID
-  type: library
   download: 
     https://github.com/runemadsen/HTTP-Requests-for-Processing/releases/download/latest/httprequests_processing.zip
   override:
     categories:
     - Data
-- name: Beads
+- id: 138
+  source: http://beadsproject.net/library/beads.txt
+  status: VALID
+  type: library
+  name: Beads
   authors: '[Ollie Bown](http://www.olliebown.com), [Benito Crawford](http://benitomedia.com),
     [Ben Porter](http://bp.io) and [Aengus Martin](http://www.am-process.org)'
   url: http://www.beadsproject.net/
@@ -2137,15 +2141,15 @@ contributions:
   prettyVersion: '4.1'
   minRevision: 0
   maxRevision: 0
-  source: http://beadsproject.net/library/beads.txt
-  id: 138
-  status: VALID
-  type: library
   download: http://beadsproject.net/library/beads.zip
   override:
     categories:
     - Sound
-- name: VSync for Processing
+- id: 139
+  source: http://ernestum.github.io/VSync-for-Processing/download/VSync.txt
+  status: VALID
+  type: library
+  name: VSync for Processing
   authors: Maximilian Ernestus
   url: http://ernestum.github.io/VSync-for-Processing/
   categories:
@@ -2161,15 +2165,16 @@ contributions:
   prettyVersion: v0.1
   minRevision: 0
   maxRevision: 0
-  source: http://ernestum.github.io/VSync-for-Processing/download/VSync.txt
-  id: 139
-  status: VALID
-  type: library
   download: http://ernestum.github.io/VSync-for-Processing/download/VSync.zip
   override:
     categories:
     - I/O
-- name: CountdownTimer
+- id: 140
+  source: 
+    https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.txt
+  status: VALID
+  type: library
+  name: CountdownTimer
   authors: '[Dong Hyun Choi](http://dhchoi.com)'
   url: https://github.com/dhchoi/processing-countdowntimer
   categories:
@@ -2183,17 +2188,16 @@ contributions:
   prettyVersion: 0.9.4
   minRevision: 227
   maxRevision: 0
-  source: 
-    https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.txt
-  id: 140
-  status: VALID
-  type: library
   download: 
     https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.zip
   override:
     categories:
     - Utilities
-- name: JarMatey
+- id: 141
+  source: http://s3.staticvoidgames.com/JarMatey/JarMateyProcessingTool.txt
+  status: VALID
+  type: tool
+  name: JarMatey
   authors: '[Kevin Workman](http://StaticVoidGames.com)'
   url: http://StaticVoidGames.com/JarMatey/
   categories:
@@ -2204,10 +2208,6 @@ contributions:
   prettyVersion: '2'
   minRevision: 0
   maxRevision: 0
-  source: http://s3.staticvoidgames.com/JarMatey/JarMateyProcessingTool.txt
-  id: 141
-  status: VALID
-  type: tool
   download: http://s3.staticvoidgames.com/JarMatey/JarMateyProcessingTool.zip
   override:
     maxRevision: '228'
@@ -2215,11 +2215,15 @@ contributions:
   - in broken conf
 - id: 142
   source: ' http://py.processing.org/PythonMode.txt '
-  type: mode
   status: BROKEN
+  type: mode
   log:
   - file not found, status code 404 returned for url https://py.processing.org/PythonMode.txt%20
-- name: Game Control Plus
+- id: 143
+  source: http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.txt
+  status: BROKEN
+  type: library
+  name: Game Control Plus
   authors: '[Peter Lager](http://lagers.org.uk)'
   url: http://lagers.org.uk/gamecontrol
   categories:
@@ -2232,17 +2236,17 @@ contributions:
   prettyVersion: '1.1'
   minRevision: 227
   maxRevision: 227
-  source: http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.txt
-  id: 143
-  status: BROKEN
-  type: library
   download: http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.zip
   override:
     categories:
     - I/O
   log:
   - in skipped conf
-- name: Unfolding Maps
+- id: 144
+  source: http://unfoldingmaps.org/Unfolding.txt
+  status: VALID
+  type: library
+  name: Unfolding Maps
   authors: '[Till Nagel](http://tillnagel.com/) and others'
   url: http://www.unfoldingmaps.org/
   categories:
@@ -2253,10 +2257,6 @@ contributions:
   prettyVersion: 0.9.6
   minRevision: 0
   maxRevision: 0
-  source: http://unfoldingmaps.org/Unfolding.txt
-  id: 144
-  status: VALID
-  type: library
   download: http://unfoldingmaps.org/Unfolding.zip
   override:
     maxRevision: '228'
@@ -2266,11 +2266,15 @@ contributions:
   - in broken conf
 - id: 145
   source: http://www.heroicrobotics.com/software/PixelPusher.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://www.heroicrobotics.com/software/PixelPusher.txt
-- name: BoofCV for Processing
+- id: 146
+  source: http://boofcv.org/processing/boofcv_processing.txt
+  status: VALID
+  type: library
+  name: BoofCV for Processing
   authors: Peter Abeles
   url: http://boofcv.org/index.php?title=Tutorial_Processing
   categories:
@@ -2282,15 +2286,15 @@ contributions:
   prettyVersion: '0.36'
   minRevision: 246
   maxRevision: 0
-  source: http://boofcv.org/processing/boofcv_processing.txt
-  id: 146
-  status: VALID
-  type: library
   download: http://boofcv.org/processing/boofcv_processing.zip
   override:
     categories:
     - Video & Vision
-- name: Minim
+- id: 147
+  source: http://code.compartmental.net/minim/distro/minim_for_processing.txt
+  status: VALID
+  type: library
+  name: Minim
   authors: '[Damien Di Fede](http://code.compartmental.net/) and [Anderson Mills](http://konfuzo.net/)'
   url: http://code.compartmental.net/minim/
   categories:
@@ -2302,15 +2306,15 @@ contributions:
   prettyVersion: 2.2.2
   minRevision: 243
   maxRevision: 0
-  source: http://code.compartmental.net/minim/distro/minim_for_processing.txt
-  id: 147
-  status: VALID
-  type: library
   download: http://code.compartmental.net/minim/distro/minim_for_processing.zip
   override:
     categories:
     - Sound
-- name: Syphon
+- id: 148
+  source: ' https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt '
+  status: DEPRECATED
+  type: library
+  name: Syphon
   authors: '[Andres Colubri](http://andrescolubri.net/), [Tom Butterworth](http://kriss.cx/tom),
     [Anton Marini](http://vade.info/)'
   url: https://github.com/Syphon/Processing
@@ -2327,15 +2331,15 @@ contributions:
   prettyVersion: '4.0'
   minRevision: 249
   maxRevision: 0
-  source: ' https://github.com/Syphon/Processing/releases/download/latest/Syphon.txt '
-  id: 148
-  status: DEPRECATED
-  type: library
   download: ' https://github.com/Syphon/Processing/releases/download/latest/Syphon.zip'
   override:
     categories:
     - Video & Vision
-- name: Kinect4WinSDK
+- id: 149
+  source: http://www.magicandlove.com/software/Kinect4WinSDK.txt
+  status: VALID
+  type: library
+  name: Kinect4WinSDK
   authors: '[Bryan Chung](http://www.magicandlove.com)'
   url: http://www.magicandlove.com/blog/research/kinect-for-processing-library/
   categories:
@@ -2346,15 +2350,16 @@ contributions:
   prettyVersion: 1.2.0
   minRevision: 0
   maxRevision: 0
-  source: http://www.magicandlove.com/software/Kinect4WinSDK.txt
-  id: 149
-  status: VALID
-  type: library
   download: http://www.magicandlove.com/software/Kinect4WinSDK.zip
   override:
     categories:
     - Video & Vision
-- name: Video Library for Processing 3
+- id: 150
+  source: 
+    https://github.com/processing/processing-video/releases/download/latest-processing3/video.txt
+  status: VALID
+  type: library
+  name: Video Library for Processing 3
   authors: The Processing Foundation
   url: http://processing.org/reference/libraries/video/index.html
   categories:
@@ -2365,17 +2370,16 @@ contributions:
   prettyVersion: '2.0'
   minRevision: 228
   maxRevision: 270
-  source: 
-    https://github.com/processing/processing-video/releases/download/latest-processing3/video.txt
-  id: 150
-  status: VALID
-  type: library
   download: 
     https://github.com/processing/processing-video/releases/download/latest-processing3/video.zip
   override:
     categories:
     - Video & Vision
-- name: Loom
+- id: 151
+  source: https://corajr.github.io/loom/download/loom.txt
+  status: VALID
+  type: library
+  name: Loom
   authors: '[Cora Johnson-Roberson](http://www.corajr.com)'
   url: http://corajr.github.io/loom
   categories:
@@ -2387,21 +2391,22 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://corajr.github.io/loom/download/loom.txt
-  id: 151
-  status: VALID
-  type: library
   download: https://corajr.github.io/loom/download/loom.zip
   override:
     categories:
     - Sound
 - id: 152
   source: https://imaginary-institute.com/resources/AULibrary/AULib.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 406 returned for url https://imaginary-institute.com/resources/AULibrary/AULib.txt
-- name: Sound
+- id: 153
+  source: 
+    https://github.com/processing/processing-sound/releases/download/latest/sound.txt
+  status: VALID
+  type: library
+  name: Sound
   authors: The Processing Foundation
   url: https://processing.org/reference/libraries/sound/
   categories:
@@ -2413,11 +2418,6 @@ contributions:
   minRevision: 229
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://github.com/processing/processing-sound/releases/download/latest/sound.txt
-  id: 153
-  status: VALID
-  type: library
   download: 
     https://github.com/processing/processing-sound/releases/download/latest/sound.zip
   override:
@@ -2425,11 +2425,16 @@ contributions:
     - Sound
 - id: 154
   source: http://shiffman.net/p5/examples/natureofcode.txt
-  type: examples
   status: BROKEN
+  type: examples
   log:
   - invalid file
-- name: Myo for Processing
+- id: 155
+  source: 
+    https://raw.githubusercontent.com/nok/myo-processing/master/download/MyoForProcessing.txt
+  status: VALID
+  type: library
+  name: Myo for Processing
   authors: '[Darius Morawiec](http://nok.onl)'
   url: https://github.com/nok/myo-processing
   categories:
@@ -2443,17 +2448,16 @@ contributions:
   prettyVersion: 0.9.0.3
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://raw.githubusercontent.com/nok/myo-processing/master/download/MyoForProcessing.txt
-  id: 155
-  status: VALID
-  type: library
   download: 
     https://raw.githubusercontent.com/nok/myo-processing/master/download/MyoForProcessing.zip
   override:
     categories:
     - Hardware
-- name: Jasmine
+- id: 156
+  source: http://www.lagers.org.uk/processing/jasmine/Jasmine.txt
+  status: VALID
+  type: library
+  name: Jasmine
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/jasmine
   categories:
@@ -2466,15 +2470,15 @@ contributions:
   prettyVersion: '1.1'
   minRevision: 227
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/jasmine/Jasmine.txt
-  id: 156
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing/jasmine/Jasmine.zip
   override:
     categories:
     - Math
-- name: Steganos
+- id: 157
+  source: http://www.lagers.org.uk/processing/steganos/Steganos.txt
+  status: VALID
+  type: library
+  name: Steganos
   authors: '[Peter Lager](http://www.lagers.org.uk)'
   url: http://www.lagers.org.uk/steganos/index.html
   categories:
@@ -2485,15 +2489,15 @@ contributions:
   prettyVersion: 1.0.2
   minRevision: 227
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing/steganos/Steganos.txt
-  id: 157
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing/steganos/Steganos.zip
   override:
     categories:
     - Other
-- name: ColorScheme
+- id: 158
+  source: http://josephtaylor.github.io/ColorScheme/ColorScheme.txt
+  status: VALID
+  type: library
+  name: ColorScheme
   authors: '[J. Taylor OConnor](http://josephtaylor.github.io)'
   url: http://josephtaylor.github.io/ColorScheme
   categories:
@@ -2505,15 +2509,15 @@ contributions:
   prettyVersion: 2.0.0
   minRevision: 242
   maxRevision: 0
-  source: http://josephtaylor.github.io/ColorScheme/ColorScheme.txt
-  id: 158
-  status: VALID
-  type: library
   download: http://josephtaylor.github.io/ColorScheme/ColorScheme.zip
   override:
     categories:
     - Utilities
-- name: SketchMapper
+- id: 159
+  source: http://josephtaylor.github.io/sketch-mapper/SketchMapper.txt
+  status: VALID
+  type: library
+  name: SketchMapper
   authors: '[J. Taylor OConnor](http://josephtaylor.github.io)'
   url: http://josephtaylor.github.io/sketch-mapper
   categories:
@@ -2524,15 +2528,15 @@ contributions:
   prettyVersion: 4.1.3
   minRevision: 246
   maxRevision: 0
-  source: http://josephtaylor.github.io/sketch-mapper/SketchMapper.txt
-  id: 159
-  status: VALID
-  type: library
   download: http://josephtaylor.github.io/sketch-mapper/SketchMapper.zip
   override:
     categories:
     - Utilities
-- name: Git Manager
+- id: 160
+  source: https://github.com/joelmoniz/Git-Manager/releases/download/latest/GitManager.txt
+  status: VALID
+  type: tool
+  name: Git Manager
   authors: '[Joel Moniz](http://joelmoniz.com)'
   url: http://joelmoniz.com/git-manager
   categories:
@@ -2546,12 +2550,12 @@ contributions:
   minRevision: 242
   maxRevision: 0
   lastUpdated: '1443010051000'
-  source: https://github.com/joelmoniz/Git-Manager/releases/download/latest/GitManager.txt
-  id: 160
-  status: VALID
-  type: tool
   download: https://github.com/joelmoniz/Git-Manager/releases/download/latest/GitManager.zip
-- name: Kinect v2 for Processing
+- id: 161
+  source: http://codigogenerativo.com/KinectPV2.txt
+  status: VALID
+  type: library
+  name: Kinect v2 for Processing
   authors: '[Thomas Sanchez Lengeling](http://codigogenerativo.com/)'
   url: http://codigogenerativo.com/kinectpv2/
   categories:
@@ -2562,15 +2566,15 @@ contributions:
   prettyVersion: 0.7.8
   minRevision: 246
   maxRevision: 0
-  source: http://codigogenerativo.com/KinectPV2.txt
-  id: 161
-  status: VALID
-  type: library
   download: http://codigogenerativo.com/KinectPV2.zip
   override:
     categories:
     - Video & Vision
-- name: REPL Mode
+- id: 162
+  source: https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.txt
+  status: VALID
+  type: mode
+  name: REPL Mode
   authors: '[Joel Moniz](http://joelmoniz.com)'
   url: https://github.com/joelmoniz/REPLmode
   categories:
@@ -2591,18 +2595,19 @@ contributions:
   maxRevision: 0
   imports: processing.mode.java.JavaMode
   lastUpdated: '1443120511000'
-  source: https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.txt
-  id: 162
-  status: VALID
-  type: mode
   download: https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.zip
 - id: 163
   source: http://shiffman.net/p5/examples/learningprocessing2.txt
-  type: examples
   status: BROKEN
+  type: examples
   log:
   - invalid file
-- name: Eye Tribe for Processing
+- id: 164
+  source: 
+    http://jorgecardoso.eu/processing/eyetribeprocessing/download/EyeTribeProcessing.txt
+  status: VALID
+  type: library
+  name: Eye Tribe for Processing
   authors: '[Jorge C. S. Cardoso](http://jorgecardoso.eu)'
   url: http://jorgecardoso.eu/processing/eyetribeprocessing
   categories:
@@ -2614,11 +2619,6 @@ contributions:
   prettyVersion: 0.1.2
   minRevision: 0
   maxRevision: 0
-  source: 
-    http://jorgecardoso.eu/processing/eyetribeprocessing/download/EyeTribeProcessing.txt
-  id: 164
-  status: VALID
-  type: library
   download: 
     http://jorgecardoso.eu/processing/eyetribeprocessing/download/EyeTribeProcessing.zip
   override:
@@ -2626,17 +2626,21 @@ contributions:
     - Hardware
 - id: 165
   source: https://processing.org/handbook/handbook_2e.txt
-  type: examples
   status: BROKEN
+  type: examples
   log:
   - file not found, status code 404 returned for url https://processing.org/handbook/handbook_2e.txt
 - id: 166
   source: https://processing.org/books/gswp_2e.txt
-  type: examples
   status: BROKEN
+  type: examples
   log:
   - file not found, status code 404 returned for url https://processing.org/books/gswp_2e.txt
-- name: Game Control Plus
+- id: 167
+  source: http://www.lagers.org.uk/processing3/gamecontrol/GameControlPlus.txt
+  status: VALID
+  type: library
+  name: Game Control Plus
   authors: '[Peter Lager](http://lagers.org.uk)'
   url: http://lagers.org.uk/gamecontrol
   categories:
@@ -2649,15 +2653,15 @@ contributions:
   prettyVersion: 1.2.2
   minRevision: 246
   maxRevision: 0
-  source: http://www.lagers.org.uk/processing3/gamecontrol/GameControlPlus.txt
-  id: 167
-  status: VALID
-  type: library
   download: http://www.lagers.org.uk/processing3/gamecontrol/GameControlPlus.zip
   override:
     categories:
     - I/O
-- name: Simple HTTP Server
+- id: 168
+  source: http://transfluxus.github.io/SimpleHTTPServer/download/SimpleHTTPServer.txt
+  status: VALID
+  type: library
+  name: Simple HTTP Server
   authors: '[Ramin Soleymani](http://diskordier.net)'
   url: http://diskordier.net/simpleHTTPServer
   categories:
@@ -2672,18 +2676,14 @@ contributions:
   prettyVersion: '1.6'
   minRevision: 253
   maxRevision: 253
-  source: http://transfluxus.github.io/SimpleHTTPServer/download/SimpleHTTPServer.txt
-  id: 168
-  status: VALID
-  type: library
   download: http://transfluxus.github.io/SimpleHTTPServer/download/SimpleHTTPServer.zip
   override:
     categories:
     - I/O
 - id: 169
   source: https://contribs.processing.org/pythonmode/3/PythonMode.txt
-  type: mode
   status: VALID
+  type: mode
   log:
   - file not found, status code 404 returned for url https://py.processing.org/3/PythonMode.txt
   name: Python Mode for Processing 3
@@ -2697,7 +2697,11 @@ contributions:
   minRevision: 246
   maxRevision: 270
   download: https://contribs.processing.org/pythonmode/3/PythonMode.zip
-- name: Cassette
+- id: 170
+  source: https://github.com/shlomihod/cassette/releases/download/latest/cassette.txt
+  status: VALID
+  type: library
+  name: Cassette
   authors: Shlomi Hod
   url: https://github.com/shlomihod/cassette
   categories:
@@ -2708,15 +2712,16 @@ contributions:
   prettyVersion: '1.0'
   minRevision: 246
   maxRevision: 0
-  source: https://github.com/shlomihod/cassette/releases/download/latest/cassette.txt
-  id: 170
-  status: VALID
-  type: library
   download: https://github.com/shlomihod/cassette/releases/download/latest/cassette.zip
   override:
     categories:
     - Sound
-- name: Simple Touch
+- id: 171
+  source: 
+    https://github.com/gohai/processing-simpletouch/releases/download/latest/processing-simpletouch.txt
+  status: VALID
+  type: library
+  name: Simple Touch
   authors: '[Gottfried Haider](http://gottfriedhaider.com/)'
   url: https://github.com/gohai/processing-simpletouch
   categories:
@@ -2727,17 +2732,16 @@ contributions:
   prettyVersion: 1.0.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/gohai/processing-simpletouch/releases/download/latest/processing-simpletouch.txt
-  id: 171
-  status: VALID
-  type: library
   download: 
     https://github.com/gohai/processing-simpletouch/releases/download/latest/processing-simpletouch.zip
   override:
     categories:
     - I/O
-- name: Drop
+- id: 172
+  source: http://transfluxus.github.io/drop/download/Drop.txt
+  status: VALID
+  type: library
+  name: Drop
   authors: '[Ramin Soleymani](http://diskordier.net), original sDrop by [Andreas Schlegel](http://www.sojamo.com)'
   url: http://transfluxus.github.io/drop/
   categories:
@@ -2750,15 +2754,15 @@ contributions:
   prettyVersion: 1.0.2
   minRevision: 246
   maxRevision: 0
-  source: http://transfluxus.github.io/drop/download/Drop.txt
-  id: 172
-  status: VALID
-  type: library
   download: http://transfluxus.github.io/drop/download/Drop.zip
   override:
     categories:
     - I/O
-- name: MQTT
+- id: 173
+  source: https://github.com/256dpi/processing-mqtt/releases/download/latest/mqtt.txt
+  status: VALID
+  type: library
+  name: MQTT
   authors: '[Joel Gaehwiler](https://github.com/256dpi)'
   url: https://github.com/256dpi/processing-mqtt
   categories:
@@ -2769,15 +2773,15 @@ contributions:
   prettyVersion: 1.7.3
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/256dpi/processing-mqtt/releases/download/latest/mqtt.txt
-  id: 173
-  status: VALID
-  type: library
   download: https://github.com/256dpi/processing-mqtt/releases/download/latest/mqtt.zip
   override:
     categories:
     - I/O
-- name: Camera 3D
+- id: 174
+  source: https://ixora.io/downloads/camera3D/Camera3D.txt
+  status: VALID
+  type: library
+  name: Camera 3D
   authors: '[Jim Schmitz](https://ixora.io)'
   url: https://ixora.io/projects/camera-3D/
   categories:
@@ -2790,15 +2794,16 @@ contributions:
   prettyVersion: 1.2.4
   minRevision: 233
   maxRevision: 0
-  source: https://ixora.io/downloads/camera3D/Camera3D.txt
-  id: 174
-  status: VALID
-  type: library
   download: https://ixora.io/downloads/camera3D/Camera3D.zip
   override:
     categories:
     - 3D
-- name: Websockets
+- id: 175
+  source: 
+    https://github.com/alexandrainst/processing_websockets/releases/download/latest/webSockets.txt
+  status: VALID
+  type: library
+  name: Websockets
   authors: Lasse Steenbock Vestergaard
   url: https://github.com/alexandrainst/processing_websockets
   categories:
@@ -2813,11 +2818,6 @@ contributions:
   prettyVersion: 0.1b
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/alexandrainst/processing_websockets/releases/download/latest/webSockets.txt
-  id: 175
-  status: VALID
-  type: library
   download: 
     https://github.com/alexandrainst/processing_websockets/releases/download/latest/webSockets.zip
   override:
@@ -2826,11 +2826,15 @@ contributions:
     - I/O
 - id: 176
   source: http://www.stefanobaldan.com/projects/ipcapture/download/IPCapture.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
-- name: Console
+- id: 177
+  source: https://github.com/keshrath/Console/releases/download/latest/Console.txt
+  status: VALID
+  type: library
+  name: Console
   authors: '[Mathias Markl](http://www.mukprojects.at)'
   url: https://github.com/keshrath/Console
   categories:
@@ -2845,15 +2849,15 @@ contributions:
   prettyVersion: 1.0.4
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/keshrath/Console/releases/download/latest/Console.txt
-  id: 177
-  status: VALID
-  type: library
   download: https://github.com/keshrath/Console/releases/download/latest/Console.zip
   override:
     categories:
     - I/O
-- name: ImageLoader
+- id: 178
+  source: https://github.com/keshrath/ImageLoader/releases/download/latest/ImageLoader.txt
+  status: VALID
+  type: library
+  name: ImageLoader
   authors: '[Mathias Markl](http://www.mukprojects.at)'
   url: https://github.com/keshrath/ImageLoader
   categories:
@@ -2868,15 +2872,15 @@ contributions:
   prettyVersion: 3.0.1
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/keshrath/ImageLoader/releases/download/latest/ImageLoader.txt
-  id: 178
-  status: VALID
-  type: library
   download: https://github.com/keshrath/ImageLoader/releases/download/latest/ImageLoader.zip
   override:
     categories:
     - I/O
-- name: MuKCast
+- id: 179
+  source: https://github.com/keshrath/MuKCast/releases/download/latest/MuKCast.txt
+  status: VALID
+  type: library
+  name: MuKCast
   authors: '[Mathias Markl](http://www.mukprojects.at)'
   url: https://github.com/keshrath/MuKCast
   categories:
@@ -2890,15 +2894,15 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/keshrath/MuKCast/releases/download/latest/MuKCast.txt
-  id: 179
-  status: VALID
-  type: library
   download: https://github.com/keshrath/MuKCast/releases/download/latest/MuKCast.zip
   override:
     categories:
     - I/O
-- name: Interfascia
+- id: 180
+  source: http://interfascia.berg.industries/download/interfascia.txt
+  status: VALID
+  type: library
+  name: Interfascia
   authors: '[Brendan Berg](http://berg.industries/)'
   url: http://github.com/brendanberg/interfascia
   categories:
@@ -2911,16 +2915,17 @@ contributions:
   prettyVersion: '004'
   minRevision: 0
   maxRevision: 0
-  source: http://interfascia.berg.industries/download/interfascia.txt
-  id: 180
-  status: VALID
-  type: library
   download: http://interfascia.berg.industries/download/interfascia.zip
   override:
     categories:
     - GUI
     - Utilities
-- name: Shape-Sketch
+- id: 181
+  source: 
+    https://github.com/joelmoniz/Shape-Sketch/releases/download/latest/ShapeSketch.txt
+  status: VALID
+  type: tool
+  name: Shape-Sketch
   authors: '[Joel Moniz](http://joelmoniz.com)'
   url: https://github.com/joelmoniz/Shape-Sketch
   categories:
@@ -2934,14 +2939,14 @@ contributions:
   minRevision: 245
   maxRevision: 0
   lastUpdated: '1455510195000'
-  source: 
-    https://github.com/joelmoniz/Shape-Sketch/releases/download/latest/ShapeSketch.txt
-  id: 181
-  status: VALID
-  type: tool
   download: 
     https://github.com/joelmoniz/Shape-Sketch/releases/download/latest/ShapeSketch.zip
-- name: Font Highlighting Editor
+- id: 182
+  source: 
+    https://github.com/rzats/font-highlighting-editor/releases/download/latest/FontHighlightingEditor.txt
+  status: VALID
+  type: tool
+  name: Font Highlighting Editor
   authors: '[Rostyslav Zatserkovnyi](https://github.com/rzats)'
   url: https://github.com/rzats/font-highlighting-editor
   categories:
@@ -2953,14 +2958,14 @@ contributions:
   prettyVersion: 1.1.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/rzats/font-highlighting-editor/releases/download/latest/FontHighlightingEditor.txt
-  id: 182
-  status: VALID
-  type: tool
   download: 
     https://github.com/rzats/font-highlighting-editor/releases/download/latest/FontHighlightingEditor.zip
-- name: AndroidCapture for Processing
+- id: 183
+  source: 
+    https://github.com/onlylemi/processing-android-capture/releases/download/latest/AndroidCaptureForProcessing.txt
+  status: VALID
+  type: library
+  name: AndroidCapture for Processing
   authors: '[Jianbin Qi](https://github.com/onlylemi/)'
   url: https://github.com/onlylemi/processing-android-capture
   categories:
@@ -2972,17 +2977,17 @@ contributions:
   prettyVersion: '2.0'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/onlylemi/processing-android-capture/releases/download/latest/AndroidCaptureForProcessing.txt
-  id: 183
-  status: VALID
-  type: library
   download: 
     https://github.com/onlylemi/processing-android-capture/releases/download/latest/AndroidCaptureForProcessing.zip
   override:
     categories:
     - Data
-- name: GL Video
+- id: 184
+  source: 
+    https://github.com/gohai/processing-glvideo/releases/download/latest/processing-glvideo.txt
+  status: VALID
+  type: library
+  name: GL Video
   authors: '[Gottfried Haider](http://gottfriedhaider.com/)'
   url: https://github.com/gohai/processing-glvideo
   categories:
@@ -2994,17 +2999,16 @@ contributions:
   prettyVersion: '1.3'
   minRevision: 249
   maxRevision: 0
-  source: 
-    https://github.com/gohai/processing-glvideo/releases/download/latest/processing-glvideo.txt
-  id: 184
-  status: VALID
-  type: library
   download: 
     https://github.com/gohai/processing-glvideo/releases/download/latest/processing-glvideo.zip
   override:
     categories:
     - Video & Vision
-- name: Ptmx
+- id: 185
+  source: http://softlab.pt/ptmx/ptmx.txt
+  status: VALID
+  type: library
+  name: Ptmx
   authors: '[Caldas Lopes](http://softlab.pt)'
   url: https://github.com/linux-man/ptmx
   categories:
@@ -3015,15 +3019,15 @@ contributions:
   prettyVersion: '0.3'
   minRevision: 246
   maxRevision: 0
-  source: http://softlab.pt/ptmx/ptmx.txt
-  id: 185
-  status: VALID
-  type: library
   download: http://softlab.pt/ptmx/ptmx.zip
   override:
     categories:
     - Other
-- name: Spout for Processing
+- id: 186
+  source: https://github.com/leadedge/SpoutProcessing/releases/download/latest/spout.txt
+  status: VALID
+  type: library
+  name: Spout for Processing
   authors: '[Lynn Jarvis](https://spout.zeal.co) and [Martin Froehlich](http://maybites.ch)'
   url: https://github.com/leadedge/SpoutProcessing/wiki
   categories:
@@ -3035,15 +3039,15 @@ contributions:
   prettyVersion: 2.0.8.0
   minRevision: 246
   maxRevision: 0
-  source: https://github.com/leadedge/SpoutProcessing/releases/download/latest/spout.txt
-  id: 186
-  status: VALID
-  type: library
   download: https://github.com/leadedge/SpoutProcessing/releases/download/latest/spout.zip
   override:
     categories:
     - Video & Vision
-- name: Video Export
+- id: 187
+  source: https://funprogramming.org/VideoExport-for-Processing/download/VideoExport.txt
+  status: VALID
+  type: library
+  name: Video Export
   authors: '[Abe Pazos](http://hamoid.com)'
   url: https://funprogramming.org/VideoExport-for-Processing
   categories:
@@ -3055,21 +3059,21 @@ contributions:
   prettyVersion: 0.2.3
   minRevision: 233
   maxRevision: 0
-  source: https://funprogramming.org/VideoExport-for-Processing/download/VideoExport.txt
-  id: 187
-  status: VALID
-  type: library
   download: https://funprogramming.org/VideoExport-for-Processing/download/VideoExport.zip
   override:
     categories:
     - I/O
 - id: 188
   source: http://developers.gausstoys.com/processing/GaussSense.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
-- name: HPGLGraphics
+- id: 189
+  source: http://ciaron.net/hpglgraphics/download/hpglgraphics.txt
+  status: VALID
+  type: library
+  name: HPGLGraphics
   authors: '[Ciaron Linstead](http://ciaron.net)'
   url: http://ciaron.net/HPGLGraphics
   categories:
@@ -3083,15 +3087,15 @@ contributions:
   prettyVersion: 1.0.4
   minRevision: 0
   maxRevision: 0
-  source: http://ciaron.net/hpglgraphics/download/hpglgraphics.txt
-  id: 189
-  status: VALID
-  type: library
   download: http://ciaron.net/hpglgraphics/download/hpglgraphics.zip
   override:
     categories:
     - Hardware
-- name: Hardware I/O
+- id: 190
+  source: https://github.com/gohai/processing/releases/download/latest/io.txt
+  status: VALID
+  type: library
+  name: Hardware I/O
   authors: The Processing Foundation
   url: http://processing.org/reference/libraries/io/index.html
   categories:
@@ -3103,15 +3107,16 @@ contributions:
   prettyVersion: '0264'
   minRevision: 247
   maxRevision: 0
-  source: https://github.com/gohai/processing/releases/download/latest/io.txt
-  id: 190
-  status: VALID
-  type: library
   download: https://github.com/gohai/processing/releases/download/latest/io.zip
   override:
     categories:
     - Hardware
-- name: Upload to Pi
+- id: 191
+  source: 
+    https://github.com/gohai/processing-uploadtopi/releases/download/latest/UploadToPiTool.txt
+  status: VALID
+  type: tool
+  name: Upload to Pi
   authors: '[Gottfried Haider](http://gottfriedhaider.com/)'
   url: https://github.com/gohai/processing-uploadtopi
   categories:
@@ -3123,14 +3128,14 @@ contributions:
   prettyVersion: 1.0.6
   minRevision: 247
   maxRevision: 0
-  source: 
-    https://github.com/gohai/processing-uploadtopi/releases/download/latest/UploadToPiTool.txt
-  id: 191
-  status: VALID
-  type: tool
   download: 
     https://github.com/gohai/processing-uploadtopi/releases/download/latest/UploadToPiTool.zip
-- name: Free Transform
+- id: 192
+  source: 
+    https://github.com/barelief/freeTransform-processing/releases/download/latest/FreeTransform.txt
+  status: VALID
+  type: library
+  name: Free Transform
   authors: '[Bartosh Polonski](http://bpolonski.com)'
   url: https://github.com/barelief/freeTransform-processing
   categories:
@@ -3142,11 +3147,6 @@ contributions:
   prettyVersion: '0.4'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/barelief/freeTransform-processing/releases/download/latest/FreeTransform.txt
-  id: 192
-  status: VALID
-  type: library
   download: 
     https://github.com/barelief/freeTransform-processing/releases/download/latest/FreeTransform.zip
   override:
@@ -3154,11 +3154,15 @@ contributions:
     - Utilities
 - id: 193
   source: http://shiffman.net/p5/libraries/processing3/mpe/mpe.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
-- name: WOVNS Examples
+- id: 194
+  source: http://damellis.github.io/wovns-processing-examples/WOVNS.txt
+  status: VALID
+  type: examples
+  name: WOVNS Examples
   authors: '[David Mellis](http://web.media.mit.edu/~mellis/) for [WOVNS](http://wovns.com/)'
   url: http://www.wovns.com/tutorials/designing-computational-textiles-with-processing/
   categories:
@@ -3170,12 +3174,12 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: http://damellis.github.io/wovns-processing-examples/WOVNS.txt
-  id: 194
-  status: VALID
-  type: examples
   download: http://damellis.github.io/wovns-processing-examples/WOVNS.zip
-- name: Culebra Behavior Library for Processing
+- id: 195
+  source: http://culebra.technology/culebra.txt
+  status: VALID
+  type: library
+  name: Culebra Behavior Library for Processing
   authors: '[Luis Quinones](http://complicitMatter.com)'
   url: http://www.complicitmatter.com/culebra-java/
   categories:
@@ -3190,17 +3194,17 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 250
   maxRevision: 0
-  source: http://culebra.technology/culebra.txt
-  id: 195
-  status: VALID
-  type: library
   download: http://culebra.technology/culebra.zip
   override:
     categories:
     - 3D
     - Geometry
     - Simulation
-- name: QueasyCam
+- id: 196
+  source: https://github.com/jrc03c/queasycam/releases/download/latest/queasycam.txt
+  status: VALID
+  type: library
+  name: QueasyCam
   authors: '[Josh Castle](https://twitter.com/jrc03c)'
   url: https://github.com/jrc03c/queasycam
   categories:
@@ -3211,15 +3215,15 @@ contributions:
   prettyVersion: '1.4'
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/jrc03c/queasycam/releases/download/latest/queasycam.txt
-  id: 196
-  status: VALID
-  type: library
   download: https://github.com/jrc03c/queasycam/releases/download/latest/queasycam.zip
   override:
     categories:
     - 3D
-- name: Phidgets For Processing
+- id: 197
+  source: ' https://github.com/sgeigers/Phidgets-For-Processing/releases/download/latest/PhidgetsForProcessing.txt '
+  status: DEPRECATED
+  type: library
+  name: Phidgets For Processing
   authors: '[Shachar Geiger](sgeiger@shenkar.ac.il)'
   url: https://github.com/sgeigers/Phidgets-For-Processing
   categories:
@@ -3235,15 +3239,15 @@ contributions:
   prettyVersion: '0.8'
   minRevision: 0
   maxRevision: 0
-  source: ' https://github.com/sgeigers/Phidgets-For-Processing/releases/download/latest/PhidgetsForProcessing.txt '
-  id: 197
-  status: DEPRECATED
-  type: library
   download: ' https://github.com/sgeigers/Phidgets-For-Processing/releases/download/latest/PhidgetsForProcessing.zip'
   override:
     categories:
     - Hardware
-- name: Zxing For Processing (QRCode lib)
+- id: 198
+  source: http://cagewebdev.com/zxing4p/zxing4p3.txt
+  status: VALID
+  type: library
+  name: Zxing For Processing (QRCode lib)
   authors: '[Rolf van Gelder](http://cagewebdev.com/)'
   url: http://cagewebdev.com/zxing4processing-processing-library/
   categories:
@@ -3254,15 +3258,16 @@ contributions:
   prettyVersion: '3.1'
   minRevision: 227
   maxRevision: 0
-  source: http://cagewebdev.com/zxing4p/zxing4p3.txt
-  id: 198
-  status: VALID
-  type: library
   download: http://cagewebdev.com/zxing4p/zxing4p3.zip
   override:
     categories:
     - Data
-- name: p5.js Mode
+- id: 199
+  source: 
+    https://github.com/fathominfo/processing-p5js-mode/releases/download/latest/p5jsMode.txt
+  status: VALID
+  type: mode
+  name: p5.js Mode
   authors: '[Fathom Information Design](http://fathom.info/)'
   url: https://github.com/fathominfo/processing-p5js-mode
   categories:
@@ -3274,20 +3279,19 @@ contributions:
   minRevision: 1280
   maxRevision: 0
   imports: processing.mode.java.JavaMode
-  source: 
-    https://github.com/fathominfo/processing-p5js-mode/releases/download/latest/p5jsMode.txt
-  id: 199
-  status: VALID
-  type: mode
   download: 
     https://github.com/fathominfo/processing-p5js-mode/releases/download/latest/p5jsMode.zip
 - id: 200
   source: http://shiffman.net/p5/libraries/processing3/toxiclibs/toxiclibs.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - invalid file
-- name: PixelFlow
+- id: 201
+  source: https://github.com/diwi/PixelFlow/releases/download/latest/PixelFlow.txt
+  status: VALID
+  type: library
+  name: PixelFlow
   authors: '[Thomas Diewald](http://www.thomasdiewald.com)'
   url: https://github.com/diwi/PixelFlow
   categories:
@@ -3305,17 +3309,17 @@ contributions:
   prettyVersion: 1.3.0
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/diwi/PixelFlow/releases/download/latest/PixelFlow.txt
-  id: 201
-  status: VALID
-  type: library
   download: https://github.com/diwi/PixelFlow/releases/download/latest/PixelFlow.zip
   override:
     categories:
     - Simulation
     - Utilities
     - Video & Vision
-- name: ColorBlindness
+- id: 202
+  source: https://ixora.io/downloads/colorblindness/ColorBlindness.txt
+  status: VALID
+  type: library
+  name: ColorBlindness
   authors: '[Jim Schmitz](https://ixora.io)'
   url: https://ixora.io/projects/colorblindness/
   categories:
@@ -3328,15 +3332,15 @@ contributions:
   prettyVersion: 1.0.2
   minRevision: 227
   maxRevision: 0
-  source: https://ixora.io/downloads/colorblindness/ColorBlindness.txt
-  id: 202
-  status: VALID
-  type: library
   download: https://ixora.io/downloads/colorblindness/ColorBlindness.zip
   override:
     categories:
     - Utilities
-- name: HiVis
+- id: 203
+  source: https://github.com/OliverColeman/hivis/releases/download/latest/HiVis.txt
+  status: VALID
+  type: library
+  name: HiVis
   authors: '[Philip Poronnik, Oliver Bown, Oliver Coleman, Phillip Gough, Narayan
     Sankaran](https://github.com/OliverColeman/)'
   url: https://github.com/OliverColeman/hivis
@@ -3357,16 +3361,16 @@ contributions:
   prettyVersion: 2.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/OliverColeman/hivis/releases/download/latest/HiVis.txt
-  id: 203
-  status: VALID
-  type: library
   download: https://github.com/OliverColeman/hivis/releases/download/latest/HiVis.zip
   override:
     categories:
     - Data
     - Math
-- name: OCT
+- id: 204
+  source: https://github.com/thwegene/OCT/releases/download/latest/OCT.txt
+  status: VALID
+  type: library
+  name: OCT
   authors: '[Thomas Wegener](http://www.thomaswegener.ch)'
   url: https://github.com/thwegene/OCT
   categories:
@@ -3377,15 +3381,15 @@ contributions:
   prettyVersion: 0.1.1
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/thwegene/OCT/releases/download/latest/OCT.txt
-  id: 204
-  status: VALID
-  type: library
   download: https://github.com/thwegene/OCT/releases/download/latest/OCT.zip
   override:
     categories:
     - Geometry
-- name: Manuale di Programmazione Cinematografica
+- id: 205
+  source: http://mad4j.github.io/book-mdpc/book-mdpc.txt
+  status: VALID
+  type: examples
+  name: Manuale di Programmazione Cinematografica
   authors: '[Daniele Olmisani](https://github.com/mad4j)'
   url: https://github.com/mad4j/book-mdpc
   categories:
@@ -3397,15 +3401,15 @@ contributions:
   minRevision: 0
   maxRevision: 0
   compatibleModesList: ''
-  source: http://mad4j.github.io/book-mdpc/book-mdpc.txt
-  id: 205
-  status: VALID
-  type: examples
   download: http://mad4j.github.io/book-mdpc/book-mdpc.zip
   override:
     categories:
     - Books
-- name: AP-Sync
+- id: 206
+  source: https://ap-sync.github.io/libs/AP_sync_processing/APsync.txt
+  status: VALID
+  type: library
+  name: AP-Sync
   authors: '[Nigel Tiany](http://nigeltiany.com)'
   url: http://ap-sync.github.io
   categories:
@@ -3419,16 +3423,17 @@ contributions:
   prettyVersion: peace
   minRevision: 100
   maxRevision: 0
-  source: https://ap-sync.github.io/libs/AP_sync_processing/APsync.txt
-  id: 206
-  status: VALID
-  type: library
   download: https://ap-sync.github.io/libs/AP_sync_processing/APsync.zip
   override:
     categories:
     - Data
     - I/O
-- name: Timing Utilities
+- id: 207
+  source: 
+    https://github.com/Lord-of-the-Galaxy/Timing-Utilities/releases/download/latest/timing_utils.txt
+  status: VALID
+  type: library
+  name: Timing Utilities
   authors: Lord of Galaxy
   url: https://github.com/Lord-of-the-Galaxy/Timing-Utilities
   categories:
@@ -3440,17 +3445,17 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://github.com/Lord-of-the-Galaxy/Timing-Utilities/releases/download/latest/timing_utils.txt
-  id: 207
-  status: VALID
-  type: library
   download: 
     https://github.com/Lord-of-the-Galaxy/Timing-Utilities/releases/download/latest/timing_utils.zip
   override:
     categories:
     - Utilities
-- name: Simple Tweet
+- id: 208
+  source: 
+    https://github.com/gohai/processing-simpletweet/releases/download/latest/processing-simpletweet.txt
+  status: VALID
+  type: library
+  name: Simple Tweet
   authors: '[Gottfried Haider](http://gottfriedhaider.com/)'
   url: https://github.com/gohai/processing-simpletweet
   categories:
@@ -3461,17 +3466,17 @@ contributions:
   prettyVersion: '1'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/gohai/processing-simpletweet/releases/download/latest/processing-simpletweet.txt
-  id: 208
-  status: VALID
-  type: library
   download: 
     https://github.com/gohai/processing-simpletweet/releases/download/latest/processing-simpletweet.zip
   override:
     categories:
     - Data
-- name: Simple Receipt Printer
+- id: 209
+  source: 
+    https://github.com/gohai/processing-simplereceiptprinter/releases/download/latest/processing-simplereceiptprinter.txt
+  status: VALID
+  type: library
+  name: Simple Receipt Printer
   authors: '[Gottfried Haider](http://gottfriedhaider.com/)'
   url: https://github.com/gohai/processing-simplereceiptprinter
   categories:
@@ -3482,17 +3487,16 @@ contributions:
   prettyVersion: '1.1'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/gohai/processing-simplereceiptprinter/releases/download/latest/processing-simplereceiptprinter.txt
-  id: 209
-  status: VALID
-  type: library
   download: 
     https://github.com/gohai/processing-simplereceiptprinter/releases/download/latest/processing-simplereceiptprinter.zip
   override:
     categories:
     - I/O
-- name: ColorHarmony
+- id: 210
+  source: http://cagewebdev.com/colorharmony/colorharmony.txt
+  status: VALID
+  type: library
+  name: ColorHarmony
   authors: '[Rolf van Gelder](http://cagewebdev.com/)'
   url: http://cagewebdev.com/colorharmony-processing-library/
   categories:
@@ -3503,15 +3507,15 @@ contributions:
   prettyVersion: '1.0'
   minRevision: 227
   maxRevision: 0
-  source: http://cagewebdev.com/colorharmony/colorharmony.txt
-  id: 210
-  status: VALID
-  type: library
   download: http://cagewebdev.com/colorharmony/colorharmony.zip
   override:
     categories:
     - Utilities
-- name: PS3Eye
+- id: 211
+  source: https://github.com/diwi/PS3Eye/releases/download/latest/PS3Eye.txt
+  status: VALID
+  type: library
+  name: PS3Eye
   authors: '[Thomas Diewald](http://www.thomasdiewald.com)'
   url: https://github.com/diwi/PS3Eye
   categories:
@@ -3523,16 +3527,16 @@ contributions:
   prettyVersion: '1.05'
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/diwi/PS3Eye/releases/download/latest/PS3Eye.txt
-  id: 211
-  status: VALID
-  type: library
   download: https://github.com/diwi/PS3Eye/releases/download/latest/PS3Eye.zip
   override:
     categories:
     - Hardware
     - Video & Vision
-- name: PostFX for Processing
+- id: 212
+  source: https://github.com/cansik/processing-postfx/releases/download/latest/PostFX.txt
+  status: VALID
+  type: library
+  name: PostFX for Processing
   authors: '[Florian Bruggisser](https://bildspur.ch)'
   url: https://github.com/cansik/processing-postfx
   categories:
@@ -3544,15 +3548,16 @@ contributions:
   prettyVersion: v1.2
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/cansik/processing-postfx/releases/download/latest/PostFX.txt
-  id: 212
-  status: VALID
-  type: library
   download: https://github.com/cansik/processing-postfx/releases/download/latest/PostFX.zip
   override:
     categories:
     - Utilities
-- name: Mouse 2D Transformations
+- id: 213
+  source: 
+    https://github.com/AlexPoupakis/mouse2DTransformations/releases/download/latest/Mouse2DTransformations.txt
+  status: VALID
+  type: library
+  name: Mouse 2D Transformations
   authors: Alex Poupakis
   url: https://github.com/AlexPoupakis/mouse2DTransformations
   categories:
@@ -3569,17 +3574,16 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/AlexPoupakis/mouse2DTransformations/releases/download/latest/Mouse2DTransformations.txt
-  id: 213
-  status: VALID
-  type: library
   download: 
     https://github.com/AlexPoupakis/mouse2DTransformations/releases/download/latest/Mouse2DTransformations.zip
   override:
     categories:
     - Utilities
-- name: Dashed Lines
+- id: 214
+  source: http://www.garciadelcastillo.es/dashedlines/dashedlines.txt
+  status: VALID
+  type: library
+  name: Dashed Lines
   authors: '[Jose Luis Garcia del Castillo](http://www.garciadelcastillo.es)'
   url: https://github.com/garciadelcastillo/-dashed-lines-for-processing-
   categories:
@@ -3591,15 +3595,15 @@ contributions:
   prettyVersion: 0.0.3
   minRevision: 0
   maxRevision: 0
-  source: http://www.garciadelcastillo.es/dashedlines/dashedlines.txt
-  id: 214
-  status: VALID
-  type: library
   download: http://www.garciadelcastillo.es/dashedlines/dashedlines.zip
   override:
     categories:
     - Geometry
-- name: extruder
+- id: 215
+  source: http://maxlfarrell.gitlab.io/extruder/extruder.txt
+  status: VALID
+  type: library
+  name: extruder
   authors: '[Max Farrell](https://arcane.info/)'
   url: http://maxlfarrell.gitlab.io/extruder
   categories:
@@ -3612,15 +3616,16 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: http://maxlfarrell.gitlab.io/extruder/extruder.txt
-  id: 215
-  status: VALID
-  type: library
   download: http://maxlfarrell.gitlab.io/extruder/extruder.zip
   override:
     categories:
     - 3D
-- name: LiquidFunProcessing
+- id: 216
+  source: 
+    https://github.com/diwi/LiquidFunProcessing/releases/download/latest/LiquidFunProcessing.txt
+  status: VALID
+  type: library
+  name: LiquidFunProcessing
   authors: '[Thomas Diewald](http://www.thomasdiewald.com)'
   url: https://github.com/diwi/LiquidFunProcessing
   categories:
@@ -3633,17 +3638,16 @@ contributions:
   prettyVersion: '1.05'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/diwi/LiquidFunProcessing/releases/download/latest/LiquidFunProcessing.txt
-  id: 216
-  status: VALID
-  type: library
   download: 
     https://github.com/diwi/LiquidFunProcessing/releases/download/latest/LiquidFunProcessing.zip
   override:
     categories:
     - Simulation
-- name: Tramontana Processing Library
+- id: 217
+  source: https://tramontanaixd.github.io/processing-library/Tramontana.txt
+  status: VALID
+  type: library
+  name: Tramontana Processing Library
   authors: '[Pierluigi Dalla Rosa, Enrico Gueli](http://www.pierdr.com, https://www.instagram.com/ris8_allo_zen0/)'
   url: https://tramontana.xyz
   categories:
@@ -3659,15 +3663,16 @@ contributions:
   prettyVersion: 1.0.5
   minRevision: 250
   maxRevision: 0
-  source: https://tramontanaixd.github.io/processing-library/Tramontana.txt
-  id: 217
-  status: VALID
-  type: library
   download: https://tramontanaixd.github.io/processing-library/Tramontana.zip
   override:
     categories:
     - Utilities
-- name: Sweep for Processing
+- id: 218
+  source: 
+    https://github.com/cansik/sweep-processing/releases/download/latest/SweepProcessing.txt
+  status: VALID
+  type: library
+  name: Sweep for Processing
   authors: '[Florian Bruggisser](https://bildspur.ch)'
   url: https://github.com/cansik/sweep-processing
   categories:
@@ -3678,17 +3683,16 @@ contributions:
   prettyVersion: v0.3.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/cansik/sweep-processing/releases/download/latest/SweepProcessing.txt
-  id: 218
-  status: VALID
-  type: library
   download: 
     https://github.com/cansik/sweep-processing/releases/download/latest/SweepProcessing.zip
   override:
     categories:
     - Hardware
-- name: XYscope
+- id: 219
+  source: https://teddavis.org/xyscope/download/XYscope.txt
+  status: VALID
+  type: library
+  name: XYscope
   authors: '[Ted Davis](https://www.teddavis.org)'
   url: https://teddavis.org/xyscope
   categories:
@@ -3706,17 +3710,18 @@ contributions:
   prettyVersion: 3.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://teddavis.org/xyscope/download/XYscope.txt
-  id: 219
-  status: VALID
-  type: library
   download: https://teddavis.org/xyscope/download/XYscope.zip
   override:
     categories:
     - Animation
     - Hardware
     - Sound
-- name: R for Processing
+- id: 220
+  source: 
+    https://github.com/processing-r/Processing.R/releases/latest/download/RLangMode.txt
+  status: VALID
+  type: mode
+  name: R for Processing
   authors: '[Processing.R Authors](https://github.com/processing-r/Processing.R/blob/master/AUTHORS.md)'
   url: https://github.com/processing-r/Processing.R
   categories:
@@ -3728,14 +3733,13 @@ contributions:
   maxRevision: 0
   maxVersion: '0'
   minVersion: '260'
-  source: 
-    https://github.com/processing-r/Processing.R/releases/latest/download/RLangMode.txt
-  id: 220
-  status: VALID
-  type: mode
   download: 
     https://github.com/processing-r/Processing.R/releases/latest/download/RLangMode.zip
-- name: Extended Code Completion
+- id: 221
+  source: http://jonathan.dahlberg.media/ecc/ecc.txt
+  status: VALID
+  type: tool
+  name: Extended Code Completion
   authors: '[Jonathan Dahlberg](http://jonathan.dahlberg.media/)'
   url: http://jonathan.dahlberg.media/ecc/
   categories:
@@ -3748,12 +3752,12 @@ contributions:
   prettyVersion: 1.1.0
   minRevision: 246
   maxRevision: 0
-  source: http://jonathan.dahlberg.media/ecc/ecc.txt
-  id: 221
-  status: VALID
-  type: tool
   download: http://jonathan.dahlberg.media/ecc/ecc.zip
-- name: tramontanaCV
+- id: 222
+  source: https://pierdr.github.io/tramontanaCV/download/tramontanaCV.txt
+  status: VALID
+  type: library
+  name: tramontanaCV
   authors: '[Pierluigi Dalla Rosa](www.pierdr.com)'
   url: https://tramontana.xyz/tramontanacv
   categories:
@@ -3766,10 +3770,6 @@ contributions:
   prettyVersion: '2.0'
   minRevision: 250
   maxRevision: 0
-  source: https://pierdr.github.io/tramontanaCV/download/tramontanaCV.txt
-  id: 222
-  status: VALID
-  type: library
   download: https://pierdr.github.io/tramontanaCV/download/tramontanaCV.zip
   override:
     categories:
@@ -3777,12 +3777,16 @@ contributions:
 - id: 223
   source: 
     https://github.com/nyatla/NyARToolkit-for-Processing/releases/download/latest/nyar4psg.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url 
     https://github.com/nyatla/NyARToolkit-for-Processing/releases/download/latest/nyar4psg.txt
-- name: meter
+- id: 224
+  source: https://github.com/BillKujawa/meter/releases/download/latest/meter.txt
+  status: VALID
+  type: library
+  name: meter
   authors: Bill (Papa) Kujawa
   url: https://github.com/BillKujawa/meter.git
   categories:
@@ -3799,16 +3803,16 @@ contributions:
   prettyVersion: 1.0c
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/BillKujawa/meter/releases/download/latest/meter.txt
-  id: 224
-  status: VALID
-  type: library
   download: https://github.com/BillKujawa/meter/releases/download/latest/meter.zip
   override:
     categories:
     - GUI
     - Hardware
-- name: 'GazeTrack: Eye-tracking for Processing (Tobii EyeX and 4C)'
+- id: 225
+  source: http://web.tecnico.ulisboa.pt/augusto.esteves/GazeTrack/GazeTrack.txt
+  status: VALID
+  type: library
+  name: 'GazeTrack: Eye-tracking for Processing (Tobii EyeX and 4C)'
   authors: '[Augusto Esteves](http://web.tecnico.ulisboa.pt/augusto.esteves/)'
   url: http://web.tecnico.ulisboa.pt/augusto.esteves/GazeTrack/
   categories:
@@ -3821,15 +3825,16 @@ contributions:
   prettyVersion: 2.0.5
   minRevision: 0
   maxRevision: 0
-  source: http://web.tecnico.ulisboa.pt/augusto.esteves/GazeTrack/GazeTrack.txt
-  id: 225
-  status: VALID
-  type: library
   download: http://web.tecnico.ulisboa.pt/augusto.esteves/GazeTrack/GazeTrack.zip
   override:
     categories:
     - Hardware
-- name: Processing for Android, 1st Edition
+- id: 226
+  source: 
+    https://github.com/Apress/processing-for-android/releases/download/latest/processing-for-android-examples.txt
+  status: VALID
+  type: examples
+  name: Processing for Android, 1st Edition
   authors: '[Andres Colubri](http://andrescolubri.net/)'
   url: http://p5android-book.andrescolubri.net/
   categories:
@@ -3842,14 +3847,14 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://github.com/Apress/processing-for-android/releases/download/latest/processing-for-android-examples.txt
-  id: 226
-  status: VALID
-  type: examples
   download: 
     https://github.com/Apress/processing-for-android/releases/download/latest/processing-for-android-examples.zip
-- name: Image processing algorithms
+- id: 227
+  source: 
+    https://github.com/Milchreis/processing-imageprocessing/releases/download/latest/processing-imageprocessing.txt
+  status: VALID
+  type: library
+  name: Image processing algorithms
   authors: "[Nick 'Milchreis' Müller](http://github.com/milchreis)"
   url: http://github.com/milchreis/processing-imageprocessing
   categories:
@@ -3860,11 +3865,6 @@ contributions:
   prettyVersion: 1.7.0
   minRevision: 263
   maxRevision: 0
-  source: 
-    https://github.com/Milchreis/processing-imageprocessing/releases/download/latest/processing-imageprocessing.txt
-  id: 227
-  status: VALID
-  type: library
   download: 
     https://github.com/Milchreis/processing-imageprocessing/releases/download/latest/processing-imageprocessing.zip
   override:
@@ -3873,12 +3873,17 @@ contributions:
 - id: 228
   source: 
     https://perceptualcolor.org/distribution/PerceptualColorPicker/download/PerceptualColorPicker.txt
-  type: tool
   status: BROKEN
+  type: tool
   log:
   - file not found, status code 522 returned for url 
     https://perceptualcolor.org/distribution/PerceptualColorPicker/download/PerceptualColorPicker.txt
-- name: WootingKeyboard
+- id: 229
+  source: 
+    https://github.com/Shinhoo/Wooting-Keyboard-Library/releases/download/lastest/WootingKeyboard.txt
+  status: VALID
+  type: library
+  name: WootingKeyboard
   authors: '[Shinhoo Park @ KAIST Interactive Media Lab](http://kiml.org/WootingKeyboard)'
   url: http://kiml.org/WootingKeyboard
   categories:
@@ -3893,11 +3898,6 @@ contributions:
   prettyVersion: 1.0.3
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/Shinhoo/Wooting-Keyboard-Library/releases/download/lastest/WootingKeyboard.txt
-  id: 229
-  status: VALID
-  type: library
   download: 
     https://github.com/Shinhoo/Wooting-Keyboard-Library/releases/download/lastest/WootingKeyboard.zip
   override:
@@ -3905,7 +3905,11 @@ contributions:
     - Data
     - I/O
     - Utilities
-- name: ArtNet for Java and Processing
+- id: 230
+  source: https://github.com/cansik/artnet4j/releases/download/latest/artnet4j.txt
+  status: VALID
+  type: library
+  name: ArtNet for Java and Processing
   authors: '[Florian Bruggisser](https://bildspur.ch)'
   url: https://github.com/cansik/artnet4j
   categories:
@@ -3916,21 +3920,22 @@ contributions:
   prettyVersion: v0.6.2
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/cansik/artnet4j/releases/download/latest/artnet4j.txt
-  id: 230
-  status: VALID
-  type: library
   download: https://github.com/cansik/artnet4j/releases/download/latest/artnet4j.zip
   override:
     categories:
     - Data
 - id: 231
   source: http://objectstothinkwith.com/tracer/tracer.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url http://www.objectstothinkwith.com/tracer/tracer.txt
-- name: Novation Launch Control client
+- id: 232
+  source: 
+    https://github.com/haschdl/pLaunchController/releases/download/latest/pLaunchControl.txt
+  status: VALID
+  type: library
+  name: Novation Launch Control client
   authors: '[Half Scheidl](https://github.com/haschdl), [Jonathan Newman](https://github.com/poetoflight)'
   url: https://github.com/haschdl/pLaunchController
   categories:
@@ -3944,17 +3949,17 @@ contributions:
   prettyVersion: 2.1.0
   minRevision: 228
   maxRevision: 0
-  source: 
-    https://github.com/haschdl/pLaunchController/releases/download/latest/pLaunchControl.txt
-  id: 232
-  status: VALID
-  type: library
   download: 
     https://github.com/haschdl/pLaunchController/releases/download/latest/pLaunchControl.zip
   override:
     categories:
     - I/O
-- name: Getting Started
+- id: 233
+  source: 
+    https://github.com/jaewhyun/GettingStarted/releases/download/latest/GettingStarted.txt
+  status: VALID
+  type: tool
+  name: Getting Started
   authors: '[Jae Hyun](http://www.github.com/jaewhyun)'
   url: http://www.github.com/jaewhyun/GettingStarted
   categories:
@@ -3966,14 +3971,14 @@ contributions:
   prettyVersion: 1.1.0
   minRevision: 228
   maxRevision: 0
-  source: 
-    https://github.com/jaewhyun/GettingStarted/releases/download/latest/GettingStarted.txt
-  id: 233
-  status: VALID
-  type: tool
   download: 
     https://github.com/jaewhyun/GettingStarted/releases/download/latest/GettingStarted.zip
-- name: Reference Tool
+- id: 234
+  source: 
+    https://github.com/jaewhyun/ReferenceTool/releases/download/latest/ReferenceTool.txt
+  status: VALID
+  type: tool
+  name: Reference Tool
   authors: '[Jae Hyun](https://www.github.com/jaewhyun)'
   url: https://www.github.com/ReferenceTool
   categories:
@@ -3985,20 +3990,19 @@ contributions:
   prettyVersion: 1.1.1
   minRevision: 228
   maxRevision: 0
-  source: 
-    https://github.com/jaewhyun/ReferenceTool/releases/download/latest/ReferenceTool.txt
-  id: 234
-  status: VALID
-  type: tool
   download: 
     https://github.com/jaewhyun/ReferenceTool/releases/download/latest/ReferenceTool.zip
 - id: 235
   source: https://openpatch.github.io/scratch-for-java/scratch.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://openpatch.github.io/scratch-for-java/scratch.txt
-- name: VLCJVideo
+- id: 236
+  source: http://softlab.pt/VLCJVideo/VLCJVideo.txt
+  status: VALID
+  type: library
+  name: VLCJVideo
   authors: '[Caldas Lopes](http://softlab.pt)'
   url: https://github.com/linux-man/VLCJVideo
   categories:
@@ -4009,15 +4013,15 @@ contributions:
   prettyVersion: 0.4.1
   minRevision: 228
   maxRevision: 0
-  source: http://softlab.pt/VLCJVideo/VLCJVideo.txt
-  id: 236
-  status: VALID
-  type: library
   download: http://softlab.pt/VLCJVideo/VLCJVideo.zip
   override:
     categories:
     - Video & Vision
-- name: handy
+- id: 237
+  source: http://gicentre.org/handy/handy.txt
+  status: VALID
+  type: library
+  name: handy
   authors: '[Jo Wood](http://gicentre.net/) and [Aidan Slingsby](http://gicentre.net/)'
   url: https://www.gicentre.net/software/
   categories:
@@ -4032,16 +4036,17 @@ contributions:
   minRevision: 228
   maxRevision: 0
   lastUpdated: '0'
-  source: http://gicentre.org/handy/handy.txt
-  id: 237
-  status: VALID
-  type: library
   download: http://gicentre.org/handy/handy.zip
   override:
     categories:
     - Geometry
     - GUI
-- name: Intel RealSense for Processing
+- id: 238
+  source: 
+    https://github.com/cansik/realsense-processing/releases/download/contributed/RealSenseProcessing.txt
+  status: VALID
+  type: library
+  name: Intel RealSense for Processing
   authors: '[Florian Bruggisser](https://bildspur.ch)'
   url: https://github.com/cansik/realsense-processing
   categories:
@@ -4053,11 +4058,6 @@ contributions:
   prettyVersion: 2.5.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/cansik/realsense-processing/releases/download/contributed/RealSenseProcessing.txt
-  id: 238
-  status: VALID
-  type: library
   download: 
     https://github.com/cansik/realsense-processing/releases/download/contributed/RealSenseProcessing.zip
   override:
@@ -4065,11 +4065,15 @@ contributions:
     - Hardware
 - id: 239
   source: http://skweezee.net/processing/download/SkweezeeForProcessing.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - url timeout
-- name: PortMods
+- id: 240
+  source: https://commonpike.github.io/nl.kw.processing.portmods/dist/PortMods.txt
+  status: VALID
+  type: library
+  name: PortMods
   authors: '[Pike]'
   url: https://commonpike.github.io/nl.kw.processing.portmods/docs/PortMods.pdf
   categories:
@@ -4081,15 +4085,15 @@ contributions:
   prettyVersion: 1.40a
   minRevision: 0
   maxRevision: 0
-  source: https://commonpike.github.io/nl.kw.processing.portmods/dist/PortMods.txt
-  id: 240
-  status: VALID
-  type: library
   download: https://commonpike.github.io/nl.kw.processing.portmods/dist/PortMods.zip
   override:
     categories:
     - Utilities
-- name: Squarify
+- id: 241
+  source: http://agathelenclen.fr/downloads/Squarify.txt
+  status: VALID
+  type: library
+  name: Squarify
   authors: '[Agathe Lenclen](https://github.com/agatheblues), [Uri Laserson](https://github.com/laserson),
     [Bruls, Huizing, van Wijk, "Squarified Treemaps"](https://doi.org/10.1007/978-3-7091-6783-0_4)'
   url: https://github.com/agatheblues/squarify
@@ -4103,16 +4107,16 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: http://agathelenclen.fr/downloads/Squarify.txt
-  id: 241
-  status: VALID
-  type: library
   download: http://agathelenclen.fr/downloads/Squarify.zip
   override:
     categories:
     - Data
     - Geometry
-- name: Art Station
+- id: 242
+  source: https://jwilder4690.github.io/tools/ArtStation/ArtStation.txt
+  status: VALID
+  type: tool
+  name: Art Station
   authors: '[Justin Wilder](https://github.com/jwilder4690)'
   url: https://jwilder4690.github.io/tools/ArtStation/index.html
   categories:
@@ -4127,12 +4131,12 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://jwilder4690.github.io/tools/ArtStation/ArtStation.txt
-  id: 242
-  status: VALID
-  type: tool
   download: https://jwilder4690.github.io/tools/ArtStation/ArtStation.zip
-- name: Coding Creative
+- id: 243
+  source: https://coding-creative.dringtech.com/examples/coding-creative-examples.txt
+  status: VALID
+  type: examples
+  name: Coding Creative
   authors: '[Giles Dring](https://dringtech.com/)'
   url: http://coding-creative.dringtech.com/
   categories:
@@ -4144,12 +4148,12 @@ contributions:
   minRevision: 0
   maxRevision: 0
   compatibleModesList: jycessing.mode.PythonMode
-  source: https://coding-creative.dringtech.com/examples/coding-creative-examples.txt
-  id: 243
-  status: VALID
-  type: examples
   download: https://coding-creative.dringtech.com/examples/coding-creative-examples.zip
-- name: Everything Will Be IK
+- id: 244
+  source: http://giftedapprentice.com/ewbIK/ewbIK.txt
+  status: VALID
+  type: library
+  name: Everything Will Be IK
   authors: '[Eron Gjoni](https://github.com/EGjoni/)'
   url: https://github.com/EGjoni/Everything-Will-Be-IK-Processing
   categories:
@@ -4166,17 +4170,17 @@ contributions:
   prettyVersion: 3.0.4
   minRevision: 0
   maxRevision: 0
-  source: http://giftedapprentice.com/ewbIK/ewbIK.txt
-  id: 244
-  status: VALID
-  type: library
   download: http://giftedapprentice.com/ewbIK/ewbIK.zip
   override:
     categories:
     - 3D
     - Animation
     - Simulation
-- name: nub
+- id: 245
+  source: https://github.com/VisualComputing/nub/releases/download/latest/nub.txt
+  status: VALID
+  type: library
+  name: nub
   authors: '[Jean Pierre Charalambos](https://visualcomputing.github.io/)'
   url: https://github.com/VisualComputing/nub
   categories:
@@ -4199,17 +4203,18 @@ contributions:
   prettyVersion: 1.1.1
   minRevision: 1292
   maxRevision: 0
-  source: https://github.com/VisualComputing/nub/releases/download/latest/nub.txt
-  id: 245
-  status: VALID
-  type: library
   download: https://github.com/VisualComputing/nub/releases/download/latest/nub.zip
   override:
     categories:
     - 3D
     - Animation
     - Utilities
-- name: Nice Color Palettes
+- id: 246
+  source: 
+    https://github.com/federico-pepe/nice-color-palettes/releases/download/latest/NiceColorPalettes.txt
+  status: VALID
+  type: library
+  name: Nice Color Palettes
   authors: '[Federico Pepe](https://www.federicopepe.com)'
   url: https://github.com/federico-pepe/nice-color-palettes
   categories:
@@ -4220,17 +4225,17 @@ contributions:
   prettyVersion: 1.0.2
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/federico-pepe/nice-color-palettes/releases/download/latest/NiceColorPalettes.txt
-  id: 246
-  status: VALID
-  type: library
   download: 
     https://github.com/federico-pepe/nice-color-palettes/releases/download/latest/NiceColorPalettes.zip
   override:
     categories:
     - Utilities
-- name: Image Sequence Player
+- id: 247
+  source: 
+    https://github.com/orgicus/image-sequence-player/releases/download/latest/ImageSequencePlayer.txt
+  status: VALID
+  type: library
+  name: Image Sequence Player
   authors: '[George Profenza](http://www.hirschandmann.com)'
   url: https://github.com/orgicus/image-sequence-player
   categories:
@@ -4241,17 +4246,17 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/orgicus/image-sequence-player/releases/download/latest/ImageSequencePlayer.txt
-  id: 247
-  status: VALID
-  type: library
   download: 
     https://github.com/orgicus/image-sequence-player/releases/download/latest/ImageSequencePlayer.zip
   override:
     categories:
     - I/O
-- name: RunwayML Processing Library
+- id: 248
+  source: 
+    https://github.com/runwayml/processing-library/releases/download/latest/RunwayML.txt
+  status: VALID
+  type: library
+  name: RunwayML Processing Library
   authors: '[George Profenza](http://sensori.al)'
   url: https://github.com/runwayml/processing-library
   categories:
@@ -4265,18 +4270,18 @@ contributions:
   prettyVersion: 1.0.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/runwayml/processing-library/releases/download/latest/RunwayML.txt
-  id: 248
-  status: VALID
-  type: library
   download: 
     https://github.com/runwayml/processing-library/releases/download/latest/RunwayML.zip
   override:
     categories:
     - Data
     - Utilities
-- name: Rosetta Examples for P5
+- id: 249
+  source: 
+    https://github.com/jeremydouglass/rosetta_examples_p5/releases/latest/download/rosetta_examples_p5.txt
+  status: VALID
+  type: examples
+  name: Rosetta Examples for P5
   authors: '[Jeremy Douglass](http://jeremydouglass.com)'
   url: https://github.com/jeremydouglass/rosetta_examples_p5
   categories:
@@ -4294,14 +4299,13 @@ contributions:
   maxRevision: 0
   minVersion: '0'
   maxVersion: '0'
-  source: 
-    https://github.com/jeremydouglass/rosetta_examples_p5/releases/latest/download/rosetta_examples_p5.txt
-  id: 249
-  status: VALID
-  type: examples
   download: 
     https://github.com/jeremydouglass/rosetta_examples_p5/releases/latest/download/rosetta_examples_p5.zip
-- name: Shader Mode
+- id: 250
+  source: https://github.com/Izza11/shader-mode/releases/download/latest/ShaderMode.txt
+  status: VALID
+  type: mode
+  name: Shader Mode
   authors: '[Izza Tariq](https://www.izzatariq.com/)'
   url: https://github.com/Izza11/shader-mode
   categories:
@@ -4312,12 +4316,13 @@ contributions:
   minRevision: 249
   maxRevision: 0
   imports: processing.mode.java.JavaMode
-  source: https://github.com/Izza11/shader-mode/releases/download/latest/ShaderMode.txt
-  id: 250
-  status: VALID
-  type: mode
   download: https://github.com/Izza11/shader-mode/releases/download/latest/ShaderMode.zip
-- name: Pallav.Matrix
+- id: 251
+  source: 
+    https://github.com/pallav12/matrixMath-for-processing/releases/download/latest/MatrixMath.txt
+  status: VALID
+  type: library
+  name: Pallav.Matrix
   authors: '[Pallav dubey](https://github.com/pallav12/)'
   url: http://github.com/pallav12/matrixMath-for-processing
   categories:
@@ -4328,11 +4333,6 @@ contributions:
   prettyVersion: '1.0'
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/pallav12/matrixMath-for-processing/releases/download/latest/MatrixMath.txt
-  id: 251
-  status: VALID
-  type: library
   download: 
     https://github.com/pallav12/matrixMath-for-processing/releases/download/latest/MatrixMath.zip
   override:
@@ -4340,11 +4340,15 @@ contributions:
     - Math
 - id: 252
   source: http://www.bdhont.net/lunar.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://www.bdhont.net/lunar.txt
-- name: Green
+- id: 253
+  source: https://ztdp.ca/projects/school/Green/Green.txt
+  status: VALID
+  type: library
+  name: Green
   authors: '[Zacchary Dempsey-Plante](https://ztdp.ca/)'
   url: https://ztdp.ca/projects/school/Green
   categories:
@@ -4358,16 +4362,16 @@ contributions:
   prettyVersion: 1.1.3
   minRevision: 0
   maxRevision: 0
-  source: https://ztdp.ca/projects/school/Green/Green.txt
-  id: 253
-  status: VALID
-  type: library
   download: https://ztdp.ca/projects/school/Green/Green.zip
   override:
     categories:
     - Animation
     - Other
-- name: ComposingForEveryone
+- id: 254
+  source: http://www.kramann.info/ComposingForEveryone.txt
+  status: VALID
+  type: library
+  name: ComposingForEveryone
   authors: '[Guido Kramann](http://www.kramann.info/cfe)'
   url: http://www.kramann.info/cfe
   categories:
@@ -4387,21 +4391,22 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: http://www.kramann.info/ComposingForEveryone.txt
-  id: 254
-  status: VALID
-  type: library
   download: http://www.kramann.info/ComposingForEveryone.zip
   override:
     categories:
     - Sound
 - id: 255
   source: https://bdhont.net/LiveBrush.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://bdhont.net/LiveBrush.txt
-- name: UiBooster
+- id: 256
+  source: 
+    https://github.com/Milchreis/uibooster-for-processing/releases/latest/download/UiBooster.txt
+  status: VALID
+  type: library
+  name: UiBooster
   authors: "[Nick 'Milchreis' Müller](http://github.com/milchreis)"
   url: http://github.com/milchreis/uibooster-for-processing
   categories:
@@ -4414,11 +4419,6 @@ contributions:
   prettyVersion: 1.21.0
   minRevision: 263
   maxRevision: 0
-  source: 
-    https://github.com/Milchreis/uibooster-for-processing/releases/latest/download/UiBooster.txt
-  id: 256
-  status: VALID
-  type: library
   download: 
     https://github.com/Milchreis/uibooster-for-processing/releases/latest/download/UiBooster.zip
   override:
@@ -4426,11 +4426,15 @@ contributions:
     - GUI
 - id: 257
   source: https://rect.dev/processing/infinidecimal/GRInfinidecimalCanvas.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 404 returned for url https://rect.dev/processing/infinidecimal/GRInfinidecimalCanvas.txt
-- name: Grab
+- id: 258
+  source: https://github.com/Transmedia-Gx/grab/releases/latest/download/Grab.txt
+  status: VALID
+  type: library
+  name: Grab
   authors: '[Taka Iwai, Roy Tatum](http://transmedia.graphics/)'
   url: https://github.com/Transmedia-Gx/grab
   categories:
@@ -4442,16 +4446,16 @@ contributions:
   prettyVersion: 0.6.0
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/Transmedia-Gx/grab/releases/latest/download/Grab.txt
-  id: 258
-  status: VALID
-  type: library
   download: https://github.com/Transmedia-Gx/grab/releases/latest/download/Grab.zip
   override:
     categories:
     - I/O
     - Utilities
-- name: ProcMod player
+- id: 260
+  source: https://github.com/sphaero/procmod/releases/latest/download/procmod.txt
+  status: VALID
+  type: library
+  name: ProcMod player
   authors: '[Arnaud Loonstra](http://sphaero.org)'
   url: http://github.com/sphaero/procmod
   categories:
@@ -4466,15 +4470,15 @@ contributions:
   prettyVersion: 2.1.3
   minRevision: 269
   maxRevision: 0
-  source: https://github.com/sphaero/procmod/releases/latest/download/procmod.txt
-  id: 260
-  status: VALID
-  type: library
   download: https://github.com/sphaero/procmod/releases/latest/download/procmod.zip
   override:
     categories:
     - Sound
-- name: teilchen
+- id: 261
+  source: https://github.com/dennisppaul/teilchen/releases/latest/download/teilchen.txt
+  status: VALID
+  type: library
+  name: teilchen
   authors: '[Dennis P Paul](https://dennisppaul.de/)'
   url: https://github.com/dennisppaul/teilchen
   categories:
@@ -4491,15 +4495,15 @@ contributions:
   prettyVersion: '0.4'
   minRevision: 246
   maxRevision: 0
-  source: https://github.com/dennisppaul/teilchen/releases/latest/download/teilchen.txt
-  id: 261
-  status: VALID
-  type: library
   download: https://github.com/dennisppaul/teilchen/releases/latest/download/teilchen.zip
   override:
     categories:
     - Simulation
-- name: SQuelized
+- id: 262
+  source: ' https://github.com/SamuelAl/SQuelized-for-Processing/releases/latest/download/SQuelized.txt '
+  status: DEPRECATED
+  type: library
+  name: SQuelized
   authors: '[Samuel Alarco Cantos](https://samuelal.github.io/squelized.github.io/index.html)'
   url: https://samuelal.github.io/squelized.github.io/index.html
   categories:
@@ -4510,15 +4514,15 @@ contributions:
   prettyVersion: 1.1.0
   minRevision: 0
   maxRevision: 0
-  source: ' https://github.com/SamuelAl/SQuelized-for-Processing/releases/latest/download/SQuelized.txt '
-  id: 262
-  status: DEPRECATED
-  type: library
   download: ' https://github.com/SamuelAl/SQuelized-for-Processing/releases/latest/download/SQuelized.zip'
   override:
     categories:
     - Data
-- name: Processing2JS
+- id: 263
+  source: http://jonathan.dahlberg.media/processing2js/Processing2JSTool.txt
+  status: VALID
+  type: tool
+  name: Processing2JS
   authors: '[Jonathan Dahlberg](http://jonathan.dahlberg.media)'
   url: http://jonathan.dahlberg.media/processing2js
   categories:
@@ -4530,12 +4534,12 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: http://jonathan.dahlberg.media/processing2js/Processing2JSTool.txt
-  id: 263
-  status: VALID
-  type: tool
   download: http://jonathan.dahlberg.media/processing2js/Processing2JSTool.zip
-- name: wellen
+- id: 264
+  source: https://github.com/dennisppaul/wellen/releases/latest/download/wellen.txt
+  status: VALID
+  type: library
+  name: wellen
   authors: '[Dennis P Paul](https://dennisppaul.de/)'
   url: https://github.com/dennisppaul/wellen
   categories:
@@ -4551,15 +4555,15 @@ contributions:
   prettyVersion: '0.12'
   minRevision: 246
   maxRevision: 0
-  source: https://github.com/dennisppaul/wellen/releases/latest/download/wellen.txt
-  id: 264
-  status: VALID
-  type: library
   download: https://github.com/dennisppaul/wellen/releases/latest/download/wellen.zip
   override:
     categories:
     - Sound
-- name: Coding Art Book
+- id: 265
+  source: https://codingart-book.github.io/examples/CodingArtBookExamples.txt
+  status: VALID
+  type: examples
+  name: Coding Art Book
   authors: '[Mathias Funk](https://mathias-funk.com) and [Yu Zhang](https://yuzhang.nl)'
   url: https://codingart-book.com
   categories:
@@ -4576,15 +4580,16 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: https://codingart-book.github.io/examples/CodingArtBookExamples.txt
-  id: 265
-  status: VALID
-  type: examples
   download: https://codingart-book.github.io/examples/CodingArtBookExamples.zip
   override:
     categories:
     - Books
-- name: Simple Phidgets
+- id: 266
+  source: 
+    https://github.com/sgeigers/SimplePhidgets/releases/download/latest/SimplePhidgets.txt
+  status: VALID
+  type: library
+  name: Simple Phidgets
   authors: '[Shachar Geiger](s.geiger.s@gmail.com)'
   url: https://github.com/sgeigers/SimplePhidgets
   categories:
@@ -4597,17 +4602,17 @@ contributions:
   prettyVersion: 1.0.15
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/sgeigers/SimplePhidgets/releases/download/latest/SimplePhidgets.txt
-  id: 266
-  status: VALID
-  type: library
   download: 
     https://github.com/sgeigers/SimplePhidgets/releases/download/latest/SimplePhidgets.zip
   override:
     categories:
     - Hardware
-- name: Deep Vision
+- id: 267
+  source: 
+    https://github.com/cansik/deep-vision-processing/releases/download/contribution/deepvision.txt
+  status: VALID
+  type: library
+  name: Deep Vision
   authors: '[Florian Bruggisser](https://broox.ch)'
   url: https://github.com/cansik/deep-vision-processing
   categories:
@@ -4618,17 +4623,16 @@ contributions:
   prettyVersion: 0.9.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/cansik/deep-vision-processing/releases/download/contribution/deepvision.txt
-  id: 267
-  status: VALID
-  type: library
   download: 
     https://github.com/cansik/deep-vision-processing/releases/download/contribution/deepvision.zip
   override:
     categories:
     - Data
-- name: DMX4Artists
+- id: 268
+  source: http://github.com/jaysonh/Dmx4Artists/releases/latest/download/Dmx4Artists.txt
+  status: VALID
+  type: library
+  name: DMX4Artists
   authors: '[Jayson Haebich](http://www.jaysonh.com)'
   url: https://github.com/jaysonh/Dmx4Artists/
   categories:
@@ -4639,21 +4643,21 @@ contributions:
   prettyVersion: '2.0'
   minRevision: 0
   maxRevision: 0
-  source: http://github.com/jaysonh/Dmx4Artists/releases/latest/download/Dmx4Artists.txt
-  id: 268
-  status: VALID
-  type: library
   download: http://github.com/jaysonh/Dmx4Artists/releases/latest/download/Dmx4Artists.zip
   override:
     categories:
     - Hardware
 - id: 269
   source: https://augmenta-tech.com/libs/processing/Augmenta.txt
-  type: library
   status: BROKEN
+  type: library
   log:
   - file not found, status code 406 returned for url https://augmenta-tech.com/libs/processing/Augmenta.txt
-- name: (Weka4P) Weka Machine Learning for Processing
+- id: 270
+  source: https://howieliang.github.io/Weka4P/download/Weka4P.txt
+  status: VALID
+  type: library
+  name: (Weka4P) Weka Machine Learning for Processing
   authors: '[Rong-Hao Liang](r.liang@tue.nl), [Wesley Hartogs](https://wesleyhartogs.nl),
     [Janet Huang](Y.C.Huang@tue.nl)'
   url: https://howieliang.github.io/Weka4P/
@@ -4667,15 +4671,15 @@ contributions:
   prettyVersion: 0.1.0
   minRevision: 0
   maxRevision: 0
-  source: https://howieliang.github.io/Weka4P/download/Weka4P.txt
-  id: 270
-  status: VALID
-  type: library
   download: https://howieliang.github.io/Weka4P/download/Weka4P.zip
   override:
     categories:
     - Data
-- name: Pd4P3
+- id: 271
+  source: https://www.robertesler.com/software/Pd4P3.txt
+  status: VALID
+  type: library
+  name: Pd4P3
   authors: '[Robert Esler](https://www.robertesler.com)'
   url: https://github.com/robertesler/Pd4P3
   categories:
@@ -4688,15 +4692,16 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: https://www.robertesler.com/software/Pd4P3.txt
-  id: 271
-  status: VALID
-  type: library
   download: https://www.robertesler.com/software/Pd4P3.zip
   override:
     categories:
     - Sound
-- name: Latk for Processing
+- id: 272
+  source: 
+    https://fox-gieg.com/patches/processing/libraries/latkProcessing/latkProcessing.txt
+  status: VALID
+  type: library
+  name: Latk for Processing
   authors: '[Nick Fox-Gieg](https://fox-gieg.com)'
   url: https://github.com/LightningArtist/latkProcessing
   categories:
@@ -4708,17 +4713,17 @@ contributions:
   minRevision: 266
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://fox-gieg.com/patches/processing/libraries/latkProcessing/latkProcessing.txt
-  id: 272
-  status: VALID
-  type: library
   download: 
     https://fox-gieg.com/patches/processing/libraries/latkProcessing/latkProcessing.zip
   override:
     categories:
     - Animation
-- name: JavaFX
+- id: 273
+  source: 
+    https://github.com/processing/processing4-javafx/releases/download/latest/processing4-javafx.txt
+  status: VALID
+  type: library
+  name: JavaFX
   authors: The Processing Foundation
   url: https://github.com/processing/processing4-javafx
   categories:
@@ -4730,11 +4735,6 @@ contributions:
   prettyVersion: 4.0 beta 5
   minRevision: 1280
   maxRevision: 0
-  source: 
-    https://github.com/processing/processing4-javafx/releases/download/latest/processing4-javafx.txt
-  id: 273
-  status: VALID
-  type: library
   download: 
     https://github.com/processing/processing4-javafx/releases/download/latest/processing4-javafx.zip
   override:
@@ -4742,8 +4742,8 @@ contributions:
     - Other
 - id: 274
   source: https://contribs.processing.org/pythonmode/4/PythonMode.txt
-  type: mode
   status: VALID
+  type: mode
   log:
   - file not found, status code 404 returned for url https://py.processing.org/4/PythonMode.txt
   name: Python Mode for Processing 4
@@ -4757,7 +4757,12 @@ contributions:
   minRevision: 1279
   maxRevision: 0
   download: https://contribs.processing.org/pythonmode/4/PythonMode.zip
-- name: Oklab for Processing
+- id: 275
+  source: 
+    https://github.com/yashbutno/Oklab-for-Processing/releases/download/latest/OklabForProcessing.txt
+  status: VALID
+  type: library
+  name: Oklab for Processing
   authors: '[Yash Gupta](https://refuse.ink/)'
   url: https://github.com/yashbutno/Oklab-for-Processing
   categories:
@@ -4772,17 +4777,17 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/yashbutno/Oklab-for-Processing/releases/download/latest/OklabForProcessing.txt
-  id: 275
-  status: VALID
-  type: library
   download: 
     https://github.com/yashbutno/Oklab-for-Processing/releases/download/latest/OklabForProcessing.zip
   override:
     categories:
     - Utilities
-- name: Video Library for Processing 4
+- id: 276
+  source: 
+    https://github.com/processing/processing-video/releases/download/latest/video.txt
+  status: VALID
+  type: library
+  name: Video Library for Processing 4
   authors: The Processing Foundation
   url: http://processing.org/reference/libraries/video/index.html
   categories:
@@ -4793,17 +4798,16 @@ contributions:
   prettyVersion: 2.2.2
   minRevision: 1281
   maxRevision: 0
-  source: 
-    https://github.com/processing/processing-video/releases/download/latest/video.txt
-  id: 276
-  status: VALID
-  type: library
   download: 
     https://github.com/processing/processing-video/releases/download/latest/video.zip
   override:
     categories:
     - Video & Vision
-- name: Nurbs
+- id: 277
+  source: https://arnoudvanderleer.github.io/processing-nurbs/download/Nurbs.txt
+  status: VALID
+  type: library
+  name: Nurbs
   authors: '[Arnoud van der Leer](https://github.com/arnoudvanderleer)'
   url: https://arnoudvanderleer.github.io/processing-nurbs/
   categories:
@@ -4814,15 +4818,15 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://arnoudvanderleer.github.io/processing-nurbs/download/Nurbs.txt
-  id: 277
-  status: VALID
-  type: library
   download: https://arnoudvanderleer.github.io/processing-nurbs/download/Nurbs.zip
   override:
     categories:
     - Geometry
-- name: SerialRecord
+- id: 278
+  source: http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.txt
+  status: VALID
+  type: library
+  name: SerialRecord
   authors: '[Oliver Steele](steele@osteele.com)'
   url: https://osteele.github.io/Processing_SerialRecord/
   categories:
@@ -4841,16 +4845,17 @@ contributions:
   prettyVersion: 0.4.1
   minRevision: 264
   maxRevision: 0
-  source: http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.txt
-  id: 278
-  status: VALID
-  type: library
   download: http://assets.osteele.com.s3.amazonaws.com/processing/SerialRecord.zip
   override:
     categories:
     - Data
     - I/O
-- name: Android Mode for Processing 4
+- id: 279
+  source: 
+    https://github.com/processing/processing-android/releases/download/latest/AndroidMode.txt
+  status: VALID
+  type: mode
+  name: Android Mode for Processing 4
   authors: '[The Processing Foundation](https://processingfoundation.org/)'
   url: https://android.processing.org
   categories:
@@ -4861,14 +4866,13 @@ contributions:
   minRevision: 1283
   maxRevision: 0
   imports: processing.mode.java.JavaMode
-  source: 
-    https://github.com/processing/processing-android/releases/download/latest/AndroidMode.txt
-  id: 279
-  status: VALID
-  type: mode
   download: 
     https://github.com/processing/processing-android/releases/download/latest/AndroidMode.zip
-- name: Timer
+- id: 280
+  source: https://github.com/guilhermesilveira/timer/releases/download/latest/Timer.txt
+  status: VALID
+  type: library
+  name: Timer
   authors: '[Guilherme Silveira](https://guilhermesilveira.org/)'
   url: https://github.com/guilhermesilveira/timer
   categories:
@@ -4879,15 +4883,16 @@ contributions:
   prettyVersion: 1.0.1
   minRevision: 1283
   maxRevision: 0
-  source: https://github.com/guilhermesilveira/timer/releases/download/latest/Timer.txt
-  id: 280
-  status: VALID
-  type: library
   download: https://github.com/guilhermesilveira/timer/releases/download/latest/Timer.zip
   override:
     categories:
     - Utilities
-- name: Swing Helper
+- id: 281
+  source: 
+    https://github.com/NumericPrime/SwingHelperProcessing/releases/latest/download/SwingHelperLib.txt
+  status: VALID
+  type: library
+  name: Swing Helper
   authors: Michael Lukas
   url: https://github.com/NumericPrime/SwingHelperProcessing
   categories:
@@ -4904,17 +4909,17 @@ contributions:
   prettyVersion: 1.1.1
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/NumericPrime/SwingHelperProcessing/releases/latest/download/SwingHelperLib.txt
-  id: 281
-  status: VALID
-  type: library
   download: 
     https://github.com/NumericPrime/SwingHelperProcessing/releases/latest/download/SwingHelperLib.zip
   override:
     categories:
     - GUI
-- name: Complex Numbers
+- id: 282
+  source: 
+    https://github.com/vmathmachine/Complex-Numbers/releases/download/latest/ComplexNumbers.txt
+  status: VALID
+  type: library
+  name: Complex Numbers
   authors: '[Chris Maguschak](https://discourse.processing.org/u/math_machine/)'
   url: https://github.com/vmathmachine/Complex-Numbers/tree/latest
   categories:
@@ -4932,17 +4937,16 @@ contributions:
   prettyVersion: 1.1.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/vmathmachine/Complex-Numbers/releases/download/latest/ComplexNumbers.txt
-  id: 282
-  status: VALID
-  type: library
   download: 
     https://github.com/vmathmachine/Complex-Numbers/releases/download/latest/ComplexNumbers.zip
   override:
     categories:
     - Math
-- name: Joon's Renderer
+- id: 283
+  source: https://fox-gieg.com/patches/processing/libraries/joons/joons.txt
+  status: VALID
+  type: library
+  name: Joon's Renderer
   authors: '[Joon Hyub Lee](https://sketch.kaist.ac.kr/people/joonhyublee)'
   url: https://github.com/joonhyublee/joons-renderer
   categories:
@@ -4954,15 +4958,16 @@ contributions:
   minRevision: 266
   maxRevision: 0
   lastUpdated: '0'
-  source: https://fox-gieg.com/patches/processing/libraries/joons/joons.txt
-  id: 283
-  status: VALID
-  type: library
   download: https://fox-gieg.com/patches/processing/libraries/joons/joons.zip
   override:
     categories:
     - 3D
-- name: Creative Machine
+- id: 284
+  source: 
+    https://github.com/jjeongin/creative-machine/releases/download/latest/creative_machine.txt
+  status: VALID
+  type: library
+  name: Creative Machine
   authors: '[Jeongin Lee](https://github.com/jjeongin)'
   url: https://jjeongin.github.io/creative-machine
   categories:
@@ -4973,17 +4978,16 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://github.com/jjeongin/creative-machine/releases/download/latest/creative_machine.txt
-  id: 284
-  status: VALID
-  type: library
   download: 
     https://github.com/jjeongin/creative-machine/releases/download/latest/creative_machine.zip
   override:
     categories:
     - Data
-- name: JavaDoc
+- id: 285
+  source: https://github.com/hkiel/JavaDoc/releases/latest/download/JavaDoc.txt
+  status: VALID
+  type: tool
+  name: JavaDoc
   authors: '[Henning Kiel](https://github.com/hkiel)'
   url: https://github.com/hkiel/JavaDoc
   categories:
@@ -4994,12 +4998,12 @@ contributions:
   prettyVersion: 1.0.6
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/hkiel/JavaDoc/releases/latest/download/JavaDoc.txt
-  id: 285
-  status: VALID
-  type: tool
   download: https://github.com/hkiel/JavaDoc/releases/latest/download/JavaDoc.zip
-- name: LazyGui
+- id: 286
+  source: https://github.com/KrabCode/LazyGui/releases/download/latest/LazyGui.txt
+  status: VALID
+  type: library
+  name: LazyGui
   authors: "[Jakub 'Krab' Rak](https://github.com/KrabCode)"
   url: https://github.com/KrabCode/LazyGui
   categories:
@@ -5016,15 +5020,16 @@ contributions:
   minRevision: 0
   maxRevision: 0
   imports: com.krab.lazy
-  source: https://github.com/KrabCode/LazyGui/releases/download/latest/LazyGui.txt
-  id: 286
-  status: VALID
-  type: library
   download: https://github.com/KrabCode/LazyGui/releases/download/latest/LazyGui.zip
   override:
     categories:
     - GUI
-- name: BPM timings
+- id: 287
+  source: 
+    https://github.com/vincentsijben/bpm-timings-for-processing/releases/download/latest/BPM_timings.txt
+  status: VALID
+  type: library
+  name: BPM timings
   authors: '[Vincent Sijben](https://github.com/vincentsijben)'
   url: https://github.com/vincentsijben/bpm-timings-for-processing
   categories:
@@ -5037,11 +5042,6 @@ contributions:
   prettyVersion: 1.2.6
   minRevision: 270
   maxRevision: 0
-  source: 
-    https://github.com/vincentsijben/bpm-timings-for-processing/releases/download/latest/BPM_timings.txt
-  id: 287
-  status: VALID
-  type: library
   download: 
     https://github.com/vincentsijben/bpm-timings-for-processing/releases/download/latest/BPM_timings.zip
   override:
@@ -5049,7 +5049,12 @@ contributions:
     - Math
     - Sound
     - Utilities
-- name: Discord Rich Presence
+- id: 288
+  source: 
+    https://github.com/letorbi/discord-rich-presence-for-processing/releases/latest/download/DiscordRichPresence.txt
+  status: VALID
+  type: tool
+  name: Discord Rich Presence
   authors: '[Torben Haase](https://letorbi.com)'
   url: https://github.com/letorbi/discord-rich-presence-for-processing
   categories:
@@ -5064,14 +5069,14 @@ contributions:
   minRevision: 400
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://github.com/letorbi/discord-rich-presence-for-processing/releases/latest/download/DiscordRichPresence.txt
-  id: 288
-  status: VALID
-  type: tool
   download: 
     https://github.com/letorbi/discord-rich-presence-for-processing/releases/latest/download/DiscordRichPresence.zip
-- name: Basins of Attraction (Newton's Fractals)
+- id: 289
+  source: 
+    https://raw.githubusercontent.com/DarkMortal/Newton_Fractal/main/Newton_Fractals.txt
+  status: VALID
+  type: examples
+  name: Basins of Attraction (Newton's Fractals)
   authors: '[Saptarshi Dey](http://github.com/DarkMortal)'
   url: https://github.com/DarkMortal/Newton_Fractal
   categories:
@@ -5082,14 +5087,13 @@ contributions:
   prettyVersion: 1.1.2
   minRevision: 0
   maxRevision: 0
-  source: 
-    https://raw.githubusercontent.com/DarkMortal/Newton_Fractal/main/Newton_Fractals.txt
-  id: 289
-  status: VALID
-  type: examples
   download: 
     https://raw.githubusercontent.com/DarkMortal/Newton_Fractal/main/Newton_Fractals.zip
-- name: FIP
+- id: 290
+  source: https://github.com/prontopablo/FIP/releases/download/latest/FIP.txt
+  status: VALID
+  type: library
+  name: FIP
   authors: '[Darragh Nolan](https://github.com/prontopablo/FIP)'
   url: https://prontopablo.github.io/FIP/
   categories:
@@ -5102,15 +5106,15 @@ contributions:
   prettyVersion: 1.0.9
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/prontopablo/FIP/releases/download/latest/FIP.txt
-  id: 290
-  status: VALID
-  type: library
   download: https://github.com/prontopablo/FIP/releases/download/latest/FIP.zip
   override:
     categories:
     - Video & Vision
-- name: EasyEase
+- id: 291
+  source: https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.txt
+  status: VALID
+  type: library
+  name: EasyEase
   authors: '[Fred Egidi](https://github.com/fredegd)'
   url: https://fredegd.github.io/EasyEase
   categories:
@@ -5123,15 +5127,16 @@ contributions:
   prettyVersion: 1.0.0
   minRevision: 0
   maxRevision: 0
-  source: https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.txt
-  id: 291
-  status: VALID
-  type: library
   download: https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.zip
   override:
     categories:
     - Animation
-- name: Processing for Android, 2nd Edition
+- id: 292
+  source: 
+    https://github.com/Apress/Processing-for-Android-Second-Edition/releases/download/latest/processing-for-android-examples.txt
+  status: VALID
+  type: examples
+  name: Processing for Android, 2nd Edition
   authors: '[Andres Colubri](https://andrescolubri.net/)'
   url: https://andrescolubri.net/processing-for-android-book/
   categories:
@@ -5144,11 +5149,6 @@ contributions:
   minRevision: 0
   maxRevision: 0
   lastUpdated: '0'
-  source: 
-    https://github.com/Apress/Processing-for-Android-Second-Edition/releases/download/latest/processing-for-android-examples.txt
-  id: 292
-  status: VALID
-  type: examples
   download: 
     https://github.com/Apress/Processing-for-Android-Second-Edition/releases/download/latest/processing-for-android-examples.zip
   override:

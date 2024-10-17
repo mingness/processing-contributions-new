@@ -23,11 +23,17 @@ body:
       placeholder: https://
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: contribution_type
     attributes:
       label: contribution_type
-      description: The type of contribution. Values can be `library`, `examples`, `tool` or `mode`.
+      description: The type of contribution.
+      options:
+        - library
+        - examples
+        - tool
+        - mode
+      default: 0
     validations:
       required: true
   - type: markdown

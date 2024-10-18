@@ -13,21 +13,30 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 import re
 import os
 from typing import Optional, Union
-from collections import OrderedDict
-from pydantic import BaseModel, Field, ConfigDict, field_validator, validator
+from pydantic import BaseModel, Field, ConfigDict, field_validator
 
 
-class Properties(BaseModel):
+class PropertiesBase(BaseModel):
     name: str
-    authors: str = Field(alias='authorList')
+    authors: str
     url: str
-    categories: Optional[str] = Field(None, alias='category')
+    categories: Optional[str] = Field(None)
     sentence: str
     paragraph: Optional[str] = None
-    version: Union[int, str]
-    prettyVersion: Optional[str] = None
+    version: int
+    prettyVersion: str
     minRevision: int = Field(0)
     maxRevision: int = Field(0)
+
+    model_config = ConfigDict(
+        extra='allow',
+    )
+
+class PropertiesExisting(PropertiesBase):
+    authors: str = Field(alias='authorList')
+    categories: Optional[str] = Field(None, alias='category')
+    version: Union[int, str]
+    prettyVersion: Optional[str] = None
 
     model_config = ConfigDict(
         extra='allow',
@@ -42,23 +51,8 @@ class Properties(BaseModel):
             return 0
 
 
-
-class PropertiesNew(BaseModel):
-    name: str
-    authors: str
-    url: str
-    categories: Optional[str] = Field(None)
-    sentence: str
-    paragraph: Optional[str] = None
-    version: Union[int, str]
-    prettyVersion: str
-    minRevision: int = Field(0)
-    maxRevision: int = Field(0)
-
-    model_config = ConfigDict(
-        extra='allow',
-        populate_by_name=True,
-    )
+class LibraryPropertiesNew(BaseModel):
+    categories: str
 
 
 @retry(stop=stop_after_attempt(3),
@@ -104,16 +98,21 @@ def parse_text(properties_raw):
 
 def validate_existing(properties_dict):
     # validation on existing contribution is weaker
-    properties = Properties.model_validate(properties_dict)
+    properties = PropertiesExisting.model_validate(properties_dict)
 
     return properties.model_dump()
 
 def validate_new(properties_dict):
     # new contribution has stronger validation
-    properties = PropertiesNew.model_validate(properties_dict)
+    properties = PropertiesBase.model_validate(properties_dict)
 
     return properties.model_dump()
 
+def validate_new_library(properties_dict):
+    # new contribution has stronger validation
+    properties = LibraryPropertiesNew.model_validate(properties_dict)
+
+    return properties.model_dump()
 
 def set_output(output_object):
     with open(os.environ['GITHUB_OUTPUT'],'a') as f:
@@ -150,7 +149,10 @@ if __name__ == "__main__":
     print(f"properties text: {properties_raw}")  # just for debugging, should do this via logging levels
 
     try:
-        props = validate_new(parse_text(properties_raw))
+        if type_ == 'library':
+            props = validate_new_library(parse_text(properties_raw))
+        else:
+            props = validate_new(parse_text(properties_raw))
     except Exception as e:
         set_output_error(f'Errors when parsing file. Please check all required fields, and file format.\n\n{e}')
         raise e

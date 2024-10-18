@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   validate:
+    if: contains(github.event.issue.labels.*.name, 'new-contribution')
     runs-on: ubuntu-latest
     outputs:
       props: ${{ steps.parseProps.outputs.props }}

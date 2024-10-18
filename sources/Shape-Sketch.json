@@ -15,8 +15,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 245,
-      "maxRevision": 0,
+      "minRevision": "245",
+      "maxRevision": "0",
       "props": "https://github.com/joelmoniz/Shape-Sketch/releases/download/latest/ShapeSketch.txt",
       "download": "https://github.com/joelmoniz/Shape-Sketch/releases/download/latest/ShapeSketch.zip"
     }

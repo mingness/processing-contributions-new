@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "https://github.com/NumericPrime/SwingHelperProcessing/releases/latest/download/SwingHelperLib.txt",
       "download": "https://github.com/NumericPrime/SwingHelperProcessing/releases/latest/download/SwingHelperLib.zip"
     }

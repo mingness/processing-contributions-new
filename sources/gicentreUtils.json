@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 228,
-      "maxRevision": 0,
+      "minRevision": "228",
+      "maxRevision": "0",
       "props": "http://staff.city.ac.uk/~jwo/giCentre/utils/gicentreUtils.txt",
       "download": "http://staff.city.ac.uk/~jwo/giCentre/utils/gicentreUtils.zip"
     }

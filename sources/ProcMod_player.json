@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 269,
-      "maxRevision": 0,
+      "minRevision": "269",
+      "maxRevision": "0",
       "props": "https://github.com/sphaero/procmod/releases/latest/download/procmod.txt",
       "download": "https://github.com/sphaero/procmod/releases/latest/download/procmod.zip"
     }

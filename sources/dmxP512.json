@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://motscousus.com/stuff/2011-01_dmxP512/dmxP512.txt",
       "download": "http://motscousus.com/stuff/2011-01_dmxP512/dmxP512.zip"
     }

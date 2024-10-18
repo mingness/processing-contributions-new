@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 1283,
-      "maxRevision": 0,
+      "minRevision": "1283",
+      "maxRevision": "0",
       "props": "https://github.com/guilhermesilveira/timer/releases/download/latest/Timer.txt",
       "download": "https://github.com/guilhermesilveira/timer/releases/download/latest/Timer.zip"
     }

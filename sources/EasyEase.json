@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.txt",
       "download": "https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.zip"
     }

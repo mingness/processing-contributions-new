@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://www.sojamo.de/libraries/controlP5/controlP5.txt",
       "download": "http://www.sojamo.de/libraries/controlP5/controlP5.zip"
     }

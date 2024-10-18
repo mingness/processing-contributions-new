@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "https://github.com/yashbutno/Oklab-for-Processing/releases/download/latest/OklabForProcessing.txt",
       "download": "https://github.com/yashbutno/Oklab-for-Processing/releases/download/latest/OklabForProcessing.zip"
     }

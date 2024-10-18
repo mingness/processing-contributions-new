@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
+      "minRevision": "0",
       "maxRevision": "228",
       "props": "http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.txt",
       "download": "http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip"

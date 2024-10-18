@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 246,
-      "maxRevision": 0,
+      "minRevision": "246",
+      "maxRevision": "0",
       "props": "http://josephtaylor.github.io/sketch-mapper/SketchMapper.txt",
       "download": "http://josephtaylor.github.io/sketch-mapper/SketchMapper.zip"
     }

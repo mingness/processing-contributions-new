@@ -294,7 +294,7 @@ contributions:
   maxRevision: 0
   download: http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Math
   log:
@@ -389,7 +389,7 @@ contributions:
   download: 
     http://jorgecardoso.eu/processing/MindSetProcessing/download/MindsetProcessing.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - I/O
   log:
@@ -705,7 +705,7 @@ contributions:
   maxRevision: 0
   download: http://transmote.com/nest/download/Nest.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Utilities
   log:
@@ -742,7 +742,7 @@ contributions:
   maxRevision: 227
   download: http://www.lagers.org.uk/processing/shapes3d/Shapes3D.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - 3D
   log:
@@ -1030,7 +1030,7 @@ contributions:
   maxRevision: 0
   download: http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Utilities
   log:
@@ -1076,7 +1076,7 @@ contributions:
   maxRevision: 0
   download: http://bezier.de/processing/modes/CoffeeScriptMode.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
   log:
   - in broken conf
 - id: 71
@@ -1317,7 +1317,7 @@ contributions:
   maxRevision: 0
   download: http://bezier.de/processing/modes/JavaScriptMode.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
   log:
   - in broken conf
 - id: 88
@@ -1359,7 +1359,7 @@ contributions:
   download: 
     https://raw.githubusercontent.com/nok/soundcloud-processing/master/download/SoundCloud.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Data
   log:
@@ -1676,7 +1676,7 @@ contributions:
   download: 
     https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Data
   log:
@@ -1719,7 +1719,7 @@ contributions:
   maxRevision: 0
   download: http://larskaltenbach.de/code/speedTool/download/SpeedTool.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
   log:
   - in broken conf
 - id: 113
@@ -1776,7 +1776,7 @@ contributions:
   maxRevision: 0
   download: ' https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.zip'
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Typography
   log:
@@ -1878,7 +1878,7 @@ contributions:
   maxRevision: 0
   download: http://igeo.jp/igeo.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - 3D
   log:
@@ -1959,7 +1959,7 @@ contributions:
   maxRevision: 0
   download: https://github.com/onar3d/processing-mother/releases/download/latest/Mother.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Utilities
   log:
@@ -2210,7 +2210,7 @@ contributions:
   maxRevision: 0
   download: http://s3.staticvoidgames.com/JarMatey/JarMateyProcessingTool.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
   log:
   - in broken conf
 - id: 142
@@ -2259,7 +2259,7 @@ contributions:
   maxRevision: 0
   download: http://unfoldingmaps.org/Unfolding.zip
   override:
-    maxRevision: '228'
+    maxRevision: 228
     categories:
     - Data
   log:

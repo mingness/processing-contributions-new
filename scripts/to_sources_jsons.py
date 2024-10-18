@@ -55,7 +55,7 @@ def to_sources_dict(contribution_dict):
 
   sources_dict['packages'] = [
     {
-      field:('java' if field == 'mode' else contribution_dict[field])
+      field:('java' if field == 'mode' else str(contribution_dict[field]))
       for field in json_package_fields_list
     }
   ]

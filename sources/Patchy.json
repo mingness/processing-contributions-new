@@ -13,8 +13,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://mrfeinberg.com/patchy/patchy.txt",
       "download": "http://mrfeinberg.com/patchy/patchy.zip"
     }

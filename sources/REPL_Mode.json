@@ -13,8 +13,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 242,
-      "maxRevision": 0,
+      "minRevision": "242",
+      "maxRevision": "0",
       "props": "https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.txt",
       "download": "https://github.com/joelmoniz/REPLmode/releases/download/latest/REPLMode.zip"
     }

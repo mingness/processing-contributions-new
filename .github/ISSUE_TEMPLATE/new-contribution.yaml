@@ -41,8 +41,6 @@ body:
       value: |
         Once you submit this form, the properties file found at the url will be parsed and validated. 
         
-        The result of this validation will be added to this issue. 
-        
-        If the text file is valid, a pull request will be automatically created, adding your contribution to the repository. 
-        
-        If the text file is not valid, a comment with the error will be added to the issue. You will need to edit your properties file before the contribution can be added.
+        The result of this validation will be added to this issue:
+        * If the text file is valid, a pull request will be automatically created, adding your contribution to the repository. 
+        * If the text file is not valid, a comment with the error will be added to the issue. You will need to edit your properties file before the contribution can be added.

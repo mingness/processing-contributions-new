@@ -1,8 +1,6 @@
 name: New Contribution
 description: Register a new contribution.
-title: "[NEW]: "
 labels: ["new-contribution"]
-projects: ["mingness/processing-contributions-new"]
 body:
   - type: markdown
     attributes:

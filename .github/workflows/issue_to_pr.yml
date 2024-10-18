@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       props: ${{ steps.parseProps.outputs.props }}
+      comment-id: ${{ steps.issueComment.outputs.comment-id }}
     steps:
       - name: Parse issue
         id: parseIssue
@@ -40,6 +41,14 @@ jobs:
             ${{ fromJson(steps.parseIssue.outputs.payload).contribution_type }} \
             "${{ fromJson(steps.parseIssue.outputs.payload).properties_url }}"
 
+      - name: add comment to issue
+        id: issueComment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Your properties file was successfully parsed.
+
       - name: if failure, add comment to issue
         if: failure()
         uses: peter-evans/create-or-update-comment@v4
@@ -54,6 +63,7 @@ jobs:
     env:
       BRANCH_NAME: issue-${{ github.event.issue.number }}
       ISSUE_NUM: ${{ github.event.issue.number }}
+      ISSUE_TITLE: ${{ github.event.issue.title }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
@@ -101,3 +111,20 @@ jobs:
         run: gh pr create -B main -H $BRANCH_NAME --title "new contribution issue $ISSUE_NUM" --body "${{github.event.issue.title }}"
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: add comment to issue
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ needs.validate.outputs.comment-id }}
+          body: |
+            A pull request with your contribution has been successfully created.
+
+
+      - name: if failure, add comment to issue
+        if: failure()
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ needs.validate.outputs.comment-id }}
+          body: |
+            An error was encountered when adding your contribution.
+            We will look into this issue as soon as possible.

@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://beadsproject.net/library/beads.txt",
       "download": "http://beadsproject.net/library/beads.zip"
     }

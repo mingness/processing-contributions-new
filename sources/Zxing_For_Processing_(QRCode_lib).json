@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 227,
-      "maxRevision": 0,
+      "minRevision": "227",
+      "maxRevision": "0",
       "props": "http://cagewebdev.com/zxing4p/zxing4p3.txt",
       "download": "http://cagewebdev.com/zxing4p/zxing4p3.zip"
     }

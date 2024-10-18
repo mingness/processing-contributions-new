@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 400,
-      "maxRevision": 0,
+      "minRevision": "400",
+      "maxRevision": "0",
       "props": "https://github.com/letorbi/discord-rich-presence-for-processing/releases/latest/download/DiscordRichPresence.txt",
       "download": "https://github.com/letorbi/discord-rich-presence-for-processing/releases/latest/download/DiscordRichPresence.zip"
     }

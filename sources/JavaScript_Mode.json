@@ -12,7 +12,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
+      "minRevision": "0",
       "maxRevision": "228",
       "props": "http://bezier.de/processing/modes/JavaScriptMode.txt",
       "download": "http://bezier.de/processing/modes/JavaScriptMode.zip"

@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 229,
-      "maxRevision": 0,
+      "minRevision": "229",
+      "maxRevision": "0",
       "props": "https://github.com/processing/processing-sound/releases/download/latest/sound.txt",
       "download": "https://github.com/processing/processing-sound/releases/download/latest/sound.zip"
     }

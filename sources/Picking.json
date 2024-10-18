@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://n.clavaud.free.fr/processing/library/picking/download/Picking.txt",
       "download": "http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip"
     }

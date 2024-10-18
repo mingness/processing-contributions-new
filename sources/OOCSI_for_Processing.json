@@ -16,8 +16,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://iddi.github.io/oocsi-processing/oocsi.txt",
       "download": "http://iddi.github.io/oocsi-processing/oocsi.zip"
     }

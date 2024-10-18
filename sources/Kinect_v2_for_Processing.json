@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 246,
-      "maxRevision": 0,
+      "minRevision": "246",
+      "maxRevision": "0",
       "props": "http://codigogenerativo.com/KinectPV2.txt",
       "download": "http://codigogenerativo.com/KinectPV2.zip"
     }

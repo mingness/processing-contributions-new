@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "http://ubaa.net/shared/processing/udp/udp.txt",
       "download": "http://ubaa.net/shared/processing/udp/udp.zip"
     }

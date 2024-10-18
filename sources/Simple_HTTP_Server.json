@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 253,
-      "maxRevision": 253,
+      "minRevision": "253",
+      "maxRevision": "253",
       "props": "http://transfluxus.github.io/SimpleHTTPServer/download/SimpleHTTPServer.txt",
       "download": "http://transfluxus.github.io/SimpleHTTPServer/download/SimpleHTTPServer.zip"
     }

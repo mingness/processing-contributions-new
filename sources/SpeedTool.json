@@ -14,7 +14,7 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
+      "minRevision": "0",
       "maxRevision": "228",
       "props": "http://larskaltenbach.de/code/speedTool/download/SpeedTool.txt",
       "download": "http://larskaltenbach.de/code/speedTool/download/SpeedTool.zip"

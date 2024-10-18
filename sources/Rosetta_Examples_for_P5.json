@@ -14,8 +14,8 @@
   "packages": [
     {
       "mode": "java",
-      "minRevision": 0,
-      "maxRevision": 0,
+      "minRevision": "0",
+      "maxRevision": "0",
       "props": "https://github.com/jeremydouglass/rosetta_examples_p5/releases/latest/download/rosetta_examples_p5.txt",
       "download": "https://github.com/jeremydouglass/rosetta_examples_p5/releases/latest/download/rosetta_examples_p5.zip"
     }

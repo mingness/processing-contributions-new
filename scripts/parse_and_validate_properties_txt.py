@@ -13,6 +13,7 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 import re
 import os
 from typing import Optional, Union
+from collections import OrderedDict
 from pydantic import BaseModel, Field, ConfigDict, field_validator, validator
 
 
@@ -154,7 +155,11 @@ if __name__ == "__main__":
         set_output_error(f'Errors when parsing file. Please check all required fields, and file format.\n\n{e}')
         raise e
 
-    props["props"] = url
-    props["type"] = type_
-    print(f"properties dict: {props}")  # just for debugging, should do this via logging levels
-    set_output(props)
+    contribution= {
+        "type": type_,
+        "source": url,
+    }
+    contribution.update(props)
+
+    print(f"properties dict: {contribution}")  # just for debugging, should do this via logging levels
+    set_output(contribution)

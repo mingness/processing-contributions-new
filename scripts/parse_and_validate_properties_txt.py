@@ -51,7 +51,7 @@ class PropertiesExisting(PropertiesBase):
             return 0
 
 
-class LibraryPropertiesNew(BaseModel):
+class LibraryPropertiesNew(PropertiesBase):
     categories: str
 
 
@@ -94,6 +94,7 @@ def parse_text(properties_raw):
     if field_name:
         properties_dict[field_name] = field_value
 
+    print(f"properites_dict={properties_dict}")
     return properties_dict
 
 def validate_existing(properties_dict):

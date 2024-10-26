@@ -5154,3 +5154,15 @@ contributions:
   override:
     categories:
     - Books
+- id: 293
+  status: VALID
+  type: library
+  source: https://github.com/remixlab/proscene/releases/download/latest/proscene.txt
+  categories:
+  - 3D
+  - Animation
+  - GUI
+  - Geometry
+  - I/O
+  - Utilities
+  download: https://github.com/remixlab/proscene/releases/download/latest/proscene.zip

@@ -58,3 +58,10 @@ by the contribution manager in the Processing application.
 * `to_sources_jsons.py`: processes the `contributions.yaml` database file to individual json files in the `sources` 
 folder, for consumption by the Processing website.
 * `utils.py`: utility functions used by multiple script files.
+
+
+## Contributors
+
+This repository was created by Claudine Chen ([@mingness](https://github.com/mingness)) as part of the 
+2024 New Beginnings (pr05) Grant from the [Processing Foundation](https://github.com/processing), to simplify the
+workflows for libraries, tools, and modes, mentored by Stef Tervelde ([@Stefterv](https://github.com/stefterv)).

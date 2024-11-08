@@ -27,6 +27,7 @@ class PropertiesBase(BaseModel):
     prettyVersion: str
     minRevision: int = Field(0)
     maxRevision: int = Field(0)
+    modes: Optional[str] = Field(None, alias='compatibleModesList')
 
     model_config = ConfigDict(
         extra='allow',
@@ -94,7 +95,6 @@ def parse_text(properties_raw):
     if field_name:
         properties_dict[field_name] = field_value
 
-    print(f"properites_dict={properties_dict}")
     return properties_dict
 
 def validate_existing(properties_dict):

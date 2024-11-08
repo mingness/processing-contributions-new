@@ -9,6 +9,12 @@ from parse_and_validate_properties_txt import read_properties_txt, parse_text, v
 
 
 def update_contribution(contribution, props):
+  datetime_today = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S%z')
+  contribution['lastUpdated'] = datetime_today
+  if 'previousVersions' not in contribution:
+    contribution['previousVersions'] = []
+  contribution['previousVersions'].append(contribution['prettyVersion'])
+
   # update from online
   for field in props.keys():
     # process category list
@@ -26,17 +32,19 @@ def update_contribution(contribution, props):
 def log_broken(contribution, msg):
   if contribution['status'] == 'VALID':
     contribution['status'] = 'BROKEN'
+    if 'log' not in contribution:
+      contribution['log'] = []
     contribution['log'].append(msg)
 
 def process_contribution(contribution):
-  date_today = datetime.today().strftime('%Y-%m-%d')
-  this_version = 0
+  date_today = datetime.utcnow().strftime('%Y-%m-%d')
+  this_version = '0'
 
   if contribution['status'] != 'DEPRECATED':
-    # compare version to what is at url. If has iterated up, update contribution to
+    # compare version to what is at url. If has changed, update contribution to
     # what is online
     if 'version' in contribution:
-      this_version = int(contribution['version'])
+      this_version = contribution['version']
 
     try:
       properties_raw = read_properties_txt(contribution['source'])
@@ -53,10 +61,15 @@ def process_contribution(contribution):
       log_broken(contribution, f'invalid file, {date_today}')
       return
 
-    if int(props['version']) > this_version:
+    # some library files have field lastUpdated. This also exists in the database, but is defined
+    # by our scripts, so remove this field.
+    contribution.pop('lastUpdated', None)
+
+    contribution['status'] = 'VALID'
+
+    if props['version'] != this_version:
       # update from online
       update_contribution(contribution, props)
-      contribution['status'] = 'VALID'
 
 
 if __name__ == "__main__":

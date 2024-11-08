@@ -3,6 +3,8 @@ Creates the contribs.txt file from the contributions.yaml file.
 """
 
 import json
+import pathlib
+import shutil
 from collections import defaultdict
 
 from utils import get_valid_contributions
@@ -11,7 +13,7 @@ type_list = ['library', 'examples', 'tool', 'mode']
 contribs_fields_list = [
     'name', 'authors', 'url', 'categories', 'sentence', 'paragraph',
     'version', 'prettyVersion', 'minRevision', 'maxRevision', 'imports',
-    'compatibleModesList', 'id', 'type', 'download'
+    'modes', 'compatibleModesList', 'id', 'type', 'download'
 ]
 
 
@@ -44,7 +46,13 @@ def read_contribs_text(filepath):
 
 
 if __name__ == "__main__":
-  contribs_text_file = '../pde/contribs.txt'
+  pde_folder = pathlib.Path(__file__).parent.parent / 'pde/'
+  # remove sources folder if it already exists
+  if pde_folder.is_dir():
+    shutil.rmtree(pde_folder)
+  pde_folder.mkdir(parents=True, exist_ok=True)
+
+  contribs_text_file = pde_folder / 'contribs.txt'
 
   contributions_list = get_valid_contributions()
 

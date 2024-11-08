@@ -8,6 +8,7 @@
     "Tutorial"
   ],
   "sentence": "Example sketches for each lesson in the Coding Creative workshop.",
+  "modes": "jycessing.mode.PythonMode",
   "paragraph": null,
   "id": "243",
   "type": "examples",

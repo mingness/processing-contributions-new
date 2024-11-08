@@ -59,6 +59,21 @@ type=library
 download=http://www.die-seite.ch/colladaloader/colladaLoader.zip
 
 library
+name=GenerativeDesign
+authors=[Benedikt Gross, Hartmut Bohnacker](http://www.generative-gestaltung.de/)
+url=http://www.generative-gestaltung.de/
+categories=Compilation
+sentence=A collection of various functions belonging to the book GENERATIVE DESIGN (english), GENERATIVE GESTALTUNG (german) and DESIGN GENERATIF (french).
+paragraph=It supplies classes and functions for 3d-surfaces, simple physics (nodes, springs, attractors), graphic tablets, ASE-export or asynchronous loading of xml, html and images.
+version=6
+prettyVersion=1.0.5
+minRevision=0
+maxRevision=227
+id=007
+type=library
+download=https://github.com/generative-design/GenerativeDesignLibrary2/releases/download/latest/generativedesign.zip
+
+library
 name=SFTP
 authors=[Daniel Shiffman](http://www.shiffman.net)
 url=https://github.com/shiffman/SFTP-Processing
@@ -297,6 +312,21 @@ type=library
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 
 library
+name=Tablet
+authors=[Andres Colubri](http://interfaze.info/)
+url=http://interfaze.info/libraries/tablet/
+categories=I/O
+sentence=Tablet is a library for using pen tablets from Processing.
+paragraph=It provides simplified access to the pen's pressure, tilt, etc. It is based on <a href="https://sourceforge.net/projects/jpen/">JPen</a>, the Java Pen Tablet Access Library.
+version=4
+prettyVersion=1.2.1
+minRevision=0
+maxRevision=227
+id=039
+type=library
+download=https://github.com/codeanticode/tablet/releases/download/latestv2/Tablet.zip
+
+library
 name=Carnivore
 authors=[RSG](http://r-s-g.org)
 url=http://r-s-g.org/carnivore
@@ -370,6 +400,36 @@ maxRevision=228
 id=047
 type=library
 download=http://transmote.com/nest/download/Nest.zip
+
+library
+name=Shapes 3D
+authors=[Peter Lager](http://www.lagers.org.uk)
+url=http://www.lagers.org.uk/s3d4p/index.html
+categories=3D
+sentence=3D Shape creation and display made easy.
+paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
+version=10
+prettyVersion=2.1.5
+minRevision=197
+maxRevision=228
+id=050
+type=library
+download=http://www.lagers.org.uk/processing/shapes3d/Shapes3D.zip
+
+library
+name=G4P
+authors=[Peter Lager](http://www.lagers.org.uk)
+url=http://www.lagers.org.uk/g4p
+categories=GUI
+sentence=Provides a set of 2D GUI controls and multiple window support.
+paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
+version=30
+prettyVersion=4.1.1
+minRevision=245
+maxRevision=0
+id=051
+type=library
+download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 
 library
 name=Guido
@@ -1090,6 +1150,21 @@ maxRevision=0
 id=140
 type=library
 download=https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.zip
+
+library
+name=Game Control Plus
+authors=[Peter Lager](http://lagers.org.uk)
+url=http://lagers.org.uk/gamecontrol
+categories=I/O
+sentence=Use joysticks, gamepads and other control devices in your sketch.
+paragraph=Create sketches that use joysticks, gamepads etc. that can be easily configured to work on different platforms and with different control devices without having to change the source code.
+version=5
+prettyVersion=1.1
+minRevision=227
+maxRevision=227
+id=143
+type=library
+download=http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.zip
 
 library
 name=Unfolding Maps
@@ -2721,6 +2796,21 @@ url=http://www.lagers.org.uk/g4ptool/index.html
 categories=
 sentence=Graphic design tool for creating user interfaces with G4P.
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
+version=17
+prettyVersion=2.6
+minRevision=227
+maxRevision=227
+id=052
+type=tool
+download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
+
+tool
+name=G4P GUI Builder
+authors=[Peter Lager](http://www.lagers.org.uk)
+url=http://www.lagers.org.uk/g4ptool/index.html
+categories=
+sentence=Graphic design tool for creating user interfaces with G4P.
+paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
 version=25
 prettyVersion=4.4.2
 minRevision=246
@@ -2739,7 +2829,7 @@ paragraph=Simple wizard style interface to export and sign (optional) applets fr
 version=4
 prettyVersion=1.2
 minRevision=0
-maxRevision=0
+maxRevision=228
 id=096
 type=tool
 download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip

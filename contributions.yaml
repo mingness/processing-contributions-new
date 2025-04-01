@@ -5194,3 +5194,23 @@ contributions:
   override:
     categories:
     - Books
+- id: 293
+  status: VALID
+  dateAdded: '2025-04-01T11:58:04'
+  type: library
+  source: https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.txt
+  name: EasyEase
+  authors: '[Fred Egidi](https://github.com/fredegd)'
+  url: https://fredegd.github.io/EasyEase
+  categories:
+  - Math
+  - Utilities
+  - Animation
+  sentence: Easing Function and non linear distribution utilities for Processing
+  paragraph: EasyEase convert and bend linear motion into the most common easing curves
+  version: 1
+  prettyVersion: 1.0.0
+  minRevision: 0
+  maxRevision: 0
+  modes:
+  download: https://github.com/fredegd/EasyEase/releases/download/latest/EasyEase.zip

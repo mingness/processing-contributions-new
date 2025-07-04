@@ -146,7 +146,9 @@ if __name__ == "__main__":
     }
     contribution.update(props)
 
-    contribution_str = json.dumps(contribution)
+    # dump dictionary into string. replace occurrences of single quotes with two single quotes.
+    # this is because github actions will delimit strings with single quotes, and escapes single quotes this way
+    contribution_str = json.dumps(contribution).replace("'", "''")
 
     print(f"properties dict: {contribution_str}")  # just for debugging, should do this via logging levels
     set_output(contribution_str)

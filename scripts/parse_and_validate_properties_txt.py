@@ -14,6 +14,7 @@ import re
 import os
 from typing import Optional, Union
 from pydantic import BaseModel, Field, ConfigDict, field_validator
+import javaproperties as jp
 
 
 class PropertiesBase(BaseModel):
@@ -64,7 +65,7 @@ def read_properties_txt(properties_url):
         'User-Agent': 'Mozilla/5.0',
         'Accept': 'text/html',
     }
-    r = requests.get(properties_url, headers=headers)
+    r = requests.get(properties_url, headers=headers, timeout=30)
 
     if r.status_code != 200:
         raise FileNotFoundError(f"status code {r.status_code} returned for url {r.url}")
@@ -72,48 +73,29 @@ def read_properties_txt(properties_url):
     return r.text
 
 def parse_text(properties_raw):
-    field_pattern = re.compile(r"^([a-zA-z]+)\s*=(.*)")
-
-    properties_dict = {}
-    field_name = ""
-    field_value = ""
-    properties_lines = properties_raw.split('\n')
-    for line in properties_lines:
-        if line.startswith('#') or not line.strip():
-            continue
-        if line_match := field_pattern.match(line):
-            # store previous key-value pair
-            if field_name:
-                properties_dict[field_name] = field_value
-            # process current line
-            field_name = line_match[1].strip()
-            field_value = line_match[2].strip()
-            field_value = field_value.split('#')[0].strip()
-        else:
-            field_value += " " + line.strip()
-    # store last key-pair
-    if field_name:
-        properties_dict[field_name] = field_value
-
+    properties_dict = {
+        key: value.split('#')[0].strip() if isinstance(value, str) else value
+        for key, value in jp.loads(properties_raw).items()
+    }
     return properties_dict
 
 def validate_existing(properties_dict):
     # validation on existing contribution is weaker
     properties = PropertiesExisting.model_validate(properties_dict)
 
-    return properties.model_dump()
+    return properties.model_dump(exclude_unset=True)
 
 def validate_new(properties_dict):
     # new contribution has stronger validation
     properties = PropertiesBase.model_validate(properties_dict)
 
-    return properties.model_dump()
+    return properties.model_dump(exclude_unset=True)
 
 def validate_new_library(properties_dict):
     # new contribution has stronger validation
     properties = LibraryPropertiesNew.model_validate(properties_dict)
 
-    return properties.model_dump()
+    return properties.model_dump(exclude_unset=True)
 
 def set_output(output_object):
     with open(os.environ['GITHUB_OUTPUT'],'a') as f:
@@ -164,5 +146,7 @@ if __name__ == "__main__":
     }
     contribution.update(props)
 
-    print(f"properties dict: {contribution}")  # just for debugging, should do this via logging levels
-    set_output(contribution)
+    contribution_str = json.dumps(contribution)
+
+    print(f"properties dict: {contribution_str}")  # just for debugging, should do this via logging levels
+    set_output(contribution_str)

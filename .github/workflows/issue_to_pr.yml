@@ -5,9 +5,6 @@ on:
       - opened
       - edited
       - reopened
-  push:
-    branches:
-      - main
 permissions:
   contents: write
   issues: write
@@ -15,11 +12,14 @@ permissions:
 
 jobs:
   validate:
-    if: contains(github.event.issue.labels.*.name, 'new-contribution')
+    name: Validate .properties File and Create a submission Pull Request
+    # Only run this job if the issue has the 'new contribution' label
+    if: contains(github.event.issue.labels.*.name, 'new contribution')
     runs-on: ubuntu-latest
-    outputs:
-      props: ${{ steps.parseProps.outputs.props }}
-      comment-id: ${{ steps.issueComment.outputs.comment-id }}
+    env:
+      BRANCH_NAME: issue-${{ github.event.issue.number }}
+      ISSUE_NUM: ${{ github.event.issue.number }}
+      ISSUE_TITLE: ${{ github.event.issue.title }}
     steps:
       - name: Parse issue
         id: parseIssue
@@ -40,13 +40,17 @@ jobs:
 
       - name: Read and validate properties txt file
         id: parseProps
-        run: >
+        run: |
           python -u scripts/parse_and_validate_properties_txt.py \
-            ${{ fromJson(steps.parseIssue.outputs.payload).contribution_type }} \
-            "${{ fromJson(steps.parseIssue.outputs.payload).properties_url }}"
+            "${{ contains(github.event.issue.labels.*.name, 'library') && 'library' || 
+                 contains(github.event.issue.labels.*.name, 'tools') && 'tool' ||
+                 contains(github.event.issue.labels.*.name, 'mode') && 'mode' ||
+                 contains(github.event.issue.labels.*.name, 'examples') && 'examples' }}" \
+            "${{ fromJson(steps.parseIssue.outputs.payload)['Properties File URL'] }}"
 
       - name: add comment to issue
         id: issueComment
+        if: success()
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -59,27 +63,11 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            There was an error in reading in your file and parsing it.
-            
+            There was an error in reading your properties file or parsing it.
+
+            Please ensure that the URL is correct and the file follows the required format.
+
             ${{ steps.parseProps.outputs.error }}
-  create-pr:
-    needs: validate
-    env:
-      BRANCH_NAME: issue-${{ github.event.issue.number }}
-      ISSUE_NUM: ${{ github.event.issue.number }}
-      ISSUE_TITLE: ${{ github.event.issue.title }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
 
       - name: check if target branch exists
         id: branchExists
@@ -102,24 +90,27 @@ jobs:
       - name: edit database
         run: |
           cd scripts
-          python add_new_contribution_to_yaml.py '${{ needs.validate.outputs.props }}'
+          python add_new_contribution_to_yaml.py '${{ steps.parseProps.outputs.props }}'
 
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: new contribution from issue ${{ env.ISSUE_NUM }}
+          commit_message: adding contribution ${{ github.event.issue.title }} from #${{ github.event.issue.number }}
           branch: ${{ env.BRANCH_NAME }}
           add_options: '-u'
 
       - name: Create pull request
-        run: gh pr create -B main -H $BRANCH_NAME --title "new contribution issue $ISSUE_NUM" --body "${{github.event.issue.title }}"
+        run: |
+          gh pr create -B main -H $BRANCH_NAME --title "Adding ${{ github.event.issue.title }}" --body "This pull request will add ${{ github.event.issue.title }}
+          
+          and it closes \#${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ github.token }}
 
       - name: add comment to issue
         uses: peter-evans/create-or-update-comment@v4
         with:
-          comment-id: ${{ needs.validate.outputs.comment-id }}
+          comment-id:  ${{ steps.issueComment.outputs.comment-id }}
           body: |
             A pull request with your contribution has been successfully created.
 
@@ -128,7 +119,8 @@ jobs:
         if: failure()
         uses: peter-evans/create-or-update-comment@v4
         with:
-          comment-id: ${{ needs.validate.outputs.comment-id }}
+          comment-id:  ${{ steps.issueComment.outputs.comment-id }}
           body: |
             An error was encountered when adding your contribution.
-            We will look into this issue as soon as possible.
+
+            We will look into this issue as soon as possible. Please check the details of your submission and try again if necessary.

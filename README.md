@@ -1,6 +1,8 @@
 # processing-contributions-new
 
-This repository maintains the contributions to Processing.
+This repository was used to develop the processing/processing-contributions repository as part of the
+pr05 grant in 2024. It is still used to test development of the processing repo, since forks don't
+have issues, and sometimes we need to test the issue workflows.
 
 All contributions are stored in a contributions database file in yaml format, `contributions.yaml`.
 Consumers of this data are the Processing website, and the Processing application.
